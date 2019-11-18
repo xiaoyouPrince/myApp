@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		541B685DF6C43D8009A8161C /* Pods_myApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC881613FB68E0CC860311D1 /* Pods_myApp.framework */; };
+		B43062082382539B00783DDF /* LYLUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = B43062072382539B00783DDF /* LYLUnicode.m */; };
 		B4C656BE238178BC00959704 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C656BD238178BC00959704 /* AppDelegate.m */; };
 		B4C656C1238178BC00959704 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C656C0238178BC00959704 /* SceneDelegate.m */; };
 		B4C656C4238178BC00959704 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C656C3238178BC00959704 /* ViewController.m */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		667BB2AC3A9171C2A3047EA8 /* Pods-myApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-myApp/Pods-myApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B43062072382539B00783DDF /* LYLUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLUnicode.m; sourceTree = "<group>"; };
 		B4C656B9238178BC00959704 /* myApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C656BC238178BC00959704 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B4C656BD238178BC00959704 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		B4C656BB238178BC00959704 /* myApp */ = {
 			isa = PBXGroup;
 			children = (
+				B43062072382539B00783DDF /* LYLUnicode.m */,
 				B4C656D52381AAD100959704 /* BaseInitial */,
 			);
 			path = myApp;
@@ -188,12 +191,22 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-myApp/Pods-myApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +247,7 @@
 				B4C656BE238178BC00959704 /* AppDelegate.m in Sources */,
 				B4C656CF238178BD00959704 /* main.m in Sources */,
 				B4C656C1238178BC00959704 /* SceneDelegate.m in Sources */,
+				B43062082382539B00783DDF /* LYLUnicode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
