@@ -17,6 +17,7 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
+  - IQKeyboardManager (6.4.2)
   - Masonry (1.1.0)
   - MJExtension (3.1.2)
   - MJRefresh (3.2.0)
@@ -27,6 +28,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
   - FMDB (~> 2.7.5)
+  - IQKeyboardManager (~> 6.4.2)
   - Masonry (~> 1.1.0)
   - MJExtension (~> 3.1.2)
   - MJRefresh (~> 3.2.0)
@@ -36,6 +38,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - FMDB
+    - IQKeyboardManager
     - Masonry
     - MJExtension
     - MJRefresh
@@ -44,11 +47,12 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  IQKeyboardManager: b41e0a4943fbac4c11a239d31a688667675f962e
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 81e8e411ced318561dd09334b0c83d8227cef79c
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
   SDWebImage: 96d7f03415ccb28d299d765f93557ff8a617abd8
 
-PODFILE CHECKSUM: 550fcbfd7e5ab30c4df04b72dc48f9937eb1e036
+PODFILE CHECKSUM: 0fdbc2e0fdf7cd3f6fceaa5a06fe9d948607b3ef
 
 COCOAPODS: 1.5.3

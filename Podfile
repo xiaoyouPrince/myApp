@@ -12,5 +12,6 @@ target 'myApp' do
   pod 'FMDB', '~> 2.7.5'
   pod 'MJExtension', '~> 3.1.2'
   pod 'MJRefresh', '~> 3.2.0'
+  pod 'IQKeyboardManager', '~> 6.4.2'
 
 end
