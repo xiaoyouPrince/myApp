@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XBUGConfigView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择登录方式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Da5-Yw-Au9">
+                    <rect key="frame" x="40" y="60" width="104" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AvF-tL-4ev">
+                    <rect key="frame" x="40" y="96" width="108" height="30"/>
+                    <color key="tintColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="短信验证码登录">
+                        <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.12941176470588237" green="0.50588235294117645" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4k-LA-o05">
+                    <rect key="frame" x="235.5" y="96" width="92" height="30"/>
+                    <color key="tintColor" red="0.77647058823529413" green="0.77647058823529413" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="账号密码登录">
+                        <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.082352941176470587" green="0.49411764705882355" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设置项目地址(选填)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lS6-kr-n87">
+                    <rect key="frame" x="40" y="156" width="151" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="如: https://api2.fescotech.com/appserver" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HKu-cm-6lh">
+                    <rect key="frame" x="40" y="192" width="295" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设置首汽根地址(选填)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLL-T7-jUT">
+                    <rect key="frame" x="40" y="256" width="169" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="如 http://47.93.126.37" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8J7-js-TIB">
+                    <rect key="frame" x="40" y="292" width="295" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQB-yI-wEA">
+                    <rect key="frame" x="74" y="537" width="77" height="30"/>
+                    <state key="normal" title="确定并保存"/>
+                    <connections>
+                        <action selector="saveAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Bid-F9-EVI"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xH-dP-Mr9">
+                    <rect key="frame" x="224" y="537" width="77" height="30"/>
+                    <state key="normal" title="取消并退出"/>
+                    <connections>
+                        <action selector="cancelAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="yjn-UV-zYB"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="VLL-T7-jUT" firstAttribute="top" secondItem="HKu-cm-6lh" secondAttribute="bottom" constant="30" id="4k3-HW-Asc"/>
+                <constraint firstItem="o4k-LA-o05" firstAttribute="top" secondItem="AvF-tL-4ev" secondAttribute="top" id="4oY-gH-MJj"/>
+                <constraint firstItem="lS6-kr-n87" firstAttribute="top" secondItem="AvF-tL-4ev" secondAttribute="bottom" constant="30" id="5TN-h9-dUn"/>
+                <constraint firstItem="VLL-T7-jUT" firstAttribute="leading" secondItem="lS6-kr-n87" secondAttribute="leading" id="6Aj-21-SrH"/>
+                <constraint firstItem="HKu-cm-6lh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="83N-NV-GsC"/>
+                <constraint firstItem="Da5-Yw-Au9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="AtL-0R-Zpg"/>
+                <constraint firstItem="mQB-yI-wEA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="0.6" id="Dxd-ro-b71"/>
+                <constraint firstItem="8J7-js-TIB" firstAttribute="top" secondItem="VLL-T7-jUT" secondAttribute="bottom" constant="15" id="Gby-PC-bI8"/>
+                <constraint firstItem="8J7-js-TIB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="Jm5-Ne-nKQ"/>
+                <constraint firstItem="5xH-dP-Mr9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="1.4" id="Lzc-vI-dz9"/>
+                <constraint firstItem="8J7-js-TIB" firstAttribute="leading" secondItem="VLL-T7-jUT" secondAttribute="leading" id="MI0-Mk-t8J"/>
+                <constraint firstItem="o4k-LA-o05" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="1.5" id="Mkg-sc-kJG"/>
+                <constraint firstItem="HKu-cm-6lh" firstAttribute="leading" secondItem="lS6-kr-n87" secondAttribute="leading" id="NWh-Hp-aWS"/>
+                <constraint firstItem="AvF-tL-4ev" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" multiplier="0.5" id="NZP-Ch-MDN"/>
+                <constraint firstItem="5xH-dP-Mr9" firstAttribute="bottom" secondItem="mQB-yI-wEA" secondAttribute="bottom" id="Ovc-4g-Tcm"/>
+                <constraint firstAttribute="trailing" secondItem="HKu-cm-6lh" secondAttribute="trailing" constant="40" id="UkU-on-eI9"/>
+                <constraint firstAttribute="bottom" secondItem="mQB-yI-wEA" secondAttribute="bottom" constant="100" id="bz0-Gc-9Sw"/>
+                <constraint firstItem="lS6-kr-n87" firstAttribute="leading" secondItem="Da5-Yw-Au9" secondAttribute="leading" id="eE8-NY-pPo"/>
+                <constraint firstItem="Da5-Yw-Au9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="fk4-lI-6Qb"/>
+                <constraint firstItem="AvF-tL-4ev" firstAttribute="top" secondItem="Da5-Yw-Au9" secondAttribute="bottom" constant="15" id="hQP-U6-5Kt"/>
+                <constraint firstAttribute="trailing" secondItem="8J7-js-TIB" secondAttribute="trailing" constant="40" id="iQF-cP-IFA"/>
+                <constraint firstItem="HKu-cm-6lh" firstAttribute="top" secondItem="lS6-kr-n87" secondAttribute="bottom" constant="15" id="ijJ-lf-3cN"/>
+            </constraints>
+            <connections>
+                <outlet property="accountPWDBtn" destination="o4k-LA-o05" id="u28-5O-9TK"/>
+                <outlet property="bookcarUrlTF" destination="8J7-js-TIB" id="3gB-LN-HE2"/>
+                <outlet property="phoneSMSBtn" destination="AvF-tL-4ev" id="RvD-zF-r2J"/>
+                <outlet property="projUrlTF" destination="HKu-cm-6lh" id="Uz4-EQ-4RI"/>
+            </connections>
+            <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>
+        </view>
+    </objects>
+</document>

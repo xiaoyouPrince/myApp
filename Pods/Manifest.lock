@@ -21,6 +21,8 @@ PODS:
   - Masonry (1.1.0)
   - MJExtension (3.1.2)
   - MJRefresh (3.2.0)
+  - SDCycleScrollView (1.80):
+    - SDWebImage (>= 5.0.0)
   - SDWebImage (5.1.1):
     - SDWebImage/Core (= 5.1.1)
   - SDWebImage/Core (5.1.1)
@@ -32,16 +34,18 @@ DEPENDENCIES:
   - Masonry (~> 1.1.0)
   - MJExtension (~> 3.1.2)
   - MJRefresh (~> 3.2.0)
+  - SDCycleScrollView
   - SDWebImage (~> 5.1.1)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - AFNetworking
     - FMDB
     - IQKeyboardManager
     - Masonry
     - MJExtension
     - MJRefresh
+    - SDCycleScrollView
     - SDWebImage
 
 SPEC CHECKSUMS:
@@ -51,8 +55,9 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 81e8e411ced318561dd09334b0c83d8227cef79c
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
   SDWebImage: 96d7f03415ccb28d299d765f93557ff8a617abd8
 
-PODFILE CHECKSUM: 0fdbc2e0fdf7cd3f6fceaa5a06fe9d948607b3ef
+PODFILE CHECKSUM: 839055231816630c4661e48985167c287765a560
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4

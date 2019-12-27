@@ -3,12 +3,62 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		541B685DF6C43D8009A8161C /* Pods_myApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC881613FB68E0CC860311D1 /* Pods_myApp.framework */; };
-		B43062082382539B00783DDF /* LYLUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = B43062072382539B00783DDF /* LYLUnicode.m */; };
+		B45FCD6C23B61F3200626D06 /* LYLUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCD2923B61F3200626D06 /* LYLUnicode.m */; };
+		B45FCD6F23B61F3200626D06 /* XYChooseOrderTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCD3223B61F3200626D06 /* XYChooseOrderTimeView.m */; };
+		B45FCD7023B61F3200626D06 /* XYChooseOrderTimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45FCD3323B61F3200626D06 /* XYChooseOrderTimeView.xib */; };
+		B45FCD7623B61F3300626D06 /* XYFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCD3C23B61F3200626D06 /* XYFileTool.m */; };
+		B45FCD7723B61F3300626D06 /* XYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCD4023B61F3200626D06 /* XYAlertView.m */; };
+		B45FCD7823B61F3300626D06 /* XYPinYinTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCD4423B61F3200626D06 /* XYPinYinTool.m */; };
+		B45FCD8023B61F3300626D06 /* XYCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCD5523B61F3200626D06 /* XYCommon.m */; };
+		B45FCD8523B61F6300626D06 /* XYSharePresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCD8323B61F6300626D06 /* XYSharePresentationController.m */; };
+		B45FCD8623B61F6300626D06 /* XYSharePopoverAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCD8423B61F6300626D06 /* XYSharePopoverAnimator.m */; };
+		B45FCD9523B61F7A00626D06 /* UITextField+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCD8723B61F7A00626D06 /* UITextField+XYAdd.m */; };
+		B45FCD9623B61F7A00626D06 /* UIButton+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCD8823B61F7A00626D06 /* UIButton+XYAdd.m */; };
+		B45FCD9723B61F7A00626D06 /* UIBarButtonItem+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCD8B23B61F7A00626D06 /* UIBarButtonItem+XYAdd.m */; };
+		B45FCD9823B61F7A00626D06 /* UILabel+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCD8E23B61F7A00626D06 /* UILabel+XYAdd.m */; };
+		B45FCD9923B61F7A00626D06 /* UIColor+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCD8F23B61F7A00626D06 /* UIColor+XYAdd.m */; };
+		B45FCD9A23B61F7A00626D06 /* UIImage+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCD9023B61F7A00626D06 /* UIImage+XYAdd.m */; };
+		B45FCD9B23B61F7A00626D06 /* UIView+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCD9223B61F7A00626D06 /* UIView+XYAdd.m */; };
+		B45FCDA623B61F8A00626D06 /* NSAttributedString+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCD9C23B61F8A00626D06 /* NSAttributedString+XYAdd.m */; };
+		B45FCDA723B61F8A00626D06 /* NSArray+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCD9D23B61F8A00626D06 /* NSArray+XYAdd.m */; };
+		B45FCDA823B61F8A00626D06 /* NSMutableArray+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCD9F23B61F8A00626D06 /* NSMutableArray+XYAdd.m */; };
+		B45FCDA923B61F8A00626D06 /* NSString+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCDA123B61F8A00626D06 /* NSString+XYAdd.m */; };
+		B45FCDAA23B61F8A00626D06 /* NSObject+XYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCDA423B61F8A00626D06 /* NSObject+XYAdd.m */; };
+		B45FCDB123B61FAF00626D06 /* XBUGTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCDAB23B61FAF00626D06 /* XBUGTool.m */; };
+		B45FCDB223B61FAF00626D06 /* xConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = B45FCDAC23B61FAF00626D06 /* xConfig.plist */; };
+		B45FCDB323B61FAF00626D06 /* XBUGConfigView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45FCDAD23B61FAF00626D06 /* XBUGConfigView.xib */; };
+		B45FCDB423B61FAF00626D06 /* XBUGConfigView.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCDB023B61FAF00626D06 /* XBUGConfigView.m */; };
+		B45FCDBC23B61FBD00626D06 /* XYPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCDB623B61FBC00626D06 /* XYPopoverViewController.m */; };
+		B45FCDBD23B61FBD00626D06 /* XYPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCDB823B61FBD00626D06 /* XYPresentationController.m */; };
+		B45FCDBE23B61FBD00626D06 /* XYPopoverAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCDB923B61FBD00626D06 /* XYPopoverAnimator.m */; };
+		B45FCDBF23B61FBD00626D06 /* XYPopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45FCDBA23B61FBD00626D06 /* XYPopoverViewController.xib */; };
+		B45FCDC423B61FCC00626D06 /* XYRequestParam.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCDC023B61FCB00626D06 /* XYRequestParam.m */; };
+		B45FCDC523B61FCC00626D06 /* XYHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCDC123B61FCB00626D06 /* XYHttpTool.m */; };
+		B45FCDCC23B61FE500626D06 /* icon_star@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B45FCDC723B61FE500626D06 /* icon_star@3x.png */; };
+		B45FCDCD23B61FE500626D06 /* XYStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCDC823B61FE500626D06 /* XYStarView.m */; };
+		B45FCDCE23B61FE500626D06 /* icon_star_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B45FCDC923B61FE500626D06 /* icon_star_bg@2x.png */; };
+		B45FCDCF23B61FE500626D06 /* icon_star_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B45FCDCA23B61FE500626D06 /* icon_star_bg@3x.png */; };
+		B45FCDD023B61FE500626D06 /* icon_star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B45FCDCB23B61FE500626D06 /* icon_star@2x.png */; };
+		B45FCDDD23B6203B00626D06 /* PageRecord.plist in Resources */ = {isa = PBXBuildFile; fileRef = B45FCDD223B6203A00626D06 /* PageRecord.plist */; };
+		B45FCDDE23B6203B00626D06 /* UIResponder+XYActionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCDD323B6203B00626D06 /* UIResponder+XYActionRecord.m */; };
+		B45FCDDF23B6203B00626D06 /* XYActionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCDD423B6203B00626D06 /* XYActionRecord.m */; };
+		B45FCDE023B6203B00626D06 /* UIViewController+XYActionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCDD523B6203B00626D06 /* UIViewController+XYActionRecord.m */; };
+		B45FCDE123B6203B00626D06 /* XYActionDataAndNetTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCDD723B6203B00626D06 /* XYActionDataAndNetTool.m */; };
+		B45FCDE223B6203B00626D06 /* UIControl+XYActionRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCDD823B6203B00626D06 /* UIControl+XYActionRecord.m */; };
+		B45FCDE323B6203B00626D06 /* EventRecord.plist in Resources */ = {isa = PBXBuildFile; fileRef = B45FCDDA23B6203B00626D06 /* EventRecord.plist */; };
+		B45FCDF723B6218B00626D06 /* XYDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCDE523B6218B00626D06 /* XYDatePickerView.m */; };
+		B45FCDFD23B6218B00626D06 /* XYPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCDF623B6218B00626D06 /* XYPickerView.m */; };
+		B45FCE0923B621A500626D06 /* XYLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCE0023B621A500626D06 /* XYLocation.m */; };
+		B45FCE0A23B621A500626D06 /* XYLocationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCE0223B621A500626D06 /* XYLocationBar.m */; };
+		B45FCE0B23B621A500626D06 /* XYLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCE0423B621A500626D06 /* XYLocationCell.m */; };
+		B45FCE0C23B621A500626D06 /* XYChooseLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCE0723B621A500626D06 /* XYChooseLocationView.m */; };
+		B45FCE1223B6230200626D06 /* UIViewController+XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCE1023B6230200626D06 /* UIViewController+XYNavigationController.m */; };
+		B45FCE1323B6230200626D06 /* XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCE1123B6230200626D06 /* XYNavigationController.m */; };
 		B4C656BE238178BC00959704 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C656BD238178BC00959704 /* AppDelegate.m */; };
 		B4C656C1238178BC00959704 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C656C0238178BC00959704 /* SceneDelegate.m */; };
 		B4C656C4238178BC00959704 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C656C3238178BC00959704 /* ViewController.m */; };
@@ -20,7 +70,100 @@
 
 /* Begin PBXFileReference section */
 		667BB2AC3A9171C2A3047EA8 /* Pods-myApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-myApp/Pods-myApp.debug.xcconfig"; sourceTree = "<group>"; };
-		B43062072382539B00783DDF /* LYLUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLUnicode.m; sourceTree = "<group>"; };
+		B45FCD1923B61F3200626D06 /* XYKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYKit.h; sourceTree = "<group>"; };
+		B45FCD2923B61F3200626D06 /* LYLUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLUnicode.m; sourceTree = "<group>"; };
+		B45FCD3123B61F3200626D06 /* XYChooseOrderTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYChooseOrderTimeView.h; sourceTree = "<group>"; };
+		B45FCD3223B61F3200626D06 /* XYChooseOrderTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYChooseOrderTimeView.m; sourceTree = "<group>"; };
+		B45FCD3323B61F3200626D06 /* XYChooseOrderTimeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYChooseOrderTimeView.xib; sourceTree = "<group>"; };
+		B45FCD3C23B61F3200626D06 /* XYFileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYFileTool.m; sourceTree = "<group>"; };
+		B45FCD3D23B61F3200626D06 /* XYFileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYFileTool.h; sourceTree = "<group>"; };
+		B45FCD3E23B61F3200626D06 /* XYHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYHeader.h; sourceTree = "<group>"; };
+		B45FCD4023B61F3200626D06 /* XYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYAlertView.m; sourceTree = "<group>"; };
+		B45FCD4123B61F3200626D06 /* XYAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYAlertView.h; sourceTree = "<group>"; };
+		B45FCD4323B61F3200626D06 /* XYPinYinTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPinYinTool.h; sourceTree = "<group>"; };
+		B45FCD4423B61F3200626D06 /* XYPinYinTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPinYinTool.m; sourceTree = "<group>"; };
+		B45FCD5323B61F3200626D06 /* XYCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYCommon.h; sourceTree = "<group>"; };
+		B45FCD5423B61F3200626D06 /* XYKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYKitMacro.h; sourceTree = "<group>"; };
+		B45FCD5523B61F3200626D06 /* XYCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYCommon.m; sourceTree = "<group>"; };
+		B45FCD8123B61F6200626D06 /* XYSharePresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSharePresentationController.h; sourceTree = "<group>"; };
+		B45FCD8223B61F6300626D06 /* XYSharePopoverAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYSharePopoverAnimator.h; sourceTree = "<group>"; };
+		B45FCD8323B61F6300626D06 /* XYSharePresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSharePresentationController.m; sourceTree = "<group>"; };
+		B45FCD8423B61F6300626D06 /* XYSharePopoverAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYSharePopoverAnimator.m; sourceTree = "<group>"; };
+		B45FCD8723B61F7A00626D06 /* UITextField+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+XYAdd.m"; sourceTree = "<group>"; };
+		B45FCD8823B61F7A00626D06 /* UIButton+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+XYAdd.m"; sourceTree = "<group>"; };
+		B45FCD8923B61F7A00626D06 /* UITextField+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+XYAdd.h"; sourceTree = "<group>"; };
+		B45FCD8A23B61F7A00626D06 /* UIButton+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+XYAdd.h"; sourceTree = "<group>"; };
+		B45FCD8B23B61F7A00626D06 /* UIBarButtonItem+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+XYAdd.m"; sourceTree = "<group>"; };
+		B45FCD8C23B61F7A00626D06 /* UILabel+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+XYAdd.h"; sourceTree = "<group>"; };
+		B45FCD8D23B61F7A00626D06 /* UIImage+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+XYAdd.h"; sourceTree = "<group>"; };
+		B45FCD8E23B61F7A00626D06 /* UILabel+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+XYAdd.m"; sourceTree = "<group>"; };
+		B45FCD8F23B61F7A00626D06 /* UIColor+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+XYAdd.m"; sourceTree = "<group>"; };
+		B45FCD9023B61F7A00626D06 /* UIImage+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+XYAdd.m"; sourceTree = "<group>"; };
+		B45FCD9123B61F7A00626D06 /* UIBarButtonItem+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+XYAdd.h"; sourceTree = "<group>"; };
+		B45FCD9223B61F7A00626D06 /* UIView+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XYAdd.m"; sourceTree = "<group>"; };
+		B45FCD9323B61F7A00626D06 /* UIView+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XYAdd.h"; sourceTree = "<group>"; };
+		B45FCD9423B61F7A00626D06 /* UIColor+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+XYAdd.h"; sourceTree = "<group>"; };
+		B45FCD9C23B61F8A00626D06 /* NSAttributedString+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+XYAdd.m"; sourceTree = "<group>"; };
+		B45FCD9D23B61F8A00626D06 /* NSArray+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+XYAdd.m"; sourceTree = "<group>"; };
+		B45FCD9E23B61F8A00626D06 /* NSArray+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+XYAdd.h"; sourceTree = "<group>"; };
+		B45FCD9F23B61F8A00626D06 /* NSMutableArray+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+XYAdd.m"; sourceTree = "<group>"; };
+		B45FCDA023B61F8A00626D06 /* NSMutableArray+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+XYAdd.h"; sourceTree = "<group>"; };
+		B45FCDA123B61F8A00626D06 /* NSString+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XYAdd.m"; sourceTree = "<group>"; };
+		B45FCDA223B61F8A00626D06 /* NSAttributedString+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+XYAdd.h"; sourceTree = "<group>"; };
+		B45FCDA323B61F8A00626D06 /* NSObject+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XYAdd.h"; sourceTree = "<group>"; };
+		B45FCDA423B61F8A00626D06 /* NSObject+XYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XYAdd.m"; sourceTree = "<group>"; };
+		B45FCDA523B61F8A00626D06 /* NSString+XYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XYAdd.h"; sourceTree = "<group>"; };
+		B45FCDAB23B61FAF00626D06 /* XBUGTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBUGTool.m; sourceTree = "<group>"; };
+		B45FCDAC23B61FAF00626D06 /* xConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = xConfig.plist; sourceTree = "<group>"; };
+		B45FCDAD23B61FAF00626D06 /* XBUGConfigView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XBUGConfigView.xib; sourceTree = "<group>"; };
+		B45FCDAE23B61FAF00626D06 /* XBUGConfigView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBUGConfigView.h; sourceTree = "<group>"; };
+		B45FCDAF23B61FAF00626D06 /* XBUGTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBUGTool.h; sourceTree = "<group>"; };
+		B45FCDB023B61FAF00626D06 /* XBUGConfigView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBUGConfigView.m; sourceTree = "<group>"; };
+		B45FCDB523B61FBC00626D06 /* XYPopoverAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPopoverAnimator.h; sourceTree = "<group>"; };
+		B45FCDB623B61FBC00626D06 /* XYPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPopoverViewController.m; sourceTree = "<group>"; };
+		B45FCDB723B61FBD00626D06 /* XYPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPopoverViewController.h; sourceTree = "<group>"; };
+		B45FCDB823B61FBD00626D06 /* XYPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPresentationController.m; sourceTree = "<group>"; };
+		B45FCDB923B61FBD00626D06 /* XYPopoverAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPopoverAnimator.m; sourceTree = "<group>"; };
+		B45FCDBA23B61FBD00626D06 /* XYPopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYPopoverViewController.xib; sourceTree = "<group>"; };
+		B45FCDBB23B61FBD00626D06 /* XYPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPresentationController.h; sourceTree = "<group>"; };
+		B45FCDC023B61FCB00626D06 /* XYRequestParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYRequestParam.m; sourceTree = "<group>"; };
+		B45FCDC123B61FCB00626D06 /* XYHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYHttpTool.m; sourceTree = "<group>"; };
+		B45FCDC223B61FCB00626D06 /* XYHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYHttpTool.h; sourceTree = "<group>"; };
+		B45FCDC323B61FCC00626D06 /* XYRequestParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYRequestParam.h; sourceTree = "<group>"; };
+		B45FCDC623B61FE500626D06 /* XYStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYStarView.h; sourceTree = "<group>"; };
+		B45FCDC723B61FE500626D06 /* icon_star@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_star@3x.png"; sourceTree = "<group>"; };
+		B45FCDC823B61FE500626D06 /* XYStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYStarView.m; sourceTree = "<group>"; };
+		B45FCDC923B61FE500626D06 /* icon_star_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_star_bg@2x.png"; sourceTree = "<group>"; };
+		B45FCDCA23B61FE500626D06 /* icon_star_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_star_bg@3x.png"; sourceTree = "<group>"; };
+		B45FCDCB23B61FE500626D06 /* icon_star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_star@2x.png"; sourceTree = "<group>"; };
+		B45FCDD123B6203A00626D06 /* UIControl+XYActionRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+XYActionRecord.h"; sourceTree = "<group>"; };
+		B45FCDD223B6203A00626D06 /* PageRecord.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PageRecord.plist; sourceTree = "<group>"; };
+		B45FCDD323B6203B00626D06 /* UIResponder+XYActionRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+XYActionRecord.m"; sourceTree = "<group>"; };
+		B45FCDD423B6203B00626D06 /* XYActionRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYActionRecord.m; sourceTree = "<group>"; };
+		B45FCDD523B6203B00626D06 /* UIViewController+XYActionRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XYActionRecord.m"; sourceTree = "<group>"; };
+		B45FCDD623B6203B00626D06 /* XYActionDataAndNetTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYActionDataAndNetTool.h; sourceTree = "<group>"; };
+		B45FCDD723B6203B00626D06 /* XYActionDataAndNetTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYActionDataAndNetTool.m; sourceTree = "<group>"; };
+		B45FCDD823B6203B00626D06 /* UIControl+XYActionRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+XYActionRecord.m"; sourceTree = "<group>"; };
+		B45FCDD923B6203B00626D06 /* UIViewController+XYActionRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XYActionRecord.h"; sourceTree = "<group>"; };
+		B45FCDDA23B6203B00626D06 /* EventRecord.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EventRecord.plist; sourceTree = "<group>"; };
+		B45FCDDB23B6203B00626D06 /* XYActionRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYActionRecord.h; sourceTree = "<group>"; };
+		B45FCDDC23B6203B00626D06 /* UIResponder+XYActionRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+XYActionRecord.h"; sourceTree = "<group>"; };
+		B45FCDE523B6218B00626D06 /* XYDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYDatePickerView.m; sourceTree = "<group>"; };
+		B45FCDE623B6218B00626D06 /* XYDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYDatePickerView.h; sourceTree = "<group>"; };
+		B45FCDF523B6218B00626D06 /* XYPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYPickerView.h; sourceTree = "<group>"; };
+		B45FCDF623B6218B00626D06 /* XYPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYPickerView.m; sourceTree = "<group>"; };
+		B45FCDFF23B621A500626D06 /* XYLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLocation.h; sourceTree = "<group>"; };
+		B45FCE0023B621A500626D06 /* XYLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLocation.m; sourceTree = "<group>"; };
+		B45FCE0123B621A500626D06 /* XYChooseLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYChooseLocationView.h; sourceTree = "<group>"; };
+		B45FCE0223B621A500626D06 /* XYLocationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLocationBar.m; sourceTree = "<group>"; };
+		B45FCE0323B621A500626D06 /* XYLocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLocationCell.h; sourceTree = "<group>"; };
+		B45FCE0423B621A500626D06 /* XYLocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYLocationCell.m; sourceTree = "<group>"; };
+		B45FCE0623B621A500626D06 /* XYLocationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYLocationBar.h; sourceTree = "<group>"; };
+		B45FCE0723B621A500626D06 /* XYChooseLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYChooseLocationView.m; sourceTree = "<group>"; };
+		B45FCE0E23B6230200626D06 /* UIViewController+XYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XYNavigationController.h"; sourceTree = "<group>"; };
+		B45FCE0F23B6230200626D06 /* XYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNavigationController.h; sourceTree = "<group>"; };
+		B45FCE1023B6230200626D06 /* UIViewController+XYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XYNavigationController.m"; sourceTree = "<group>"; };
+		B45FCE1123B6230200626D06 /* XYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYNavigationController.m; sourceTree = "<group>"; };
 		B4C656B9238178BC00959704 /* myApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C656BC238178BC00959704 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B4C656BD238178BC00959704 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -58,6 +201,259 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B45FCCF823B61F3200626D06 /* XYTools */ = {
+			isa = PBXGroup;
+			children = (
+				B45FCD3E23B61F3200626D06 /* XYHeader.h */,
+				B45FCCF923B61F3200626D06 /* XYSharePopover */,
+				B45FCCFE23B61F3200626D06 /* XYKit */,
+				B45FCD1A23B61F3200626D06 /* XBUGTool */,
+				B45FCD2123B61F3200626D06 /* XYPopover */,
+				B45FCD2923B61F3200626D06 /* LYLUnicode.m */,
+				B45FCD2A23B61F3200626D06 /* HttpTools */,
+				B45FCD2F23B61F3200626D06 /* XYViews */,
+				B45FCD3B23B61F3200626D06 /* FileTools */,
+				B45FCD3F23B61F3200626D06 /* XYAlertView */,
+				B45FCD4223B61F3200626D06 /* PinYinTool */,
+				B45FCD4523B61F3200626D06 /* XYActionRecord */,
+				B45FCD5223B61F3200626D06 /* Base */,
+			);
+			path = XYTools;
+			sourceTree = "<group>";
+		};
+		B45FCCF923B61F3200626D06 /* XYSharePopover */ = {
+			isa = PBXGroup;
+			children = (
+				B45FCD8223B61F6300626D06 /* XYSharePopoverAnimator.h */,
+				B45FCD8423B61F6300626D06 /* XYSharePopoverAnimator.m */,
+				B45FCD8123B61F6200626D06 /* XYSharePresentationController.h */,
+				B45FCD8323B61F6300626D06 /* XYSharePresentationController.m */,
+			);
+			path = XYSharePopover;
+			sourceTree = "<group>";
+		};
+		B45FCCFE23B61F3200626D06 /* XYKit */ = {
+			isa = PBXGroup;
+			children = (
+				B45FCD1923B61F3200626D06 /* XYKit.h */,
+				B45FCCFF23B61F3200626D06 /* UIKit */,
+				B45FCD0E23B61F3200626D06 /* Foundation */,
+			);
+			path = XYKit;
+			sourceTree = "<group>";
+		};
+		B45FCCFF23B61F3200626D06 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				B45FCD9123B61F7A00626D06 /* UIBarButtonItem+XYAdd.h */,
+				B45FCD8B23B61F7A00626D06 /* UIBarButtonItem+XYAdd.m */,
+				B45FCD8A23B61F7A00626D06 /* UIButton+XYAdd.h */,
+				B45FCD8823B61F7A00626D06 /* UIButton+XYAdd.m */,
+				B45FCD9423B61F7A00626D06 /* UIColor+XYAdd.h */,
+				B45FCD8F23B61F7A00626D06 /* UIColor+XYAdd.m */,
+				B45FCD8D23B61F7A00626D06 /* UIImage+XYAdd.h */,
+				B45FCD9023B61F7A00626D06 /* UIImage+XYAdd.m */,
+				B45FCD8C23B61F7A00626D06 /* UILabel+XYAdd.h */,
+				B45FCD8E23B61F7A00626D06 /* UILabel+XYAdd.m */,
+				B45FCD8923B61F7A00626D06 /* UITextField+XYAdd.h */,
+				B45FCD8723B61F7A00626D06 /* UITextField+XYAdd.m */,
+				B45FCD9323B61F7A00626D06 /* UIView+XYAdd.h */,
+				B45FCD9223B61F7A00626D06 /* UIView+XYAdd.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		B45FCD0E23B61F3200626D06 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				B45FCD9E23B61F8A00626D06 /* NSArray+XYAdd.h */,
+				B45FCD9D23B61F8A00626D06 /* NSArray+XYAdd.m */,
+				B45FCDA223B61F8A00626D06 /* NSAttributedString+XYAdd.h */,
+				B45FCD9C23B61F8A00626D06 /* NSAttributedString+XYAdd.m */,
+				B45FCDA023B61F8A00626D06 /* NSMutableArray+XYAdd.h */,
+				B45FCD9F23B61F8A00626D06 /* NSMutableArray+XYAdd.m */,
+				B45FCDA323B61F8A00626D06 /* NSObject+XYAdd.h */,
+				B45FCDA423B61F8A00626D06 /* NSObject+XYAdd.m */,
+				B45FCDA523B61F8A00626D06 /* NSString+XYAdd.h */,
+				B45FCDA123B61F8A00626D06 /* NSString+XYAdd.m */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		B45FCD1A23B61F3200626D06 /* XBUGTool */ = {
+			isa = PBXGroup;
+			children = (
+				B45FCDAE23B61FAF00626D06 /* XBUGConfigView.h */,
+				B45FCDB023B61FAF00626D06 /* XBUGConfigView.m */,
+				B45FCDAD23B61FAF00626D06 /* XBUGConfigView.xib */,
+				B45FCDAF23B61FAF00626D06 /* XBUGTool.h */,
+				B45FCDAB23B61FAF00626D06 /* XBUGTool.m */,
+				B45FCDAC23B61FAF00626D06 /* xConfig.plist */,
+			);
+			path = XBUGTool;
+			sourceTree = "<group>";
+		};
+		B45FCD2123B61F3200626D06 /* XYPopover */ = {
+			isa = PBXGroup;
+			children = (
+				B45FCDB523B61FBC00626D06 /* XYPopoverAnimator.h */,
+				B45FCDB923B61FBD00626D06 /* XYPopoverAnimator.m */,
+				B45FCDB723B61FBD00626D06 /* XYPopoverViewController.h */,
+				B45FCDB623B61FBC00626D06 /* XYPopoverViewController.m */,
+				B45FCDBA23B61FBD00626D06 /* XYPopoverViewController.xib */,
+				B45FCDBB23B61FBD00626D06 /* XYPresentationController.h */,
+				B45FCDB823B61FBD00626D06 /* XYPresentationController.m */,
+			);
+			path = XYPopover;
+			sourceTree = "<group>";
+		};
+		B45FCD2A23B61F3200626D06 /* HttpTools */ = {
+			isa = PBXGroup;
+			children = (
+				B45FCDC223B61FCB00626D06 /* XYHttpTool.h */,
+				B45FCDC123B61FCB00626D06 /* XYHttpTool.m */,
+				B45FCDC323B61FCC00626D06 /* XYRequestParam.h */,
+				B45FCDC023B61FCB00626D06 /* XYRequestParam.m */,
+			);
+			path = HttpTools;
+			sourceTree = "<group>";
+		};
+		B45FCD2F23B61F3200626D06 /* XYViews */ = {
+			isa = PBXGroup;
+			children = (
+				B45FCDE723B6218B00626D06 /* XYChooseLocationView */,
+				B45FCDE423B6218B00626D06 /* XYDatePickerView */,
+				B45FCDF423B6218B00626D06 /* XYPickerView */,
+				B45FCD3023B61F3200626D06 /* XYChooseOrderTimeView */,
+				B45FCD3423B61F3200626D06 /* XYStarView */,
+			);
+			path = XYViews;
+			sourceTree = "<group>";
+		};
+		B45FCD3023B61F3200626D06 /* XYChooseOrderTimeView */ = {
+			isa = PBXGroup;
+			children = (
+				B45FCD3123B61F3200626D06 /* XYChooseOrderTimeView.h */,
+				B45FCD3223B61F3200626D06 /* XYChooseOrderTimeView.m */,
+				B45FCD3323B61F3200626D06 /* XYChooseOrderTimeView.xib */,
+			);
+			path = XYChooseOrderTimeView;
+			sourceTree = "<group>";
+		};
+		B45FCD3423B61F3200626D06 /* XYStarView */ = {
+			isa = PBXGroup;
+			children = (
+				B45FCDC923B61FE500626D06 /* icon_star_bg@2x.png */,
+				B45FCDCA23B61FE500626D06 /* icon_star_bg@3x.png */,
+				B45FCDCB23B61FE500626D06 /* icon_star@2x.png */,
+				B45FCDC723B61FE500626D06 /* icon_star@3x.png */,
+				B45FCDC623B61FE500626D06 /* XYStarView.h */,
+				B45FCDC823B61FE500626D06 /* XYStarView.m */,
+			);
+			path = XYStarView;
+			sourceTree = "<group>";
+		};
+		B45FCD3B23B61F3200626D06 /* FileTools */ = {
+			isa = PBXGroup;
+			children = (
+				B45FCD3D23B61F3200626D06 /* XYFileTool.h */,
+				B45FCD3C23B61F3200626D06 /* XYFileTool.m */,
+			);
+			path = FileTools;
+			sourceTree = "<group>";
+		};
+		B45FCD3F23B61F3200626D06 /* XYAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				B45FCD4123B61F3200626D06 /* XYAlertView.h */,
+				B45FCD4023B61F3200626D06 /* XYAlertView.m */,
+			);
+			path = XYAlertView;
+			sourceTree = "<group>";
+		};
+		B45FCD4223B61F3200626D06 /* PinYinTool */ = {
+			isa = PBXGroup;
+			children = (
+				B45FCD4323B61F3200626D06 /* XYPinYinTool.h */,
+				B45FCD4423B61F3200626D06 /* XYPinYinTool.m */,
+			);
+			path = PinYinTool;
+			sourceTree = "<group>";
+		};
+		B45FCD4523B61F3200626D06 /* XYActionRecord */ = {
+			isa = PBXGroup;
+			children = (
+				B45FCDDA23B6203B00626D06 /* EventRecord.plist */,
+				B45FCDD223B6203A00626D06 /* PageRecord.plist */,
+				B45FCDD123B6203A00626D06 /* UIControl+XYActionRecord.h */,
+				B45FCDD823B6203B00626D06 /* UIControl+XYActionRecord.m */,
+				B45FCDDC23B6203B00626D06 /* UIResponder+XYActionRecord.h */,
+				B45FCDD323B6203B00626D06 /* UIResponder+XYActionRecord.m */,
+				B45FCDD923B6203B00626D06 /* UIViewController+XYActionRecord.h */,
+				B45FCDD523B6203B00626D06 /* UIViewController+XYActionRecord.m */,
+				B45FCDD623B6203B00626D06 /* XYActionDataAndNetTool.h */,
+				B45FCDD723B6203B00626D06 /* XYActionDataAndNetTool.m */,
+				B45FCDDB23B6203B00626D06 /* XYActionRecord.h */,
+				B45FCDD423B6203B00626D06 /* XYActionRecord.m */,
+			);
+			path = XYActionRecord;
+			sourceTree = "<group>";
+		};
+		B45FCD5223B61F3200626D06 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B45FCE0E23B6230200626D06 /* UIViewController+XYNavigationController.h */,
+				B45FCE1023B6230200626D06 /* UIViewController+XYNavigationController.m */,
+				B45FCE0F23B6230200626D06 /* XYNavigationController.h */,
+				B45FCE1123B6230200626D06 /* XYNavigationController.m */,
+				B45FCD5323B61F3200626D06 /* XYCommon.h */,
+				B45FCD5423B61F3200626D06 /* XYKitMacro.h */,
+				B45FCD5523B61F3200626D06 /* XYCommon.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B45FCDE423B6218B00626D06 /* XYDatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				B45FCDE623B6218B00626D06 /* XYDatePickerView.h */,
+				B45FCDE523B6218B00626D06 /* XYDatePickerView.m */,
+			);
+			path = XYDatePickerView;
+			sourceTree = "<group>";
+		};
+		B45FCDE723B6218B00626D06 /* XYChooseLocationView */ = {
+			isa = PBXGroup;
+			children = (
+				B45FCDFE23B621A500626D06 /* Model */,
+				B45FCE0123B621A500626D06 /* XYChooseLocationView.h */,
+				B45FCE0723B621A500626D06 /* XYChooseLocationView.m */,
+				B45FCE0623B621A500626D06 /* XYLocationBar.h */,
+				B45FCE0223B621A500626D06 /* XYLocationBar.m */,
+				B45FCE0323B621A500626D06 /* XYLocationCell.h */,
+				B45FCE0423B621A500626D06 /* XYLocationCell.m */,
+			);
+			path = XYChooseLocationView;
+			sourceTree = "<group>";
+		};
+		B45FCDF423B6218B00626D06 /* XYPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				B45FCDF523B6218B00626D06 /* XYPickerView.h */,
+				B45FCDF623B6218B00626D06 /* XYPickerView.m */,
+			);
+			path = XYPickerView;
+			sourceTree = "<group>";
+		};
+		B45FCDFE23B621A500626D06 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B45FCDFF23B621A500626D06 /* XYLocation.h */,
+				B45FCE0023B621A500626D06 /* XYLocation.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B4C656B0238178BC00959704 = {
 			isa = PBXGroup;
 			children = (
@@ -79,7 +475,7 @@
 		B4C656BB238178BC00959704 /* myApp */ = {
 			isa = PBXGroup;
 			children = (
-				B43062072382539B00783DDF /* LYLUnicode.m */,
+				B45FCCF823B61F3200626D06 /* XYTools */,
 				B4C656D52381AAD100959704 /* BaseInitial */,
 			);
 			path = myApp;
@@ -173,9 +569,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B45FCDE323B6203B00626D06 /* EventRecord.plist in Resources */,
 				B4C656CC238178BD00959704 /* LaunchScreen.storyboard in Resources */,
 				B4C656C9238178BD00959704 /* Assets.xcassets in Resources */,
+				B45FCDDD23B6203B00626D06 /* PageRecord.plist in Resources */,
+				B45FCDCF23B61FE500626D06 /* icon_star_bg@3x.png in Resources */,
+				B45FCDB223B61FAF00626D06 /* xConfig.plist in Resources */,
+				B45FCDD023B61FE500626D06 /* icon_star@2x.png in Resources */,
+				B45FCDBF23B61FBD00626D06 /* XYPopoverViewController.xib in Resources */,
 				B4C656C7238178BC00959704 /* Main.storyboard in Resources */,
+				B45FCD7023B61F3200626D06 /* XYChooseOrderTimeView.xib in Resources */,
+				B45FCDB323B61FAF00626D06 /* XBUGConfigView.xib in Resources */,
+				B45FCDCC23B61FE500626D06 /* icon_star@3x.png in Resources */,
+				B45FCDCE23B61FE500626D06 /* icon_star_bg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,32 +594,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-myApp/Pods-myApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
-				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
-				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-myApp/Pods-myApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-myApp/Pods-myApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-myApp/Pods-myApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-myApp/Pods-myApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		45A1B58D970D356084F27900 /* [CP] Check Pods Manifest.lock */ = {
@@ -245,11 +634,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B45FCD7623B61F3300626D06 /* XYFileTool.m in Sources */,
+				B45FCD6F23B61F3200626D06 /* XYChooseOrderTimeView.m in Sources */,
+				B45FCDA623B61F8A00626D06 /* NSAttributedString+XYAdd.m in Sources */,
+				B45FCDBE23B61FBD00626D06 /* XYPopoverAnimator.m in Sources */,
+				B45FCE1323B6230200626D06 /* XYNavigationController.m in Sources */,
+				B45FCD7823B61F3300626D06 /* XYPinYinTool.m in Sources */,
+				B45FCE0C23B621A500626D06 /* XYChooseLocationView.m in Sources */,
+				B45FCD9923B61F7A00626D06 /* UIColor+XYAdd.m in Sources */,
+				B45FCDBD23B61FBD00626D06 /* XYPresentationController.m in Sources */,
+				B45FCDAA23B61F8A00626D06 /* NSObject+XYAdd.m in Sources */,
+				B45FCDB423B61FAF00626D06 /* XBUGConfigView.m in Sources */,
 				B4C656C4238178BC00959704 /* ViewController.m in Sources */,
+				B45FCD9A23B61F7A00626D06 /* UIImage+XYAdd.m in Sources */,
+				B45FCD8623B61F6300626D06 /* XYSharePopoverAnimator.m in Sources */,
 				B4C656BE238178BC00959704 /* AppDelegate.m in Sources */,
+				B45FCDFD23B6218B00626D06 /* XYPickerView.m in Sources */,
+				B45FCDE223B6203B00626D06 /* UIControl+XYActionRecord.m in Sources */,
+				B45FCD9623B61F7A00626D06 /* UIButton+XYAdd.m in Sources */,
+				B45FCDA823B61F8A00626D06 /* NSMutableArray+XYAdd.m in Sources */,
+				B45FCE0923B621A500626D06 /* XYLocation.m in Sources */,
+				B45FCD7723B61F3300626D06 /* XYAlertView.m in Sources */,
+				B45FCD9B23B61F7A00626D06 /* UIView+XYAdd.m in Sources */,
+				B45FCE0A23B621A500626D06 /* XYLocationBar.m in Sources */,
+				B45FCD9823B61F7A00626D06 /* UILabel+XYAdd.m in Sources */,
 				B4C656CF238178BD00959704 /* main.m in Sources */,
+				B45FCDA923B61F8A00626D06 /* NSString+XYAdd.m in Sources */,
+				B45FCD9723B61F7A00626D06 /* UIBarButtonItem+XYAdd.m in Sources */,
+				B45FCDA723B61F8A00626D06 /* NSArray+XYAdd.m in Sources */,
+				B45FCDF723B6218B00626D06 /* XYDatePickerView.m in Sources */,
+				B45FCDBC23B61FBD00626D06 /* XYPopoverViewController.m in Sources */,
+				B45FCDDF23B6203B00626D06 /* XYActionRecord.m in Sources */,
+				B45FCD8023B61F3300626D06 /* XYCommon.m in Sources */,
+				B45FCDDE23B6203B00626D06 /* UIResponder+XYActionRecord.m in Sources */,
+				B45FCD8523B61F6300626D06 /* XYSharePresentationController.m in Sources */,
 				B4C656C1238178BC00959704 /* SceneDelegate.m in Sources */,
-				B43062082382539B00783DDF /* LYLUnicode.m in Sources */,
+				B45FCDE123B6203B00626D06 /* XYActionDataAndNetTool.m in Sources */,
+				B45FCDB123B61FAF00626D06 /* XBUGTool.m in Sources */,
+				B45FCE0B23B621A500626D06 /* XYLocationCell.m in Sources */,
+				B45FCDE023B6203B00626D06 /* UIViewController+XYActionRecord.m in Sources */,
+				B45FCE1223B6230200626D06 /* UIViewController+XYNavigationController.m in Sources */,
+				B45FCD9523B61F7A00626D06 /* UITextField+XYAdd.m in Sources */,
+				B45FCDC423B61FCC00626D06 /* XYRequestParam.m in Sources */,
+				B45FCD6C23B61F3200626D06 /* LYLUnicode.m in Sources */,
+				B45FCDCD23B61FE500626D06 /* XYStarView.m in Sources */,
+				B45FCDC523B61FCC00626D06 /* XYHttpTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

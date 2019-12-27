@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>eventID</key>
+		<string>1</string>
+		<key>desc</key>
+		<string>进入选择城市</string>
+		<key>resultObj</key>
+		<data></data>
+	</dict>
+	<dict>
+		<key>eventID</key>
+		<string>2</string>
+		<key>desc</key>
+		<string>选择城市</string>
+		<key>resultObj</key>
+		<data></data>
+	</dict>
+	<dict>
+		<key>eventID</key>
+		<string>3</string>
+		<key>desc</key>
+		<string>我是一个点击无作用的Label,无用户可点击</string>
+		<key>resultObj</key>
+		<data></data>
+	</dict>
+	<dict>
+		<key>eventID</key>
+		<string>4</string>
+		<key>desc</key>
+		<string>我是可用的Label</string>
+		<key>resultObj</key>
+		<data></data>
+	</dict>
+	<dict>
+		<key>eventID</key>
+		<string>5</string>
+		<key>desc</key>
+		<string>我是ImageView</string>
+		<key>resultObj</key>
+		<data></data>
+	</dict>
+	<dict>
+		<key>eventID</key>
+		<string>10</string>
+		<key>desc</key>
+		<string>我是发送数据按钮</string>
+		<key>resultObj</key>
+		<data></data>
+	</dict>
+</array>
+</plist>

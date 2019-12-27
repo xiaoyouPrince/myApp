@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>XBUGKey</key>
+	<true/>
+	<key>LoginMethod</key>
+	<integer>0</integer>
+	<key>projURL</key>
+	<string>http://47.93.126.37/appserver</string>
+	<key>sqBaseURL</key>
+	<string>http://10.0.84.222</string>
+</dict>
+</plist>

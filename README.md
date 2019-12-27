@@ -31,6 +31,10 @@
 - SDWebImage
 - Masonry
 - FMDB
+- IQKeyboardManager
+
+接下来->导航相关...XYKit组件(自己封装的常用库)...不定时更新...
+
 
 #### 需开发者自己添加的服务，按需添加
 
