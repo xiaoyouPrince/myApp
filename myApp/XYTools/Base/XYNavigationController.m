@@ -82,7 +82,8 @@
 {
     if (self.childViewControllers.count) {
         // 返回按钮
-        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem backItemWithimage:[UIImage imageNamed:@"navigationButtonReturn"] highImage:[UIImage imageNamed:@"navigationButtonReturnClick"]  target:self action:@selector(back) title:@"返回"];
+//        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem backItemWithimage:[UIImage imageNamed:@"navigationButtonReturn"] highImage:[UIImage imageNamed:@"navigationButtonReturnClick"]  target:self action:@selector(back) title:@"返回"];
+        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem xy_itemWithTarget:self action:@selector(back) nomalImage:[UIImage imageNamed:@"navigationButtonReturn"] higeLightedImage:[UIImage imageNamed:@"navigationButtonReturnClick"] imageEdgeInsets:UIEdgeInsetsZero];
         viewController.hidesBottomBarWhenPushed = YES;
     }
     

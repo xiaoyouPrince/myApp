@@ -49,7 +49,7 @@ typedef void(^DoneBtnClickBlcok)(XYPickerViewItem *selectedItem);
 - (void)showPicker;
 
 /// 快速创建 Picker 并展示
-/// @param config 要展示picker的基本设置 @n 此处必须要设置picker数据源
+/// @param config 要展示picker的基本设置 @b 此处必须要设置picker数据源
 /// @param result 选择结果回调
 + (instancetype)showPickerWithConfig:(void(^)(XYPickerView *picker))config
                               result:(DoneBtnClickBlcok)result;

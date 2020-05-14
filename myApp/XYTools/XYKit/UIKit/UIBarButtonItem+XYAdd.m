@@ -10,126 +10,76 @@
 
 @implementation UIBarButtonItem (XYAdd)
 
-+ (UIBarButtonItem *)xy_itemWithimage:(UIImage *)image highImage:(UIImage *)highImage target:(id)target action:(SEL)action
-{
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn setImage:image forState:UIControlStateNormal];
-    [btn setImage:highImage forState:UIControlStateHighlighted];
-    [btn sizeToFit];
-    [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    UIView *containView = [[UIView alloc] initWithFrame:btn.bounds];  // 包装成View，防止系统nav扩大响应面积
-    [containView addSubview:btn];
-    
-    return [[UIBarButtonItem alloc] initWithCustomView:containView];
++(UIBarButtonItem *)xy_itemWithTarget:(id)target action:(SEL)action image:(UIImage *)image {
+    return [self xy_itemWithTarget:target action:action nomalImage:image higeLightedImage:nil imageEdgeInsets:UIEdgeInsetsZero];
 }
 
-+ (UIBarButtonItem *)xy_itemWithimage:(UIImage *)image selImage:(UIImage *)selImage target:(id)target action:(SEL)action UIBarButtonDeprecated("iOS 11请使用新方法,shiyogn mj_***")
-{
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn setImage:image forState:UIControlStateNormal];
-    [btn setImage:selImage forState:UIControlStateSelected];
-    [btn sizeToFit];
-    btn.xy_size = CGSizeMake(btn.xy_size.width * 3.5, btn.xy_size.height);
-    [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    UIView *containView = [[UIView alloc] initWithFrame:btn.bounds];
-    [containView addSubview:btn];
-    
-    return [[UIBarButtonItem alloc] initWithCustomView:containView];
++(UIBarButtonItem *)xy_itemWithTarget:(id)target action:(SEL)action image:(UIImage *)image imageEdgeInsets:(UIEdgeInsets)imageEdgeInsets {
+    return [self xy_itemWithTarget:target action:action nomalImage:image higeLightedImage:nil imageEdgeInsets:imageEdgeInsets];
 }
 
-+ (UIBarButtonItem *)xy_backItemWithimage:(UIImage *)image highImage:(UIImage *)highImage target:(id)target action:(SEL)action title:(NSString *)title{
-    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [backButton setTitle:title forState:UIControlStateNormal];
-    [backButton setImage:image forState:UIControlStateNormal];
-    [backButton setImage:highImage forState:UIControlStateHighlighted];
-    [backButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [backButton setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-    [backButton sizeToFit];
-    backButton.contentEdgeInsets = UIEdgeInsetsMake(0, 20, 0, 0);
-    [backButton addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
++(UIBarButtonItem *)xy_itemWithTarget:(id)target
+                            action:(SEL)action
+                        nomalImage:(UIImage *)nomalImage
+                  higeLightedImage:(UIImage *)higeLightedImage
+                   imageEdgeInsets:(UIEdgeInsets)imageEdgeInsets {
     
-    return  [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    
+    [button setImage:[nomalImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+    if (higeLightedImage) {
+        [button setImage:higeLightedImage forState:UIControlStateHighlighted];
+    }
+    [button sizeToFit];
+    if (button.bounds.size.width < 40) {
+        CGFloat width = 40 / button.bounds.size.height * button.bounds.size.width;
+        button.bounds = CGRectMake(0, 0, width, 40);
+    }
+    button.imageEdgeInsets = imageEdgeInsets;
+    return [[UIBarButtonItem alloc] initWithCustomView:button];
+    
 }
 
-
-+ (UIBarButtonItem *)xy_itemWithTarget:(id)target action:(SEL)action title:(NSString *)title{
-    
-//    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:target action:action];
-//    item.tintColor = [UIColor blackColor];
-//
-//    return item;
-    
-    
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn setTitle:title forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-    [btn sizeToFit];
-    [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    UIView *containView = [[UIView alloc] initWithFrame:btn.bounds];
-    [containView addSubview:btn];
-
-    return [[UIBarButtonItem alloc] initWithCustomView:containView];
++(UIBarButtonItem *)xy_itemWithTarget:(id)target action:(SEL)action title:(NSString *)title {
+    return [self xy_itemWithTarget:target action:action title:title font:nil titleColor:nil highlightedColor:nil titleEdgeInsets:UIEdgeInsetsZero];
 }
 
-@end
-
-@implementation UIBarButtonItem (XYAddDeprecated_v_11_0)
-
-+ (UIBarButtonItem *)itemWithimage:(UIImage *)image highImage:(UIImage *)highImage target:(id)target action:(SEL)action
-{
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn setImage:image forState:UIControlStateNormal];
-    [btn setImage:highImage forState:UIControlStateHighlighted];
-    [btn sizeToFit];
-    [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    UIView *containView = [[UIView alloc] initWithFrame:btn.bounds];  // 包装成View，防止系统nav扩大响应面积
-    [containView addSubview:btn];
-    
-    return [[UIBarButtonItem alloc] initWithCustomView:containView];
++(UIBarButtonItem *)xy_itemWithTarget:(id)target action:(SEL)action title:(NSString *)title titleEdgeInsets:(UIEdgeInsets)titleEdgeInsets {
+    return [self xy_itemWithTarget:target action:action title:title font:nil titleColor:nil highlightedColor:nil titleEdgeInsets:titleEdgeInsets];
 }
 
-+ (UIBarButtonItem *)itemWithimage:(UIImage *)image selImage:(UIImage *)selImage target:(id)target action:(SEL)action
-{
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn setImage:image forState:UIControlStateNormal];
-    [btn setImage:selImage forState:UIControlStateSelected];
-    [btn sizeToFit];
-    btn.xy_size = CGSizeMake(btn.xy_size.width * 3.5, btn.xy_size.height);
-    [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    UIView *containView = [[UIView alloc] initWithFrame:btn.bounds];
-    [containView addSubview:btn];
++(UIBarButtonItem *)xy_itemWithTarget:(id)target
+                            action:(SEL)action
+                             title:(NSString *)title
+                              font:(UIFont *)font
+                        titleColor:(UIColor *)titleColor
+                  highlightedColor:(UIColor *)highlightedColor
+                   titleEdgeInsets:(UIEdgeInsets)titleEdgeInsets {
     
-    return [[UIBarButtonItem alloc] initWithCustomView:containView];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    
+    [button setTitle:title forState:UIControlStateNormal];
+    button.titleLabel.font = font?font:nil;
+    [button setTitleColor:titleColor?titleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button setTitleColor:highlightedColor?highlightedColor:nil forState:UIControlStateHighlighted];
+    
+    [button sizeToFit];
+    if (button.bounds.size.width < 40) {
+        CGFloat width = 40 / button.bounds.size.height * button.bounds.size.width;
+        button.bounds = CGRectMake(0, 0, width, 40);
+    }
+    button.titleEdgeInsets = titleEdgeInsets;
+    return [[UIBarButtonItem alloc] initWithCustomView:button];
 }
 
-+ (UIBarButtonItem *)backItemWithimage:(UIImage *)image highImage:(UIImage *)highImage target:(id)target action:(SEL)action title:(NSString *)title{
-    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [backButton setTitle:title forState:UIControlStateNormal];
-    [backButton setImage:image forState:UIControlStateNormal];
-    [backButton setImage:highImage forState:UIControlStateHighlighted];
-    [backButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [backButton setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-    [backButton sizeToFit];
-    backButton.contentEdgeInsets = UIEdgeInsetsMake(0, 20, 0, 0);
-    [backButton addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
++(UIBarButtonItem *)xy_fixedSpaceWithWidth:(CGFloat)width {
     
-    return  [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    UIBarButtonItem *fixedSpace = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    fixedSpace.width = width;
+    return fixedSpace;
 }
 
-
-+ (UIBarButtonItem *)itemWithTarget:(id)target action:(SEL)action title:(NSString *)title{
-    
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn setTitle:title forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-    [btn sizeToFit];
-    [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    UIView *containView = [[UIView alloc] initWithFrame:btn.bounds];
-    [containView addSubview:btn];
-    
-    return [[UIBarButtonItem alloc] initWithCustomView:containView];
-}
 
 @end

@@ -20,12 +20,14 @@ PODS:
   - IQKeyboardManager (6.4.2)
   - Masonry (1.1.0)
   - MJExtension (3.1.2)
-  - MJRefresh (3.2.0)
+  - MJRefresh (3.2.3)
   - SDCycleScrollView (1.80):
     - SDWebImage (>= 5.0.0)
   - SDWebImage (5.1.1):
     - SDWebImage/Core (= 5.1.1)
   - SDWebImage/Core (5.1.1)
+  - XYInfomationSection (0.4.1):
+    - Masonry
 
 DEPENDENCIES:
   - AFNetworking (~> 3.2.1)
@@ -36,6 +38,7 @@ DEPENDENCIES:
   - MJRefresh (~> 3.2.0)
   - SDCycleScrollView
   - SDWebImage (~> 5.1.1)
+  - XYInfomationSection
 
 SPEC REPOS:
   trunk:
@@ -47,6 +50,7 @@ SPEC REPOS:
     - MJRefresh
     - SDCycleScrollView
     - SDWebImage
+    - XYInfomationSection
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -54,10 +58,11 @@ SPEC CHECKSUMS:
   IQKeyboardManager: b41e0a4943fbac4c11a239d31a688667675f962e
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 81e8e411ced318561dd09334b0c83d8227cef79c
-  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  MJRefresh: 2b1214a2dc8f4df4c5dcb028ea2ad4e245425fb7
   SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
   SDWebImage: 96d7f03415ccb28d299d765f93557ff8a617abd8
+  XYInfomationSection: 0458f60797dd88c670cb9970b53a5878eb5cc55d
 
-PODFILE CHECKSUM: 839055231816630c4661e48985167c287765a560
+PODFILE CHECKSUM: af3931b28bd486fd0a1bb82b07819de30a5d3ef1
 
 COCOAPODS: 1.8.4

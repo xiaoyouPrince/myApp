@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import <AFNetworking/AFNetworking.h>
+#import "XYAlertView.h"
+#import "XYKit.h"
 
 @interface ViewController ()
 
@@ -40,12 +42,53 @@
         debugLog(@"error = %@",error);
     }];
     
+    
+    
+//    UIImage *image = [[UIImage imageNamed:@"wk_backIcon"]  imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    UIButton *backBtn = [[UIButton alloc] init];
+//    [backBtn setImage:image forState:UIControlStateNormal];
+//    [backBtn addTarget:self action:@selector(backAction) forControlEvents:UIControlEventTouchUpInside];
+//    UIView *cusBack = [UIView new];
+//    cusBack.backgroundColor = UIColor.redColor;
+//    [cusBack addSubview:backBtn];
+//    cusBack.frame = CGRectMake(0, 0, 30, 44);
+//    backBtn.frame = cusBack.bounds;
+//
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:cusBack];
+//
+//    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+//    [btn setTitle:@"关闭" forState:UIControlStateNormal];
+//    btn.titleLabel.font = [UIFont systemFontOfSize:15];
+//    [btn addTarget:self action:@selector(closeAction) forControlEvents:UIControlEventTouchUpInside];
+//    [btn sizeToFit];
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    
+    
+    UIEdgeInsets inset = UIEdgeInsetsMake(-20, 10, 0, 0);
+    UIEdgeInsets inset2 = UIEdgeInsetsMake(0, -10, 0, 10);
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem xy_itemWithTarget:self action:@selector(backAction) nomalImage:[UIImage imageNamed:@"left"] higeLightedImage:[UIImage imageNamed:@"down"] imageEdgeInsets:inset];
+    
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem xy_itemWithTarget:self action:@selector(closeAction) nomalImage:[UIImage imageNamed:@"down"] higeLightedImage:[UIImage imageNamed:@"right"] imageEdgeInsets:inset2];
+//    self.navigationItem.rightBarButtonItem = [UIBarButtonItem xy_itemWithTarget:self action:@selector(closeAction) title:@"你好" font:[UIFont systemFontOfSize:15] titleColor:UIColor.redColor highlightedColor:UIColor.greenColor titleEdgeInsets:UIEdgeInsetsZero];
+    
+}
+
+- (void)backAction{
+    XYFunc
+}
+
+- (void)closeAction{
+    XYFunc
 }
 
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
     debugLog(@"this is a null project!");
+    
+    
+    [XYAlertView showAlertTitle:@"提示" message:@"目前是一个空项目，请等待" Ok:nil];
+    
 }
 
 @end

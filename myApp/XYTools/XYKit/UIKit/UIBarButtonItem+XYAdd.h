@@ -6,49 +6,99 @@
 //  Copyright © 2017年 XiaoYou. All rights reserved.
 //
 
-#define UIBarButtonDeprecated(instead) NS_DEPRECATED(2_0, 2_0, 2_0, 2_0, instead)
+#define UIBarButtonItemWithImage(action,image_normal,image_high) \
+[UIBarButtonItem xy_itemWithTarget:self action:action nomalImage:image_normal higeLightedImage:image_high imageEdgeInsets:UIEdgeInsetsZero];
+
+#define UIBarButtonItemWithTitle(action,title,font,color_normal,color_high) \
+[UIBarButtonItem xy_itemWithTarget:self action:action title:title font:font titleColor:color_normal highlightedColor:color_high titleEdgeInsets:UIEdgeInsetsZero];
 
 #import <UIKit/UIKit.h>
 
-/*
- 一共四个方法：
- 1. 创建可点击的变效果的item
- 2. 创建返回按钮 <箭头+文字>
- 3. 创建一个只有文字的item
- */
-
 @interface UIBarButtonItem (XYAdd)
 
-/// 快速创建UIBarButtonItem
-+ (UIBarButtonItem *)xy_itemWithimage:(UIImage *)image highImage:(UIImage *)highImage target:(id)target action:(SEL)action;
+/**
+ 根据图片生成UIBarButtonItem
+ 
+ @param target target对象
+ @param action 响应方法
+ @param image image
+ @return 生成的UIBarButtonItem
+ */
++ (UIBarButtonItem *)xy_itemWithTarget:(id)target action:(SEL)action image:(UIImage *)image;
+/**
+ 根据图片生成UIBarButtonItem
+ 
+ @param target target对象
+ @param action 响应方法
+ @param image image
+ @param imageEdgeInsets 图片偏移
+ @return 生成的UIBarButtonItem
+ */
++ (UIBarButtonItem *)xy_itemWithTarget:(id)target action:(SEL)action image:(UIImage *)image imageEdgeInsets:(UIEdgeInsets)imageEdgeInsets;
 
-/// 快速创建选中状态UIBarButtonItem
-+ (UIBarButtonItem *)xy_itemWithimage:(UIImage *)image selImage:(UIImage *)selImage target:(id)target action:(SEL)action;
+/**
+ 根据图片生成UIBarButtonItem
 
-/// 快速创建返回按钮(leftItem)  可设置返回箭头+文字
-+ (UIBarButtonItem *)xy_backItemWithimage:(UIImage *)image highImage:(UIImage *)highImage target:(id)target action:(SEL)action title:(NSString *)title;
+ @param target target对象
+ @param action 响应方法
+ @param nomalImage nomalImage
+ @param higeLightedImage higeLightedImage
+ @param imageEdgeInsets 图片偏移
+ @return 生成的UIBarButtonItem
+ */
++ (UIBarButtonItem *)xy_itemWithTarget:(id)target
+                            action:(SEL)action
+                        nomalImage:(UIImage *)nomalImage
+                  higeLightedImage:(UIImage *)higeLightedImage
+                   imageEdgeInsets:(UIEdgeInsets)imageEdgeInsets;
 
-/// 快速右侧功能按钮(rightItem)  通常为‘操作’、‘确定’等，无图
+
+/**
+ 根据文字生成UIBarButtonItem
+
+ @param target target对象
+ @param action 响应方法
+ @param title title
+ */
 + (UIBarButtonItem *)xy_itemWithTarget:(id)target action:(SEL)action title:(NSString *)title;
 
-@end
+/**
+ 根据文字生成UIBarButtonItem
+ 
+ @param target target对象
+ @param action 响应方法
+ @param title title
+ @param titleEdgeInsets 文字偏移
+ @return 生成的UIBarButtonItem
+ */
++ (UIBarButtonItem *)xy_itemWithTarget:(id)target action:(SEL)action title:(NSString *)title titleEdgeInsets:(UIEdgeInsets)titleEdgeInsets;
 
-@interface UIBarButtonItem (XYAddDeprecated_v_11_0)
+/**
+ 根据文字生成UIBarButtonItem
 
-#define IOS_11_0_DEPRECATED_STR "iOS 11请使用新方法,方法名前添加 xy_***"
-#define DEPRECATED_TIPS UIBarButtonDeprecated(IOS_11_0_DEPRECATED_STR)
+ @param target target对象
+ @param action 响应方法
+ @param title title
+ @param font font
+ @param titleColor 字体颜色
+ @param highlightedColor 高亮颜色
+ @param titleEdgeInsets 文字偏移
+ @return 生成的UIBarButtonItem
+ */
++ (UIBarButtonItem *)xy_itemWithTarget:(id)target
+                            action:(SEL)action
+                             title:(NSString *)title
+                              font:(UIFont *)font
+                        titleColor:(UIColor *)titleColor
+                  highlightedColor:(UIColor *)highlightedColor
+                   titleEdgeInsets:(UIEdgeInsets)titleEdgeInsets;
 
-/// 快速创建UIBarButtonItem
-+ (UIBarButtonItem *)itemWithimage:(UIImage *)image highImage:(UIImage *)highImage target:(id)target action:(SEL)action;
 
-/// 快速创建选中状态UIBarButtonItem
-+ (UIBarButtonItem *)itemWithimage:(UIImage *)image selImage:(UIImage *)selImage target:(id)target action:(SEL)action DEPRECATED_TIPS;
+/**
+ 用作修正位置的UIBarButtonItem
 
-/// 快速创建返回按钮(leftItem)  可设置返回箭头+文字
-+ (UIBarButtonItem *)backItemWithimage:(UIImage *)image highImage:(UIImage *)highImage target:(id)target action:(SEL)action title:(NSString *)title DEPRECATED_TIPS;
-
-/// 快速右侧功能按钮(rightItem)  通常为‘操作’、‘确定’等，无图
-+ (UIBarButtonItem *)itemWithTarget:(id)target action:(SEL)action title:(NSString *)title DEPRECATED_TIPS;
-
-#undef DEPRECATED_TIPS
+ @param width 修正宽度
+ @return 修正位置的UIBarButtonItem
+ */
++ (UIBarButtonItem *)xy_fixedSpaceWithWidth:(CGFloat)width;
 @end
