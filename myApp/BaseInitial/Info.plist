@@ -21,7 +21,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSHealthShareUsageDescription</key>
-	<string>需要您的同意，才能访问健康更新，给您带来更好的服务,此处仅读取</string>
+	<string>需要您的同意，才能访问健康更新，给您带来更好的服务</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>需要您的同意，才能访问健康更新，给您带来更好的服务</string>
 	<key>UIApplicationSceneManifest</key>

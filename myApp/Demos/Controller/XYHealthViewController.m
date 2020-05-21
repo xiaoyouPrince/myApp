@@ -31,7 +31,15 @@
 
 - (IBAction)authBtnClick:(id)sender {
     
-    
+    [XYHealthKitTool getTodayTotalStepCountHandler:^(NSInteger totalCount, NSError * _Nullable error) {
+        
+        if (error) {
+            self.authLabel.text = [NSString stringWithFormat:@"%@",error.domain];
+        }else
+        {
+            self.authLabel.text = @"用户许可";
+        }
+    }];
     
     
 }

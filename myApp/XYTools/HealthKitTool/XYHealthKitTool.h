@@ -18,6 +18,8 @@
     NSHealthShareUsageDescription ： 描述读取数据Key
     NSHealthUpdateUsageDescription ： 描述写入的Key
  
+    需要您的同意，才能访问健康更新，给您带来更好的服务
+ 
  */
 
 
