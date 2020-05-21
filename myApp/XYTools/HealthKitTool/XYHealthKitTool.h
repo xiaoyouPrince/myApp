@@ -20,6 +20,18 @@
  
     需要您的同意，才能访问健康更新，给您带来更好的服务
  
+ 3. Usage:
+ 
+    [XYHealthKitTool getTodayTotalStepCountHandler:^(NSInteger totalCount, NSError * _Nullable error) {
+        
+        if (error) {
+            self.stepLabel.text = [NSString stringWithFormat:@"error = %@",error.domain];
+        }else
+        {
+            self.stepLabel.text = [NSString stringWithFormat:@"一共%zd步",totalCount];
+        }
+    }];
+ 
  */
 
 

@@ -35,6 +35,25 @@
     }
 }
 
++ (void)handleRequstOrNotWithStatus:(HKAuthorizationStatus)status handler:(StepCountHandler)handler
+{
+    if (status == HKAuthorizationStatusSharingDenied) {
+        
+        // 用户拒绝
+        if (handler) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                handler(0,[NSError errorWithDomain:@"用户拒绝" code:0 userInfo:nil]);
+           });
+        }
+    }
+    
+    if (status == HKAuthorizationStatusSharingAuthorized) {
+        
+        // 用户许可，直接请求
+        [self getStepCountWithHandler:handler];
+    }
+}
+
 + (void)getStepCountWithHandler:(StepCountHandler)handler {
     
     NSCalendar *calendar = [NSCalendar currentCalendar];
@@ -94,11 +113,17 @@
             NSSet *types = [[NSSet alloc] initWithObjects:type, nil];
             [self.healthStore requestAuthorizationToShareTypes:types readTypes:types completion:^(BOOL success, NSError * _Nullable error) {
               
-                if (success) {
-                    // 请求步数
-                    [self getStepCountWithHandler:handler];
+                if (success) { // 成功处理完成请求，判断最新状态
+                    HKObjectType *type = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierStepCount];
+                    HKAuthorizationStatus status = [self.healthStore authorizationStatusForType:type];
+                    
+                    if (status != HKAuthorizationStatusNotDetermined){
+                        // 直接处理是否授权
+                        [self handleRequstOrNotWithStatus:status handler:handler];
+                    }
+                    
                 }else
-                {
+                { // 请求本身发生异常失败
                     if (handler) {
                         dispatch_async(dispatch_get_main_queue(), ^{
                             handler(0,error);
@@ -106,22 +131,10 @@
                     }
                 }
             }];
-        }
-        
-        if (status == HKAuthorizationStatusSharingDenied) {
-            
-            // 用户拒绝
-            if (handler) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    handler(0,[NSError errorWithDomain:@"用户拒绝" code:0 userInfo:nil]);
-               });
-            }
-        }
-        
-        if (status == HKAuthorizationStatusSharingAuthorized) {
-            
-            // 用户许可，直接请求
-            [self getStepCountWithHandler:handler];
+        }else
+        {
+            // 直接处理是否授权
+            [self handleRequstOrNotWithStatus:status handler:handler];
         }
         
     }else
@@ -133,5 +146,7 @@
         }
     }
 }
+
+
 
 @end
