@@ -10,6 +10,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import "XYAlertView.h"
 #import "XYKit.h"
+#import "XYDemoListController.h"
 
 @interface ViewController ()
 
@@ -71,10 +72,23 @@
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem xy_itemWithTarget:self action:@selector(closeAction) nomalImage:[UIImage imageNamed:@"down"] higeLightedImage:[UIImage imageNamed:@"right"] imageEdgeInsets:inset2];
 //    self.navigationItem.rightBarButtonItem = [UIBarButtonItem xy_itemWithTarget:self action:@selector(closeAction) title:@"你好" font:[UIFont systemFontOfSize:15] titleColor:UIColor.redColor highlightedColor:UIColor.greenColor titleEdgeInsets:UIEdgeInsetsZero];
     
+    
+    
+    
+    
+    
+    
 }
 
 - (void)backAction{
     XYFunc
+    
+    
+    
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"wbenefit.fesco.com.cn://"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"wxser.fesco.com.cn://"]];
+    
+    
 }
 
 - (void)closeAction{
@@ -84,10 +98,21 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    debugLog(@"this is a null project!");
+//    debugLog(@"this is a null project!");
+//
+//    BOOL myBool = YES;
+//    NSString *name;
+//    if (myBool) {
+//        name = @"是真的";
+//    }else{
+//        name = @"是假的";
+//    }
+//
+//    [XYAlertView showAlertTitle:name message:@"目前是一个空项目，请等待" Ok:nil];
     
     
-    [XYAlertView showAlertTitle:@"提示" message:@"目前是一个空项目，请等待" Ok:nil];
+    XYDemoListController *detail = [XYDemoListController new];
+    [self.navigationController pushViewController:detail animated:YES];
     
 }
 

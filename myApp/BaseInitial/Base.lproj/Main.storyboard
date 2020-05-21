@@ -18,7 +18,19 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击进入项目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vj-Ro-Ssm">
+                                <rect key="frame" x="155" y="437.5" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3vj-Ro-Ssm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="S4y-A9-V7N"/>
+                            <constraint firstItem="3vj-Ro-Ssm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pIj-Fg-MDm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RCX-kP-bpS"/>
                 </viewController>

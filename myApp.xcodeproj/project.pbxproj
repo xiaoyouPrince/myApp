@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		541B685DF6C43D8009A8161C /* Pods_myApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC881613FB68E0CC860311D1 /* Pods_myApp.framework */; };
+		B40C02BD2476122B00D9AE82 /* XYHealthKitTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B40C02BC2476122B00D9AE82 /* XYHealthKitTool.m */; };
 		B45FCD6C23B61F3200626D06 /* LYLUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCD2923B61F3200626D06 /* LYLUnicode.m */; };
 		B45FCD6F23B61F3200626D06 /* XYChooseOrderTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCD3223B61F3200626D06 /* XYChooseOrderTimeView.m */; };
 		B45FCD7023B61F3200626D06 /* XYChooseOrderTimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45FCD3323B61F3200626D06 /* XYChooseOrderTimeView.xib */; };
@@ -66,10 +67,16 @@
 		B4C656C9238178BD00959704 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C656C8238178BD00959704 /* Assets.xcassets */; };
 		B4C656CC238178BD00959704 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C656CA238178BD00959704 /* LaunchScreen.storyboard */; };
 		B4C656CF238178BD00959704 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C656CE238178BD00959704 /* main.m */; };
+		B4D9311F247515480013E550 /* XYDemoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D9311E247515480013E550 /* XYDemoListController.m */; };
+		B4D93123247533490013E550 /* XYHealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D93121247533490013E550 /* XYHealthViewController.m */; };
+		B4D93124247533490013E550 /* XYHealthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D93122247533490013E550 /* XYHealthViewController.xib */; };
+		B4EE4A85247573B500ADC571 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4EE4A84247573B500ADC571 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		667BB2AC3A9171C2A3047EA8 /* Pods-myApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-myApp/Pods-myApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B40C02BB2476122B00D9AE82 /* XYHealthKitTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHealthKitTool.h; sourceTree = "<group>"; };
+		B40C02BC2476122B00D9AE82 /* XYHealthKitTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHealthKitTool.m; sourceTree = "<group>"; };
 		B45FCD1923B61F3200626D06 /* XYKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYKit.h; sourceTree = "<group>"; };
 		B45FCD2923B61F3200626D06 /* LYLUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLUnicode.m; sourceTree = "<group>"; };
 		B45FCD3123B61F3200626D06 /* XYChooseOrderTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYChooseOrderTimeView.h; sourceTree = "<group>"; };
@@ -177,6 +184,13 @@
 		B4C656CD238178BD00959704 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4C656CE238178BD00959704 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4C656D62381AB8F00959704 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		B4D9311D247515480013E550 /* XYDemoListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYDemoListController.h; sourceTree = "<group>"; };
+		B4D9311E247515480013E550 /* XYDemoListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYDemoListController.m; sourceTree = "<group>"; };
+		B4D93120247533490013E550 /* XYHealthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHealthViewController.h; sourceTree = "<group>"; };
+		B4D93121247533490013E550 /* XYHealthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHealthViewController.m; sourceTree = "<group>"; };
+		B4D93122247533490013E550 /* XYHealthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYHealthViewController.xib; sourceTree = "<group>"; };
+		B4EE4A83247573B500ADC571 /* myApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = myApp.entitlements; sourceTree = "<group>"; };
+		B4EE4A84247573B500ADC571 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		C2F5745F88AFD10F042E2A92 /* Pods-myApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-myApp/Pods-myApp.release.xcconfig"; sourceTree = "<group>"; };
 		EC881613FB68E0CC860311D1 /* Pods_myApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -187,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				541B685DF6C43D8009A8161C /* Pods_myApp.framework in Frameworks */,
+				B4EE4A85247573B500ADC571 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,14 +211,25 @@
 		440DFE5D76A649CC9660992B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B4EE4A84247573B500ADC571 /* HealthKit.framework */,
 				EC881613FB68E0CC860311D1 /* Pods_myApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B40C02BA2476120F00D9AE82 /* HealthKitTool */ = {
+			isa = PBXGroup;
+			children = (
+				B40C02BB2476122B00D9AE82 /* XYHealthKitTool.h */,
+				B40C02BC2476122B00D9AE82 /* XYHealthKitTool.m */,
+			);
+			path = HealthKitTool;
+			sourceTree = "<group>";
+		};
 		B45FCCF823B61F3200626D06 /* XYTools */ = {
 			isa = PBXGroup;
 			children = (
+				B40C02BA2476120F00D9AE82 /* HealthKitTool */,
 				B45FCD3E23B61F3200626D06 /* XYHeader.h */,
 				B45FCCF923B61F3200626D06 /* XYSharePopover */,
 				B45FCCFE23B61F3200626D06 /* XYKit */,
@@ -475,6 +501,8 @@
 		B4C656BB238178BC00959704 /* myApp */ = {
 			isa = PBXGroup;
 			children = (
+				B4EE4A83247573B500ADC571 /* myApp.entitlements */,
+				B4D93119247514E70013E550 /* Demos */,
 				B45FCCF823B61F3200626D06 /* XYTools */,
 				B4C656D52381AAD100959704 /* BaseInitial */,
 			);
@@ -498,6 +526,42 @@
 				B4C656D62381AB8F00959704 /* PrefixHeader.pch */,
 			);
 			path = BaseInitial;
+			sourceTree = "<group>";
+		};
+		B4D93119247514E70013E550 /* Demos */ = {
+			isa = PBXGroup;
+			children = (
+				B4D9311C247515080013E550 /* Model */,
+				B4D9311B247514FD0013E550 /* Controller */,
+				B4D9311A247514F20013E550 /* View */,
+			);
+			path = Demos;
+			sourceTree = "<group>";
+		};
+		B4D9311A247514F20013E550 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4D9311B247514FD0013E550 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B4D9311D247515480013E550 /* XYDemoListController.h */,
+				B4D9311E247515480013E550 /* XYDemoListController.m */,
+				B4D93120247533490013E550 /* XYHealthViewController.h */,
+				B4D93121247533490013E550 /* XYHealthViewController.m */,
+				B4D93122247533490013E550 /* XYHealthViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B4D9311C247515080013E550 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CA94C160FA574E14DE76F048 /* Pods */ = {
@@ -578,6 +642,7 @@
 				B45FCDD023B61FE500626D06 /* icon_star@2x.png in Resources */,
 				B45FCDBF23B61FBD00626D06 /* XYPopoverViewController.xib in Resources */,
 				B4C656C7238178BC00959704 /* Main.storyboard in Resources */,
+				B4D93124247533490013E550 /* XYHealthViewController.xib in Resources */,
 				B45FCD7023B61F3200626D06 /* XYChooseOrderTimeView.xib in Resources */,
 				B45FCDB323B61FAF00626D06 /* XBUGConfigView.xib in Resources */,
 				B45FCDCC23B61FE500626D06 /* icon_star@3x.png in Resources */,
@@ -659,8 +724,10 @@
 				B45FCE0A23B621A500626D06 /* XYLocationBar.m in Sources */,
 				B45FCD9823B61F7A00626D06 /* UILabel+XYAdd.m in Sources */,
 				B4C656CF238178BD00959704 /* main.m in Sources */,
+				B40C02BD2476122B00D9AE82 /* XYHealthKitTool.m in Sources */,
 				B45FCDA923B61F8A00626D06 /* NSString+XYAdd.m in Sources */,
 				B45FCD9723B61F7A00626D06 /* UIBarButtonItem+XYAdd.m in Sources */,
+				B4D93123247533490013E550 /* XYHealthViewController.m in Sources */,
 				B45FCDA723B61F8A00626D06 /* NSArray+XYAdd.m in Sources */,
 				B45FCDF723B6218B00626D06 /* XYDatePickerView.m in Sources */,
 				B45FCDBC23B61FBD00626D06 /* XYPopoverViewController.m in Sources */,
@@ -669,6 +736,7 @@
 				B45FCDDE23B6203B00626D06 /* UIResponder+XYActionRecord.m in Sources */,
 				B45FCD8523B61F6300626D06 /* XYSharePresentationController.m in Sources */,
 				B4C656C1238178BC00959704 /* SceneDelegate.m in Sources */,
+				B4D9311F247515480013E550 /* XYDemoListController.m in Sources */,
 				B45FCDE123B6203B00626D06 /* XYActionDataAndNetTool.m in Sources */,
 				B45FCDB123B61FAF00626D06 /* XBUGTool.m in Sources */,
 				B45FCE0B23B621A500626D06 /* XYLocationCell.m in Sources */,
@@ -819,13 +887,14 @@
 			baseConfigurationReference = 667BB2AC3A9171C2A3047EA8 /* Pods-myApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = myApp/myApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J9CJUEB6H8;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = myApp/BaseInitial/PrefixHeader.pch;
 				INFOPLIST_FILE = myApp/BaseInitial/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -841,13 +910,14 @@
 			baseConfigurationReference = C2F5745F88AFD10F042E2A92 /* Pods-myApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = myApp/myApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J9CJUEB6H8;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = myApp/BaseInitial/PrefixHeader.pch;
 				INFOPLIST_FILE = myApp/BaseInitial/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
