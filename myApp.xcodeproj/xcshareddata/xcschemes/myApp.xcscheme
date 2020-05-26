@@ -50,6 +50,13 @@
             ReferencedContainer = "container:myApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <AdditionalOptions>
+         <AdditionalOption
+            key = "MallocStackLogging"
+            value = ""
+            isEnabled = "YES">
+         </AdditionalOption>
+      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -72,7 +79,7 @@
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

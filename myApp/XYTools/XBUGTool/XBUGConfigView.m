@@ -72,11 +72,11 @@
         XYAlertAction *action = [XYAlertAction modelWithTitle:@"https://api2.fescotech.com/appserver" value:nil];
         XYAlertAction *action1 = [XYAlertAction modelWithTitle:@"http://47.93.126.37/appserver" value:nil];
         NSArray *array = @[action,action1];
-        [XYAlertView showSheetTitle:@"选择项目地址" message:nil actions:array actionHandler:^(NSInteger index) {
-            XYAlertAction *action = array[index];
-            
-            textField.text = action.title;
-        }];
+//        [XYAlertView showSheetTitle:@"选择项目地址" message:nil actions:array actionHandler:^(NSInteger index) {
+//            XYAlertAction *action = array[index];
+//
+//            textField.text = action.title;
+//        }];
     }
     
     if (textField == self.bookcarUrlTF) { // 子项目根地址
@@ -85,11 +85,11 @@
         XYAlertAction *action1 = [XYAlertAction modelWithTitle:@"http://47.93.126.37" value:nil];
         XYAlertAction *action2 = [XYAlertAction modelWithTitle:@"http://10.0.84.222" value:nil];
         NSArray *array = @[action,action1,action2];
-        [XYAlertView showSheetTitle:@"选择首汽地址" message:nil actions:array actionHandler:^(NSInteger index) {
-            XYAlertAction *action = array[index];
-            
-            textField.text = action.title;
-        }];
+//        [XYAlertView showSheetTitle:@"选择首汽地址" message:nil actions:array actionHandler:^(NSInteger index) {
+//            XYAlertAction *action = array[index];
+//            
+//            textField.text = action.title;
+//        }];
     }
     
     return NO;

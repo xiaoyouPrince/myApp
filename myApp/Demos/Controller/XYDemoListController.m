@@ -35,10 +35,14 @@
     self.view.backgroundColor = XYGrayColor(246);
     self.title = @"DEMO";
     
-    XYInfomationItem *item = [XYInfomationItem modelWithTitle:@"健康App" titleKey:@"XYHealthViewController" type:XYInfoCellTypeChoose value:@" " placeholderValue:@"" disableUserAction:YES];
+    XYInfomationItem *item = [XYInfomationItem modelWithTitle:@"健康App" titleKey:@"XYHealthViewController" type:XYInfoCellTypeChoose value:@"展示请求步数数据" placeholderValue:@"" disableUserAction:YES];
     
+    XYInfomationItem *item2 = [XYInfomationItem modelWithTitle:@"推送权限" titleKey:@"XYHealthViewController" type:XYInfoCellTypeChoose value:@"展示需要推送权限" placeholderValue:@"" disableUserAction:YES];
+    
+    
+
     XYInfomationSection *section = [XYInfomationSection new];
-    section.dataArray = @[item];
+    section.dataArray = @[item,item2];
 
     [self setHeaderView:section edgeInsets:UIEdgeInsetsMake(15, 15, 0, 15)];
     
