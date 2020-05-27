@@ -60,6 +60,7 @@
 		B45FCE0C23B621A500626D06 /* XYChooseLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCE0723B621A500626D06 /* XYChooseLocationView.m */; };
 		B45FCE1223B6230200626D06 /* UIViewController+XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCE1023B6230200626D06 /* UIViewController+XYNavigationController.m */; };
 		B45FCE1323B6230200626D06 /* XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCE1123B6230200626D06 /* XYNavigationController.m */; };
+		B4B01421247E15710099B0D6 /* XYUserNotificationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B01420247E15710099B0D6 /* XYUserNotificationTool.m */; };
 		B4C656BE238178BC00959704 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C656BD238178BC00959704 /* AppDelegate.m */; };
 		B4C656C1238178BC00959704 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C656C0238178BC00959704 /* SceneDelegate.m */; };
 		B4C656C4238178BC00959704 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C656C3238178BC00959704 /* ViewController.m */; };
@@ -173,6 +174,8 @@
 		B45FCE0F23B6230200626D06 /* XYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNavigationController.h; sourceTree = "<group>"; };
 		B45FCE1023B6230200626D06 /* UIViewController+XYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XYNavigationController.m"; sourceTree = "<group>"; };
 		B45FCE1123B6230200626D06 /* XYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYNavigationController.m; sourceTree = "<group>"; };
+		B4B0141F247E15710099B0D6 /* XYUserNotificationTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYUserNotificationTool.h; sourceTree = "<group>"; };
+		B4B01420247E15710099B0D6 /* XYUserNotificationTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYUserNotificationTool.m; sourceTree = "<group>"; };
 		B4C656B9238178BC00959704 /* myApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C656BC238178BC00959704 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B4C656BD238178BC00959704 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -234,6 +237,7 @@
 		B45FCCF823B61F3200626D06 /* XYTools */ = {
 			isa = PBXGroup;
 			children = (
+				B4B0141E247E15210099B0D6 /* PushServiceTool */,
 				B40C02BA2476120F00D9AE82 /* HealthKitTool */,
 				B45FCD3E23B61F3200626D06 /* XYHeader.h */,
 				B45FCCF923B61F3200626D06 /* XYSharePopover */,
@@ -485,6 +489,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B4B0141E247E15210099B0D6 /* PushServiceTool */ = {
+			isa = PBXGroup;
+			children = (
+				B4B0141F247E15710099B0D6 /* XYUserNotificationTool.h */,
+				B4B01420247E15710099B0D6 /* XYUserNotificationTool.m */,
+			);
+			path = PushServiceTool;
+			sourceTree = "<group>";
+		};
 		B4C656B0238178BC00959704 = {
 			isa = PBXGroup;
 			children = (
@@ -722,6 +735,7 @@
 				B45FCDB423B61FAF00626D06 /* XBUGConfigView.m in Sources */,
 				B4C656C4238178BC00959704 /* ViewController.m in Sources */,
 				B45FCD9A23B61F7A00626D06 /* UIImage+XYAdd.m in Sources */,
+				B4B01421247E15710099B0D6 /* XYUserNotificationTool.m in Sources */,
 				B45FCD8623B61F6300626D06 /* XYSharePopoverAnimator.m in Sources */,
 				B4C656BE238178BC00959704 /* AppDelegate.m in Sources */,
 				B45FCDFD23B6218B00626D06 /* XYPickerView.m in Sources */,
