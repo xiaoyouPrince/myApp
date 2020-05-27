@@ -39,7 +39,10 @@
                                                          }
                                                      }];
     [av addAction:actionOK];
-    [currentVC presentViewController:av animated:YES completion:nil];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [currentVC presentViewController:av animated:YES completion:nil];
+    });
 }
 
 /// 两个选择的alert <OK/Cancel>
@@ -72,7 +75,11 @@
                                                          }];
     [av addAction:actionOK];
     [av addAction:actionCancel];
-    [currentVC presentViewController:av animated:YES completion:nil];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [currentVC presentViewController:av animated:YES completion:nil];
+    });
+    
 }
 
 #pragma mark - showSheet
@@ -104,7 +111,9 @@
         [av addAction:uiaction];
     }
     
-    [currentVC presentViewController:av animated:YES completion:nil];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [currentVC presentViewController:av animated:YES completion:nil];
+    });
 }
 
 

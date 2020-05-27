@@ -99,11 +99,11 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
 
-    [XYAlertView showAlertOnVC:self
-                         title:@"提示"
-                       message:@"目前是一个空项目，请等待"
-                       okTitle:@"好的"
-                            Ok:nil];
+//    [XYAlertView showAlertOnVC:self
+//                         title:@"提示"
+//                       message:@"目前是一个空项目，请等待"
+//                       okTitle:@"好的"
+//                            Ok:nil];
     
     
     XYDemoListController *detail = [XYDemoListController new];

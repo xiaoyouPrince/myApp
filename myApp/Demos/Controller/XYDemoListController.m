@@ -37,7 +37,7 @@
     
     XYInfomationItem *item = [XYInfomationItem modelWithTitle:@"健康App" titleKey:@"XYHealthViewController" type:XYInfoCellTypeChoose value:@"展示请求步数数据" placeholderValue:@"" disableUserAction:YES];
     
-    XYInfomationItem *item2 = [XYInfomationItem modelWithTitle:@"推送权限" titleKey:@"XYHealthViewController" type:XYInfoCellTypeChoose value:@"展示需要推送权限" placeholderValue:@"" disableUserAction:YES];
+    XYInfomationItem *item2 = [XYInfomationItem modelWithTitle:@"推送权限" titleKey:@"XYPushViewController" type:XYInfoCellTypeChoose value:@"展示需要推送权限" placeholderValue:@"" disableUserAction:YES];
     
     
 

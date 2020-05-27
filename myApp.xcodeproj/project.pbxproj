@@ -67,6 +67,8 @@
 		B4C656C9238178BD00959704 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C656C8238178BD00959704 /* Assets.xcassets */; };
 		B4C656CC238178BD00959704 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C656CA238178BD00959704 /* LaunchScreen.storyboard */; };
 		B4C656CF238178BD00959704 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C656CE238178BD00959704 /* main.m */; };
+		B4C829F2247CFFCA00B5F13F /* XYPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C829F0247CFFCA00B5F13F /* XYPushViewController.m */; };
+		B4C829F3247CFFCA00B5F13F /* XYPushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4C829F1247CFFCA00B5F13F /* XYPushViewController.xib */; };
 		B4D9311F247515480013E550 /* XYDemoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D9311E247515480013E550 /* XYDemoListController.m */; };
 		B4D93123247533490013E550 /* XYHealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D93121247533490013E550 /* XYHealthViewController.m */; };
 		B4D93124247533490013E550 /* XYHealthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D93122247533490013E550 /* XYHealthViewController.xib */; };
@@ -184,6 +186,9 @@
 		B4C656CD238178BD00959704 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4C656CE238178BD00959704 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B4C656D62381AB8F00959704 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		B4C829EF247CFFCA00B5F13F /* XYPushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPushViewController.h; sourceTree = "<group>"; };
+		B4C829F0247CFFCA00B5F13F /* XYPushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPushViewController.m; sourceTree = "<group>"; };
+		B4C829F1247CFFCA00B5F13F /* XYPushViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYPushViewController.xib; sourceTree = "<group>"; };
 		B4D9311D247515480013E550 /* XYDemoListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYDemoListController.h; sourceTree = "<group>"; };
 		B4D9311E247515480013E550 /* XYDemoListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYDemoListController.m; sourceTree = "<group>"; };
 		B4D93120247533490013E550 /* XYHealthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHealthViewController.h; sourceTree = "<group>"; };
@@ -553,6 +558,9 @@
 				B4D93120247533490013E550 /* XYHealthViewController.h */,
 				B4D93121247533490013E550 /* XYHealthViewController.m */,
 				B4D93122247533490013E550 /* XYHealthViewController.xib */,
+				B4C829EF247CFFCA00B5F13F /* XYPushViewController.h */,
+				B4C829F0247CFFCA00B5F13F /* XYPushViewController.m */,
+				B4C829F1247CFFCA00B5F13F /* XYPushViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -634,6 +642,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B45FCDE323B6203B00626D06 /* EventRecord.plist in Resources */,
+				B4C829F3247CFFCA00B5F13F /* XYPushViewController.xib in Resources */,
 				B4C656CC238178BD00959704 /* LaunchScreen.storyboard in Resources */,
 				B4C656C9238178BD00959704 /* Assets.xcassets in Resources */,
 				B45FCDDD23B6203B00626D06 /* PageRecord.plist in Resources */,
@@ -709,6 +718,7 @@
 				B45FCD9923B61F7A00626D06 /* UIColor+XYAdd.m in Sources */,
 				B45FCDBD23B61FBD00626D06 /* XYPresentationController.m in Sources */,
 				B45FCDAA23B61F8A00626D06 /* NSObject+XYAdd.m in Sources */,
+				B4C829F2247CFFCA00B5F13F /* XYPushViewController.m in Sources */,
 				B45FCDB423B61FAF00626D06 /* XBUGConfigView.m in Sources */,
 				B4C656C4238178BC00959704 /* ViewController.m in Sources */,
 				B45FCD9A23B61F7A00626D06 /* UIImage+XYAdd.m in Sources */,
