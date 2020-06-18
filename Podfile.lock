@@ -26,6 +26,7 @@ PODS:
   - SDWebImage (5.1.1):
     - SDWebImage/Core (= 5.1.1)
   - SDWebImage/Core (5.1.1)
+  - SVProgressHUD (2.2.5)
   - XYInfomationSection (0.4.1):
     - Masonry
 
@@ -38,6 +39,7 @@ DEPENDENCIES:
   - MJRefresh (~> 3.2.0)
   - SDCycleScrollView
   - SDWebImage (~> 5.1.1)
+  - SVProgressHUD
   - XYInfomationSection
 
 SPEC REPOS:
@@ -50,6 +52,7 @@ SPEC REPOS:
     - MJRefresh
     - SDCycleScrollView
     - SDWebImage
+    - SVProgressHUD
     - XYInfomationSection
 
 SPEC CHECKSUMS:
@@ -61,8 +64,9 @@ SPEC CHECKSUMS:
   MJRefresh: 2b1214a2dc8f4df4c5dcb028ea2ad4e245425fb7
   SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
   SDWebImage: 96d7f03415ccb28d299d765f93557ff8a617abd8
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   XYInfomationSection: 0458f60797dd88c670cb9970b53a5878eb5cc55d
 
-PODFILE CHECKSUM: af3931b28bd486fd0a1bb82b07819de30a5d3ef1
+PODFILE CHECKSUM: 3d07cc07f5c6894dd2046f410eb43cd2ea546895
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.3

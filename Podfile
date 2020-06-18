@@ -16,6 +16,7 @@ target 'myApp' do
   pod 'MJRefresh', '~> 3.2.0'
   pod 'IQKeyboardManager', '~> 6.4.2'
   pod 'SDCycleScrollView'
+  pod 'SVProgressHUD'
   pod 'XYInfomationSection'
 
 end

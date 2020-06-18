@@ -39,16 +39,19 @@
     
     XYInfomationItem *item2 = [XYInfomationItem modelWithTitle:@"推送权限" titleKey:@"XYPushViewController" type:XYInfoCellTypeChoose value:@"展示需要推送权限" placeholderValue:@"" disableUserAction:YES];
     
-    
+    XYInfomationItem *item3 = [XYInfomationItem modelWithTitle:@"KVO" titleKey:@"WebViewController" type:XYInfoCellTypeChoose value:@"KVO 实现原理" placeholderValue:@"https://www.baidu.com" disableUserAction:YES];
 
     XYInfomationSection *section = [XYInfomationSection new];
-    section.dataArray = @[item,item2];
+    section.dataArray = @[item,item2,item3];
 
     [self setHeaderView:section edgeInsets:UIEdgeInsetsMake(15, 15, 0, 15)];
     
     section.cellClickBlock = ^(NSInteger index, XYInfomationCell * _Nonnull cell) {
         Class clz = NSClassFromString(cell.model.titleKey);
         UIViewController *vc = [clz new];
+        if ([cell.model.titleKey containsString:@"WebView"]) {
+            [vc setValue:cell.model.placeholderValue forKey:@"urlString"];
+        }
         [self.navigationController pushViewController:vc animated:YES];
     };
 }

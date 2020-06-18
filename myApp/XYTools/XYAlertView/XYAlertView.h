@@ -5,6 +5,7 @@
 //  Created by 渠晓友 on 2018/2/1.
 //  Copyright © 2018年 XiaoYou. All rights reserved.
 //
+//  内部是线程安全的，可以在网络加载完成后的子线程直接使用，内部会做处理
 
 #import <Foundation/Foundation.h>
 

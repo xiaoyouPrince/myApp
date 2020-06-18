@@ -20,6 +20,23 @@
 
 @implementation XYAlertView
 
+void xy_doinMainThread(void(^block)(void)){
+    
+    if (!block) {
+        return;
+    }
+    
+    if ([NSThread isMainThread]) {
+        block();
+    }else
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            block();
+        });
+    }
+}
+
+
 /// 只是一个通知类型的alert
 + (void)showAlertOnVC:(UIViewController *)currentVC
                 title:(NSString *)title
@@ -40,7 +57,7 @@
                                                      }];
     [av addAction:actionOK];
     
-    dispatch_async(dispatch_get_main_queue(), ^{
+    xy_doinMainThread(^{
         [currentVC presentViewController:av animated:YES completion:nil];
     });
 }
@@ -76,10 +93,9 @@
     [av addAction:actionOK];
     [av addAction:actionCancel];
     
-    dispatch_async(dispatch_get_main_queue(), ^{
+    xy_doinMainThread(^{
         [currentVC presentViewController:av animated:YES completion:nil];
     });
-    
 }
 
 #pragma mark - showSheet
@@ -111,7 +127,7 @@
         [av addAction:uiaction];
     }
     
-    dispatch_async(dispatch_get_main_queue(), ^{
+    xy_doinMainThread(^{
         [currentVC presentViewController:av animated:YES completion:nil];
     });
 }
