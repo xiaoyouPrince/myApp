@@ -32,6 +32,15 @@
     // UI
     [self buildUI];
     
+    self.name = @"nihao";
+    
+    
+    NSArray *keys = @[@"title",@"name"];
+    NSDictionary *dict = [self dictionaryWithValuesForKeys:keys];
+    NSLog(@"dict = %@",dict);
+    
+    
+    [self valueForKey:@"title"];
         
 }
 
