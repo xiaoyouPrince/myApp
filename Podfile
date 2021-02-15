@@ -1,6 +1,6 @@
 source 'https://cdn.cocoapods.org/'
 
-platform :ios, '8.0'
+platform :ios, '9.0'
 
 target 'myApp' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
