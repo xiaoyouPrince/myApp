@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    XYWeakSelf
     self.view.backgroundColor = HEXCOLOR(0xf0f0f0);
     
     [self setContentWithData:[self customData] itemConfig:^(XYInfomationItem * _Nonnull item) {
@@ -26,6 +27,8 @@
         section.separatorHeight = 10;
     } sectionDistance:10 contentEdgeInsets:UIEdgeInsetsZero cellClickBlock:^(NSInteger index, XYInfomationCell * _Nonnull cell) {
         
+        UIViewController *vc = [NSClassFromString([cell.model.title stringByAppendingString:cell.model.titleKey]) new];
+        [weakSelf.navigationController pushViewController:vc animated:YES];
     }];
 }
 
@@ -54,7 +57,7 @@
         @{
             @"title": @"XYCheckBox",
             @"value": @"一组复选框组件,可以方便实现复选框功能，常用案例为选择某些信息。\n\n支持自定义cell",
-            @"titleKey": @"",
+            @"titleKey": @"VC",
             @"type": @3,
             @"customCellClass": @"XYItemListCell",
             @"valueCode": @"",
