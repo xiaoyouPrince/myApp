@@ -33,7 +33,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, copy)         NSString * customCellClass;
 
-
 + (instancetype)modelWithTitle:(NSString *)title code:(NSString *)code select:(BOOL)select;
 + (instancetype)modelWithDict:(NSDictionary *)dict;
 
@@ -70,6 +69,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** selectedItems,最终被选中的所有item */
 @property (nonatomic, strong, readonly)       NSArray * allSelectedItems;
+
+/// 快速创建一个 checkBox
+/// @param headerView 一个自定义HeaderView @note headerView 需要外接设置好高度或者高度约束
+/// @param dataArray 复选框数据源
+/// @param isMutex 是否单选 default is YES
+/// @param allowCancelSelected 是否可取消选中 default is NO
+/// @param itemSelectedHandler 每次有 item 被选中之后的回调
++ (instancetype)checkBoxWith:(nullable UIView *)headerView
+                   dataArray:(NSArray <XYCheckBoxItem *>*)dataArray
+                     isMutex:(BOOL)isMutex
+         allowCancelSelected:(BOOL)allowCancelSelected
+         itemSelectedHandler:(void(^)(XYCheckBoxItem *item))itemSelectedHandler;
 
 @end
 

@@ -47,32 +47,40 @@
 @property (nonatomic, weak)         UILabel * titleLabel;
 
 @end
-@implementation XYCheckBoxCell
+@implementation XYCheckBoxCell{
+    UIImage *_selectedImage;
+    UIImage *_unSelectedImage;
+}
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
+        // image
+        NSString *currentBundle = [[NSBundle bundleForClass:self.class] pathForResource:@"CheckBox" ofType:@"bundle"];
+        NSString *path_sel = [[NSBundle bundleWithPath:currentBundle] pathForResource:@"icon_box_choose@3x" ofType:@"png"];
+        _selectedImage = [UIImage imageNamed:path_sel];
+        NSString *path_unSel = [[NSBundle bundleWithPath:currentBundle] pathForResource:@"icon_box_unchoose@3x" ofType:@"png"];
+        _unSelectedImage = [UIImage imageNamed:path_unSel];
+        
         // iv
         UIImageView *icon = [UIImageView new];
-        icon.image = [UIImage imageNamed:@""];
         [self addSubview:icon];
         self.imageView = icon;
+        
+        // label
+        UILabel *titleLabel = [[UILabel alloc] init];
+        [self addSubview:titleLabel];
+        self.titleLabel = titleLabel;
         
         [icon mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self).offset(15);
             make.left.equalTo(self).offset(15);
         }];
         
-        // label
-        UILabel *dateLabel = [[UILabel alloc] init];
-        [dateLabel xy_setText:@"标题" font:[UIFont boldSystemFontOfSize:12] textColor:UIColor.blackColor];
-        [self addSubview:dateLabel];
-        self.titleLabel = dateLabel;
-        
-        [dateLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self);
-            make.height.equalTo(@40);
+        [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.top.bottom.equalTo(self);
+            make.left.equalTo(icon.mas_right).offset(15);
         }];
     }
     return self;
@@ -100,9 +108,7 @@
 
 - (void)setSelected:(BOOL)selected{
     self.model.select = selected;
-    
-    self.backgroundColor = selected ? UIColor.redColor : UIColor.grayColor;
-    self.titleLabel.text = selected ? @"被选中" : @"没有被选中";
+    self.imageView.image = selected ? _selectedImage : _unSelectedImage;
 }
 
 @end
@@ -113,6 +119,17 @@
 @end
 @implementation XYCheckBox
 @synthesize headerView=__headerView;
+
++ (instancetype)checkBoxWith:(UIView *)headerView dataArray:(NSArray<XYCheckBoxItem *> *)dataArray isMutex:(BOOL)isMutex allowCancelSelected:(BOOL)allowCancelSelected itemSelectedHandler:(void (^)(XYCheckBoxItem * _Nonnull))itemSelectedHandler{
+    
+    XYCheckBox *cb = [XYCheckBox new];
+    cb.headerView = headerView;
+    cb.dataArray = dataArray;
+    cb.isMutex = isMutex;
+    cb.allowCancelSelected = allowCancelSelected;
+    cb.itemSelectedHandler = itemSelectedHandler;
+    return cb;
+}
 
 - (instancetype)init
 {
@@ -133,6 +150,7 @@
 
 - (void)setupContent{
     // base
+    self.clipsToBounds = true;
     _isMutex = YES;
     
     // headerView
@@ -256,11 +274,10 @@
     }else{
         // 选中当前
         [cell setSelected:YES];
-    }
-    
-    // 选中新内容之后回调
-    if (self.itemSelectedHandler) {
-        self.itemSelectedHandler(cell.model);
+        if (self.itemSelectedHandler) {
+            self.itemSelectedHandler(cell.model);
+        }
+        
     }
 }
 
