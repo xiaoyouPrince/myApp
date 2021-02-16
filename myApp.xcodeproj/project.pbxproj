@@ -66,6 +66,7 @@
 		B49E374825D90F31007B11D8 /* XYItemListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E374725D90F31007B11D8 /* XYItemListCell.m */; };
 		B49E380E25DA997D007B11D8 /* XYCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E380D25DA997D007B11D8 /* XYCheckBox.m */; };
 		B49E381225DAC548007B11D8 /* XYCheckBoxVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E381125DAC548007B11D8 /* XYCheckBoxVC.m */; };
+		B49E382325DBBD6E007B11D8 /* CheckBox.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B49E382225DBBD6D007B11D8 /* CheckBox.bundle */; };
 		B4B01421247E15710099B0D6 /* XYUserNotificationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B01420247E15710099B0D6 /* XYUserNotificationTool.m */; };
 		B4BDA75C24924F190070D05C /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BDA75A24924F190070D05C /* WebViewController.m */; };
 		B4BDA75D24924F190070D05C /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BDA75B24924F190070D05C /* WebViewController.xib */; };
@@ -191,6 +192,7 @@
 		B49E380D25DA997D007B11D8 /* XYCheckBox.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCheckBox.m; sourceTree = "<group>"; };
 		B49E381025DAC548007B11D8 /* XYCheckBoxVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYCheckBoxVC.h; sourceTree = "<group>"; };
 		B49E381125DAC548007B11D8 /* XYCheckBoxVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYCheckBoxVC.m; sourceTree = "<group>"; };
+		B49E382225DBBD6D007B11D8 /* CheckBox.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CheckBox.bundle; sourceTree = "<group>"; };
 		B4B0141F247E15710099B0D6 /* XYUserNotificationTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYUserNotificationTool.h; sourceTree = "<group>"; };
 		B4B01420247E15710099B0D6 /* XYUserNotificationTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYUserNotificationTool.m; sourceTree = "<group>"; };
 		B4BDA75924924F190070D05C /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
@@ -516,6 +518,7 @@
 		B49E380B25DA9749007B11D8 /* XYCheckBox */ = {
 			isa = PBXGroup;
 			children = (
+				B49E382225DBBD6D007B11D8 /* CheckBox.bundle */,
 				B49E380C25DA997D007B11D8 /* XYCheckBox.h */,
 				B49E380D25DA997D007B11D8 /* XYCheckBox.m */,
 			);
@@ -700,6 +703,7 @@
 			files = (
 				B45FCDE323B6203B00626D06 /* EventRecord.plist in Resources */,
 				B4C829F3247CFFCA00B5F13F /* XYPushViewController.xib in Resources */,
+				B49E382325DBBD6E007B11D8 /* CheckBox.bundle in Resources */,
 				B4C656CC238178BD00959704 /* LaunchScreen.storyboard in Resources */,
 				B4C656C9238178BD00959704 /* Assets.xcassets in Resources */,
 				B45FCDDD23B6203B00626D06 /* PageRecord.plist in Resources */,
