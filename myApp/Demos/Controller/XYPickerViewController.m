@@ -9,6 +9,7 @@
 #import "XYPickerViewController.h"
 #import "XYPickerView.h"
 #import "XYDatePickerView.h"
+#import "XYChooseLocationView.h"
 #import "DataTool.h"
 #import "NSString+Tool.h"
 
@@ -40,9 +41,17 @@
             [cell.model.titleKey isEqualToString:@"nsrpocsrq"] ||
             [cell.model.titleKey isEqualToString:@"sjyrqq"] ||
             [cell.model.titleKey isEqualToString:@"yjbysj"] ||
-            [cell.model.titleKey isEqualToString:@"zjsjysj"]
+            [cell.model.titleKey isEqualToString:@"zjsjysj"] ||
+            [cell.model.titleKey isEqualToString:@"zlrqq"] ||
+            [cell.model.titleKey isEqualToString:@"zlrqz"]
             ) {// 出生日期 & 受教育起止时间等
             [self showDatePickerForCell:cell];
+        }else if(
+                 [cell.model.titleKey isEqualToString:@"gzcs"] ||
+                 [cell.model.titleKey isEqualToString:@"fwdz"]
+                 )
+        {
+            [self showChooseLocationViewForCell:cell];
         }else
         {
             [self showPickerForCell:cell];
@@ -112,6 +121,73 @@
         cell.model.valueCode = dateStr;
         cell.model = cell.model;
     }];
+}
+
+#pragma mark - XYChooseLocationView
+
+- (void)showChooseLocationViewForCell:(XYInfomationCell *)cell
+{
+    // 外围地址数据
+    NSArray *array = [DataTool cityArrayForPid:@"0"];
+    NSArray *locations = [XYLocation mj_objectArrayWithKeyValuesArray:array];
+    
+    // 创建内容
+    XYChooseLocationView *view = [XYChooseLocationView new];
+    [self.view addSubview:view];
+    view.baseDataArray = locations;
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(ScreenH*0.45);
+        make.left.equalTo(self.view).offset(0);
+        make.right.equalTo(self.view).offset(-0);
+        make.bottom.equalTo(self.view).offset(-0);
+    }];
+    
+    /// 创建一个coverView
+    UIButton *btn = [UIButton new];
+    btn.backgroundColor = [UIColor.blackColor colorWithAlphaComponent:0.3];
+    [btn addTarget:self action:@selector(coverBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view insertSubview:btn belowSubview:view];
+    
+    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+    
+    __weak typeof(cell) weakCell = cell;
+    view.finishChooseBlock = ^(NSArray <NSString *>*locations) {
+      
+        [btn removeFromSuperview];
+        
+        if (!locations || [locations.firstObject isEqualToString:@"请选择"]) {
+            return ;
+        }
+        
+        NSLog(@"locations = %@",locations);
+        
+        NSMutableString *stringM = @"".mutableCopy;
+        for (NSString *str in locations) {
+            if ([str isEqualToString:locations.lastObject]) {
+                [stringM appendFormat:@"%@",str];
+            }else
+            {
+                [stringM appendFormat:@"%@,",str];
+            }
+            
+        }
+        
+        weakCell.model.value = stringM;
+        weakCell.model.valueCode = stringM;
+        weakCell.model = weakCell.model;
+    };
+}
+
+- (void)coverBtnClick:(id)sender
+{
+    for (UIView *subView in self.view.subviews) {
+        if ([subView isKindOfClass:XYChooseLocationView.class]) {
+            [subView removeFromSuperview];
+        }
+    }
+    [sender removeFromSuperview];
 }
 
 #pragma mark - 数据源 构建
@@ -264,7 +340,78 @@
                              @"detail" : @""
                              }
                          ];
-    return @[childInfos, poInfos, eduInfos];
+    // 租房信息
+    NSArray *rentInfos = @[
+                        @{
+                              @"title": @"",
+                              @"value": @"租房信息",
+                              @"type": @3,
+                              @"customCellClass": @"XYItemListCell",
+                              @"backgroundColor": self.view.backgroundColor,
+                              @"valueColor": UIColor.redColor
+                          },
+                          @{
+                              @"title" : @"工作城市",
+                              @"titleKey" : @"gzcs",
+                              @"type" : @1,
+                              @"detail" : @"请选择工作城市(省市)"
+                              },
+                          @{
+                              @"title" : @"出租方类型",
+                              @"titleKey" : @"czflx",
+                              @"type" : @1,
+                              @"detail" : @""
+                              },
+                          @{
+                              @"title" : @"出租方名称", // 企业类型 ： 单位名称
+                              @"titleKey" : @"czrxm",
+                              @"type" : @0,
+                              @"detail" : @"选填"
+                              },
+                          @{
+                              @"title" : @"出租方证件类型",
+                              @"titleKey" : @"czrsfzjlx",
+                              @"type" : @1,
+                              @"detail" : @"选填"  // 选填
+                              },
+                          @{
+                              @"title" : @"出租方证件号码", // 企业类型 ： 社会统一信用代码
+                              @"titleKey" : @"czrsfzjhm",
+                              @"type" : @0,
+                              @"detail" : @"选填"
+                              },
+                          @{
+                              @"title" : @"住房租赁合同编号",
+                              @"titleKey" : @"zfzlhtbh",
+                              @"type" : @0,
+                              @"detail" : @"选填"
+                              },
+                          @{
+                              @"title" : @"房屋地址",
+                              @"titleKey" : @"fwdz",
+                              @"type" : @1,
+                              @"detail" : @"请选择省市区"
+                              },
+                          @{
+                              @"title" : @"房屋详细地址",
+                              @"titleKey" : @"jzdxxdz",
+                              @"type" : @0,
+                              @"detail" : @"请输入街道,小区,楼栋,单元室等"
+                              },
+                          @{
+                              @"title" : @"租赁日期起",
+                              @"titleKey" : @"zlrqq",
+                              @"type" : @1,
+                              @"detail" : @"请选择开始时间" // 不可大于系统当前日期
+                              },
+                          @{
+                              @"title" : @"租赁日期止",
+                              @"titleKey" : @"zlrqz",
+                              @"type" : @1,
+                              @"detail" : @"请选择结束时间"  // 不可小于租赁日期起日期
+                              }
+                          ];
+    return @[childInfos, poInfos, eduInfos, rentInfos];
 }
 
 @end

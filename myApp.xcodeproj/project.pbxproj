@@ -71,6 +71,7 @@
 		B49E382B25DD4588007B11D8 /* XYPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E382A25DD4588007B11D8 /* XYPickerViewController.m */; };
 		B49E383225DD4F80007B11D8 /* NSString+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E382E25DD4F7F007B11D8 /* NSString+Tool.m */; };
 		B49E383325DD4F80007B11D8 /* DataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E382F25DD4F7F007B11D8 /* DataTool.m */; };
+		B4A3795925DD96340070530E /* cityArray.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = B4A3795825DD96340070530E /* cityArray.sqlite */; };
 		B4B01421247E15710099B0D6 /* XYUserNotificationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B01420247E15710099B0D6 /* XYUserNotificationTool.m */; };
 		B4BDA75C24924F190070D05C /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BDA75A24924F190070D05C /* WebViewController.m */; };
 		B4BDA75D24924F190070D05C /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BDA75B24924F190070D05C /* WebViewController.xib */; };
@@ -205,6 +206,7 @@
 		B49E382F25DD4F7F007B11D8 /* DataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTool.m; sourceTree = "<group>"; };
 		B49E383025DD4F7F007B11D8 /* NSString+Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Tool.h"; sourceTree = "<group>"; };
 		B49E383125DD4F7F007B11D8 /* DataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTool.h; sourceTree = "<group>"; };
+		B4A3795825DD96340070530E /* cityArray.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = cityArray.sqlite; sourceTree = "<group>"; };
 		B4B0141F247E15710099B0D6 /* XYUserNotificationTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYUserNotificationTool.h; sourceTree = "<group>"; };
 		B4B01420247E15710099B0D6 /* XYUserNotificationTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYUserNotificationTool.m; sourceTree = "<group>"; };
 		B4BDA75924924F190070D05C /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
@@ -601,6 +603,7 @@
 				B4C656CD238178BD00959704 /* Info.plist */,
 				B4C656CE238178BD00959704 /* main.m */,
 				B4C656D62381AB8F00959704 /* PrefixHeader.pch */,
+				B4A3795825DD96340070530E /* cityArray.sqlite */,
 			);
 			path = BaseInitial;
 			sourceTree = "<group>";
@@ -743,6 +746,7 @@
 				B4D93124247533490013E550 /* XYHealthViewController.xib in Resources */,
 				B45FCD7023B61F3200626D06 /* XYChooseOrderTimeView.xib in Resources */,
 				B4BDA75D24924F190070D05C /* WebViewController.xib in Resources */,
+				B4A3795925DD96340070530E /* cityArray.sqlite in Resources */,
 				B45FCDB323B61FAF00626D06 /* XBUGConfigView.xib in Resources */,
 				B45FCDCC23B61FE500626D06 /* icon_star@3x.png in Resources */,
 				B41E8524248E0D6E00078278 /* ColorConfig.plist in Resources */,

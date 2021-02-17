@@ -8,6 +8,7 @@
 
 #import "XYChooseLocationView.h"
 #import "XYLocationCell.h"
+#import "DataTool.h"
 
 @interface XYChooseLocationView ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -370,7 +371,7 @@
     NSArray *tableDataArray = self.dataArray[tableIndex];
     XYLocation *location = tableDataArray[indexPath.row];
     
-    NSArray *array = @[];//[DataTool cityArrayForPid:location.id];
+    NSArray *array = [DataTool cityArrayForPid:location.id];
     
 //    NSString *url = URL_for_Visa_WithPath(@"/api/cityDict");
 //    [NetWorkUikits requestWithUrl:url param:params completionHandle:^(id data) {
