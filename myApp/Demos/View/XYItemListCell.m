@@ -12,7 +12,7 @@
 @implementation XYItemListCell{
     UILabel *titleLabel;
     UILabel *detailLabel;
-    BOOL hasChangeHeightWithContent;
+    UIView *accView;
 }
 
 - (instancetype)init
@@ -21,7 +21,6 @@
     if (self) {
         titleLabel = UILabel.new;
         detailLabel = UILabel.new;
-        hasChangeHeightWithContent = false;
         
         titleLabel.font = [UIFont boldSystemFontOfSize:20];
         titleLabel.textColor = UIColor.blackColor;
@@ -44,28 +43,24 @@
             make.top.equalTo(titleLabel.mas_bottom).offset(15);
             make.left.right.equalTo(titleLabel);
         }];
+        
+        // accView
+        accView = [UIView new];
+        [self addSubview:accView];
+        [accView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(detailLabel.mas_bottom).offset(15);
+            make.left.right.equalTo(detailLabel);
+        }];
     }
     return self;
 }
 
 /*
-- (void)layoutSubviews{ // 不能在这里修改 self.frame 会递归
+// 不能在这里修改 self.frame 会递归
+- (void)layoutSubviews{
     [super layoutSubviews];
-    
-//    [titleLabel sizeToFit];
-//    [detailLabel sizeToFit];
-//
-//    CGFloat margin = 23.0;
-//    titleLabel.frame = CGRectMake(margin, margin, self.bounds.size.width - 2*margin, titleLabel.bounds.size.height);
-//    detailLabel.frame = CGRectMake(margin, 2*margin + titleLabel.bounds.size.height, self.bounds.size.width - 2*margin, detailLabel.bounds.size.height);
-//
-//    if (!hasChangeHeightWithContent && detailLabel.frame.size.height > 15) {
-//        hasChangeHeightWithContent = !hasChangeHeightWithContent;
-//        CGRect frame = self.frame;
-//        frame.size.height = CGRectGetMaxY(detailLabel.frame) + margin;
-//        self.frame = frame;
-//    }
-}
+ 
+ }
  */
 
 - (void)setModel:(XYInfomationItem *)model
@@ -74,13 +69,24 @@
     
     titleLabel.text = model.title;
     detailLabel.text = model.value ?: model.placeholderValue;
-    if (model.backgroundColor) {//特殊处理一下，收个tipView,设置了bgColor
+    if (model.backgroundColor) {//特殊处理一下，首个tipView,设置了bgColor
         detailLabel.textColor = model.valueColor;
     }
     
-    [self mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.bottom.equalTo(detailLabel.mas_bottom).offset(15);
-    }];
+    if (model.accessoryView) {
+        [accView addSubview:model.accessoryView];
+        [model.accessoryView mas_makeConstraints:^(MASConstraintMaker *make) {
+             make.edges.equalTo(accView);
+        }];
+        
+        [self mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(accView.mas_bottom).offset(15);
+        }];
+    }else{
+        [self mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.bottom.equalTo(detailLabel.mas_bottom).offset(15);
+        }];
+    }
 }
 
 @end

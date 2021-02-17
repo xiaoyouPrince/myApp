@@ -27,7 +27,7 @@
         section.separatorHeight = 10;
     } sectionDistance:10 contentEdgeInsets:UIEdgeInsetsZero cellClickBlock:^(NSInteger index, XYInfomationCell * _Nonnull cell) {
         
-        UIViewController *vc = [NSClassFromString([cell.model.title stringByAppendingString:cell.model.titleKey]) new];
+        UIViewController *vc = [NSClassFromString(cell.model.titleKey) new];
         [weakSelf.navigationController pushViewController:vc animated:YES];
     }];
 }
@@ -57,7 +57,7 @@
         @{
             @"title": @"XYCheckBox",
             @"value": @"一组复选框组件,可以方便实现复选框功能，常用案例为选择某些信息。\n\n支持自定义cell",
-            @"titleKey": @"VC",
+            @"titleKey": @"XYCheckBoxVC",
             @"type": @3,
             @"customCellClass": @"XYItemListCell",
             @"valueCode": @"",
@@ -65,9 +65,9 @@
         },
         @{
             @"imageName": @"",
-            @"title": @"职位名称",
-            @"titleKey": @"",
-            @"value": @"财富规划师",
+            @"title": @"XYStarView",
+            @"titleKey": @"XYStarViewController",
+            @"value": @"一个星星框组件,常用于展示用户评分功能。\n\n支持自定义cell",
             @"type": @3,
             @"customCellClass": @"XYItemListCell",
             @"valueCode": @"",

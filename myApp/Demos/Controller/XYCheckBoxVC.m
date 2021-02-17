@@ -62,7 +62,7 @@
 //    }];
     
     // 此类使用基类方法，直接设置内容，如果使用者是放到自己View直接使用 autolayout 设置布局即可: 如上
-    [self setHeaderView:cb edgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    [self setHeaderView:cb edgeInsets:UIEdgeInsetsMake(20, 0, 0, 0)];
 }
 
 - (void)cbDemo2{
