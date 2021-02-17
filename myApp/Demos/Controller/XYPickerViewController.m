@@ -134,12 +134,20 @@
     NSArray *locations = [XYLocation mj_objectArrayWithKeyValuesArray:array];
     
     // 创建内容
-    XYChooseLocationView *view = [XYChooseLocationView new];
+//    XYChooseLocationView *view = [XYChooseLocationView new];
+//    [self.view addSubview:view];
+//    view.baseDataArray = locations;
+//    view.getNextDataArrayHandler = ^NSArray<XYLocation *> * _Nonnull(XYLocation * _Nonnull cuttentLocation) {
+//        return [DataTool cityArrayForPid:cuttentLocation.id];
+//    };
+    XYChooseLocationView *view = [XYChooseLocationView instanceAndShowWithConfig:^(XYChooseLocationView * _Nonnull clv) {
+        clv.title = @"自定title";
+        clv.baseDataArray = locations;
+        clv.getNextDataArrayHandler = ^NSArray<XYLocation *> * _Nonnull(XYLocation * _Nonnull cuttentLocation) {
+            return [DataTool cityArrayForPid:cuttentLocation.id];
+        };
+    }];
     [self.view addSubview:view];
-    view.baseDataArray = locations;
-    view.getNextDataArrayHandler = ^NSArray<XYLocation *> * _Nonnull(XYLocation * _Nonnull cuttentLocation) {
-        return [DataTool cityArrayForPid:cuttentLocation.id];
-    };
     [view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(ScreenH*0.45);
         make.left.equalTo(self.view).offset(0);
@@ -170,7 +178,10 @@
         
         NSMutableString *stringM = @"".mutableCopy;
         for (NSString *str in locations) {
-            if ([str isEqualToString:locations.lastObject]) {
+            if ([str isEqualToString:@"请选择"]) {
+                stringM = [stringM substringToIndex:stringM.length-1];
+                continue;
+            }else if ([str isEqualToString:locations.lastObject]) {
                 [stringM appendFormat:@"%@",str];
             }else
             {

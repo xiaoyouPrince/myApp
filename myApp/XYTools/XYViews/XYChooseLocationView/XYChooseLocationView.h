@@ -24,12 +24,15 @@ NS_ASSUME_NONNULL_BEGIN
  
  */
 
-
+// ######################## 下面属性为可选 ##########################
 /** 想要设置的 title */
 @property (nonatomic, copy)         NSString * title;
+/** 想要加载到哪个view上 default is the keyWindow.  */
+@property (nonatomic, weak)         UIView * viewToShow;
 
+// ######################## 下面属性为必填 ##########################
 
-/** 第一组基础数据 dataArray */
+/** 第一组基础数据 dataArray, default is nil @note 展示之前必须赋值*/
 @property (nonatomic, strong)       NSArray <XYLocation *>* baseDataArray;
 
 /// 获取第一组后面的数据 dataArray @note 调用时候内部需要同步返回，异步无效
@@ -37,6 +40,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 选择完毕，回调 */
 @property (nonatomic, copy)         void(^finishChooseBlock)(NSArray *locations);
+
+
+/// 快速创建实例 并 展示
+/// @param config 展示之前需要进行设置，数据源必须设置
++ (instancetype)viewAndShowWithConfig:(void(^)(XYChooseLocationView *clv))config;
++ (instancetype)instanceAndShowWithConfig:(void(^)(XYChooseLocationView *clv))config;
 
 
 @end

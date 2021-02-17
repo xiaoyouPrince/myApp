@@ -42,6 +42,19 @@
 //UIColor *color_nor = UIColor.blackColor;
 //UIColor *color_sel = UIColor.blackColor;
 
++ (instancetype)viewAndShowWithConfig:(void (^)(XYChooseLocationView * _Nonnull))config
+{
+    return [self instanceAndShowWithConfig:config];
+}
++ (instancetype)instanceAndShowWithConfig:(void (^)(XYChooseLocationView * _Nonnull))config
+{
+    XYChooseLocationView *clv = [XYChooseLocationView new];
+    if (config) {
+        config(clv);
+    }
+    return clv;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -73,16 +86,16 @@
     
     // barView 内部
     {
-//        UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
-//        [btn setTitle:@"取消" forState:UIControlStateNormal];
-//        [btn addTarget:self action:@selector(cancelBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-//        [toolBar addSubview:btn];
-//
-//        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.top.equalTo(toolBar).offset(0);
-//            make.left.equalTo(toolBar).offset(15);
-//            make.bottom.equalTo(toolBar).offset(-0);
-//        }];
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+        [btn setTitle:@"取消" forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(cancelBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+        [toolBar addSubview:btn];
+
+        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(toolBar).offset(0);
+            make.left.equalTo(toolBar).offset(15);
+            make.bottom.equalTo(toolBar).offset(-0);
+        }];
         
         
         UILabel *titleLabel = [[UILabel alloc] init];
@@ -97,16 +110,16 @@
         }];
 
         
-//        UIButton *btn_ensure = [UIButton buttonWithType:UIButtonTypeSystem];
-//        [btn_ensure setTitle:@"确定" forState:UIControlStateNormal];
-//        [btn_ensure addTarget:self action:@selector(ensureBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-//        [toolBar addSubview:btn_ensure];
-//        
-//        [btn_ensure mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.top.equalTo(toolBar).offset(0);
-//            make.right.equalTo(toolBar).offset(-15);
-//            make.bottom.equalTo(toolBar).offset(-0);
-//        }];
+        UIButton *btn_ensure = [UIButton buttonWithType:UIButtonTypeSystem];
+        [btn_ensure setTitle:@"确定" forState:UIControlStateNormal];
+        [btn_ensure addTarget:self action:@selector(ensureBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+        [toolBar addSubview:btn_ensure];
+        
+        [btn_ensure mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(toolBar).offset(0);
+            make.right.equalTo(toolBar).offset(-15);
+            make.bottom.equalTo(toolBar).offset(-0);
+        }];
         
         UIView *lineView = [[UIView alloc] init];
         lineView.backgroundColor = HEXCOLOR(0xeaeaea);
@@ -372,38 +385,31 @@
     XYLocation *location = tableDataArray[indexPath.row];
     
     // 获取下一级数据。交给外界回调处理
-//    NSArray *array = [DataTool cityArrayForPid:location.id];
-    NSArray *array = @[];
+    NSArray *nextLocations = @[];
     if (self.getNextDataArrayHandler) {
-        array = self.getNextDataArrayHandler(location);
-    }
-    
-//    NSString *url = URL_for_Visa_WithPath(@"/api/cityDict");
-//    [NetWorkUikits requestWithUrl:url param:params completionHandle:^(id data) {
-        
-        // 处理请求数据
-        NSArray *locations = [XYLocation mj_objectArrayWithKeyValuesArray:array];
-        
-        // 如果有数据
-        if (locations.count) {
-            // 1. 添加新的 item 和 列表
-            [self.dataArray addObject:locations];
-            [self addLocationBarItem];
-            [self addTableView];
-            
-            // 2. 修改标题
-            [self scrollToNextItem:cell.model];
-        }else
-        {
-            // 1. 修改标题
-            [self scrollToNextItem:cell.model];
-            // 2. 直接跳转出去完成选择
-            [self ensureBtnClick:nil];
+        if ([location isKindOfClass:NSDictionary.class]) { // 防止外界传入数组包字典。
+            location = [XYLocation modelWithDict:(NSDictionary *)location];
         }
+        nextLocations = self.getNextDataArrayHandler(location) ?: @[];
+    }
+    NSArray *locations = nextLocations;
+    
+    // 如果有数据
+    if (locations.count) {
+        // 1. 添加新的 item 和 列表
+        [self.dataArray addObject:locations];
+        [self addLocationBarItem];
+        [self addTableView];
         
-//    } failureHandle:^(NSError *error) {
-//
-//    }];
+        // 2. 修改标题
+        [self scrollToNextItem:cell.model];
+    }else
+    {
+        // 1. 修改标题
+        [self scrollToNextItem:cell.model];
+        // 2. 直接跳转出去完成选择
+        [self ensureBtnClick:nil];
+    }
     
 }
 

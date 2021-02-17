@@ -72,6 +72,10 @@
 
 - (void)setModel:(XYLocation *)model
 {
+    if ([model isKindOfClass:NSDictionary.class]) { // 防止外界传入数组包字典。
+        model = [XYLocation modelWithDict:(NSDictionary*)model];
+    }
+    
     _model = model;
     
     self.titleLabel.text = model.name;
