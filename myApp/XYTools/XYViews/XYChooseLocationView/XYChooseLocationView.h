@@ -32,6 +32,9 @@ NS_ASSUME_NONNULL_BEGIN
 /** 第一组基础数据 dataArray */
 @property (nonatomic, strong)       NSArray <XYLocation *>* baseDataArray;
 
+/// 获取第一组后面的数据 dataArray @note 调用时候内部需要同步返回，异步无效
+@property (nonatomic, strong)       NSArray <XYLocation *>*(^getNextDataArrayHandler)(XYLocation* cuttentLocation);
+
 /** 选择完毕，回调 */
 @property (nonatomic, copy)         void(^finishChooseBlock)(NSArray *locations);
 

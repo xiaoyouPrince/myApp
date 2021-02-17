@@ -127,6 +127,8 @@
 
 - (void)showChooseLocationViewForCell:(XYInfomationCell *)cell
 {
+    [self.view endEditing:YES];
+    
     // 外围地址数据
     NSArray *array = [DataTool cityArrayForPid:@"0"];
     NSArray *locations = [XYLocation mj_objectArrayWithKeyValuesArray:array];
@@ -135,6 +137,9 @@
     XYChooseLocationView *view = [XYChooseLocationView new];
     [self.view addSubview:view];
     view.baseDataArray = locations;
+    view.getNextDataArrayHandler = ^NSArray<XYLocation *> * _Nonnull(XYLocation * _Nonnull cuttentLocation) {
+        return [DataTool cityArrayForPid:cuttentLocation.id];
+    };
     [view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(ScreenH*0.45);
         make.left.equalTo(self.view).offset(0);

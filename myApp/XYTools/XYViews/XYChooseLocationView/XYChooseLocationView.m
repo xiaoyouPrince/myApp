@@ -371,7 +371,12 @@
     NSArray *tableDataArray = self.dataArray[tableIndex];
     XYLocation *location = tableDataArray[indexPath.row];
     
-    NSArray *array = [DataTool cityArrayForPid:location.id];
+    // 获取下一级数据。交给外界回调处理
+//    NSArray *array = [DataTool cityArrayForPid:location.id];
+    NSArray *array = @[];
+    if (self.getNextDataArrayHandler) {
+        array = self.getNextDataArrayHandler(location);
+    }
     
 //    NSString *url = URL_for_Visa_WithPath(@"/api/cityDict");
 //    [NetWorkUikits requestWithUrl:url param:params completionHandle:^(id data) {
