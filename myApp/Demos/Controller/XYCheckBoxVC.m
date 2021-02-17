@@ -6,6 +6,8 @@
 //  Copyright © 2021 渠晓友. All rights reserved.
 //
 
+// XYCheckBox 会根据自适应计算出高度。推荐使用自动布局
+
 #import "XYCheckBoxVC.h"
 #import "XYCheckBox.h"
 
@@ -68,7 +70,7 @@
 - (void)cbDemo2{
     
     // 数据源
-    NSArray *arrayM = [self dateArrayWithTitle:@"周" count:7];
+    NSArray *arrayM = [self dateArrayWithTitle:@"周计划出行日期计划出行日期计划出行日期计划出行日期/Users/quxiaoyou/Documents/GitHub/myApp/myApp/Demos/Controller/XYCheckBoxVC.m计划出行日期" count:7];
     // header View
     UIView *headerView = [self headerWithTitle:@"计划出行日期" height:40];
     headerView.backgroundColor = XYRandomColor;

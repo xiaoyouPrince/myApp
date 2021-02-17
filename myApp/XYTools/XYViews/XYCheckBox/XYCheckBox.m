@@ -28,11 +28,6 @@
 }
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key{/*防止KVC报错*/}
 
-- (CGFloat)cellHeight
-{
-    return _cellHeight ?: 50;
-}
-
 - (NSString *)description{
     return [NSString stringWithFormat:@"item = {title = %@, code = %@}",_title,_code];
 }
@@ -70,17 +65,21 @@
         
         // label
         UILabel *titleLabel = [[UILabel alloc] init];
+        titleLabel.numberOfLines = 0;
         [self addSubview:titleLabel];
         self.titleLabel = titleLabel;
         
         [icon mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(self).offset(15);
             make.left.equalTo(self).offset(15);
+            make.size.mas_equalTo(_selectedImage.size);
         }];
         
         [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.top.bottom.equalTo(self);
+            make.top.equalTo(self).offset(15);
+            make.bottom.equalTo(self).offset(-15);
             make.left.equalTo(icon.mas_right).offset(15);
+            make.right.equalTo(self).offset(-15);
         }];
     }
     return self;
@@ -91,14 +90,14 @@
     _model = model;
     [self setSelected:model.isSelected];
     
-    [self mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.height.equalTo(@(model.cellHeight));
-    }];
+    if (model.cellHeight > 0) { // 指定cell高度，就按指定的值设定
+        [self mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.height.equalTo(@(model.cellHeight));
+        }];
+    }
     
     // 设置title
     self.titleLabel.text = model.title;
-    // 设置code
-    // 设置选中状态
 }
 
 - (BOOL)isSelected
@@ -229,7 +228,6 @@
             }
             make.left.equalTo(self.contentView);
             make.right.equalTo(self.contentView);
-            make.height.equalTo(@(cell.model.cellHeight));
             
             if (index == dataArray.count-1) {
                 make.bottom.equalTo(self.contentView);
