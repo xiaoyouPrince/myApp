@@ -22,6 +22,7 @@ typedef void(^XYDatePickerDoneBlock)(NSDate *choosenDate);
 
 @interface XYDatePickerView ()
 
+@property (nonatomic, strong)     UIView *datePickerBgview; // 新增适配 ios 13.4 +
 @property(nonatomic , strong)     UIView *toolBar;
 @property(nonatomic , strong)     UIButton *cancelBtn;
 @property(nonatomic , strong)     UIButton *doneBtn;
@@ -36,14 +37,26 @@ typedef void(^XYDatePickerDoneBlock)(NSDate *choosenDate);
 @implementation XYDatePickerView
 
 #pragma mark - lazy
+- (UIView *)datePickerBgview{
+    if (!_datePickerBgview) {
+        _datePickerBgview = [UIView new];
+        _datePickerBgview.frame = CGRectMake(0, kScreenH, kScreenW, pickerHight+toolBarHight);
+        _datePickerBgview.backgroundColor = [UIColor whiteColor];
+    }
+    return _datePickerBgview;
+}
 
 - (UIDatePicker *)datePicker
 {
     if (!_datePicker) {
         UIDatePicker *datePicker = [[UIDatePicker alloc] init];
-        datePicker.frame = CGRectMake(0, kScreenH+toolBarHight, kScreenW, pickerHight);
-        datePicker.backgroundColor = [UIColor whiteColor];
+        datePicker.frame = CGRectMake(0, toolBarHight, kScreenW, pickerHight);
         datePicker.locale = [NSLocale localeWithLocaleIdentifier:@"zh_Hans_CN"];
+        if (@available(iOS 13.4, *)) {
+            datePicker.preferredDatePickerStyle = UIDatePickerStyleWheels;
+            CGPoint center = CGPointMake(kScreenW/2, datePicker.center.y);
+            datePicker.center = center;
+        }
         _datePicker = datePicker;
     }
     return _datePicker;
@@ -53,7 +66,7 @@ typedef void(^XYDatePickerDoneBlock)(NSDate *choosenDate);
 {
     if (!_toolBar) {
         UIView *toolBar = [UIView new];
-        toolBar.frame = CGRectMake(0, kScreenH, kScreenW, toolBarHight);
+        toolBar.frame = CGRectMake(0, 0, kScreenW, toolBarHight);
         toolBar.backgroundColor = [UIColor groupTableViewBackgroundColor];
         _toolBar = toolBar;
         // 两条分割线
@@ -103,7 +116,7 @@ typedef void(^XYDatePickerDoneBlock)(NSDate *choosenDate);
 {
     if (!_titleLabel) {
         UILabel *titleLabel = [UILabel new];
-        titleLabel.font = [UIFont systemFontOfSize:20];
+        titleLabel.font = [UIFont systemFontOfSize:15];
         [titleLabel sizeToFit];
         titleLabel.textColor = UIColor.grayColor;
         titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -143,8 +156,9 @@ typedef void(^XYDatePickerDoneBlock)(NSDate *choosenDate);
 - (void)setupContent{
     
     // 创建内容
-    [self addSubview:self.datePicker];
-    [self addSubview:self.toolBar];
+    [self addSubview:self.datePickerBgview];
+    [self.datePickerBgview addSubview:self.datePicker];
+    [self.datePickerBgview addSubview:self.toolBar];
     
     [self.toolBar addSubview:self.cancelBtn];
     [self.toolBar addSubview:self.doneBtn];
@@ -192,8 +206,7 @@ typedef void(^XYDatePickerDoneBlock)(NSDate *choosenDate);
     
     [UIView animateWithDuration:pickerAnimationDuration animations:^{
         self.backgroundColor = [UIColor clearColor];
-        self.toolBar.transform = CGAffineTransformIdentity;
-        self.datePicker.transform = CGAffineTransformIdentity;
+        self.datePickerBgview.transform = CGAffineTransformIdentity;
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];
@@ -234,8 +247,7 @@ typedef void(^XYDatePickerDoneBlock)(NSDate *choosenDate);
     
     [UIView animateWithDuration:pickerAnimationDuration animations:^{
         self.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.2];
-        self.toolBar.transform = CGAffineTransformTranslate(CGAffineTransformIdentity, 0, -pickerAndToolBarHight);
-        self.datePicker.transform = CGAffineTransformTranslate(CGAffineTransformIdentity, 0, -pickerAndToolBarHight);
+        self.datePickerBgview.transform = CGAffineTransformTranslate(CGAffineTransformIdentity, 0, -pickerAndToolBarHight);
     }];
 }
 
