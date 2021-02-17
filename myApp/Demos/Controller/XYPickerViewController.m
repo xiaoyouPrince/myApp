@@ -8,6 +8,7 @@
 
 #import "XYPickerViewController.h"
 #import "XYPickerView.h"
+#import "XYDatePickerView.h"
 #import "DataTool.h"
 #import "NSString+Tool.h"
 
@@ -81,34 +82,36 @@
 
 - (void)showDatePickerForCell:(XYInfomationCell *)cell{
     
-//    NSTimeInterval yearSecond = 365 * 24 * 60 * 60;
-//    [XYDatePickerView showDatePickerWithConfig:^(XYDatePickerView * _Nonnull datePicker) {
-//        datePicker.datePickerMode = UIDatePickerModeDate;
-//        datePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow: -50 * yearSecond];
-//        datePicker.maximumDate = [NSDate dateWithTimeIntervalSinceNow: -2 * yearSecond];
-//        datePicker.title = [@"选择" stringByAppendingString:cell.model.title];
-//
-//        // 如果已经有选好的时间，默认展示对应的时间
-//        if ([cell.model.value isDateFromat]) {
-//            NSDateFormatter *mft = [NSDateFormatter new];
-//            mft.dateFormat = @"yyyy-MM-dd";
-//            NSDate *date = [mft dateFromString:cell.model.value];
-//            datePicker.date = date;
-//        }
-//
-//    } result:^(NSDate * _Nonnull choosenDate) {
-//
-//        NSLog(@"选择完成，结果为:%@",choosenDate);
-//
-//        NSDateFormatter *mft = [NSDateFormatter new];
-//        mft.dateFormat = @"yyyy-MM-dd";
-//        NSString *dateStr = [mft stringFromDate:choosenDate];
-//
-//        NSLog(@"选择完成，结果为:%@",dateStr);
-//        cell.model.value = dateStr;
-//        cell.model.valueCode = dateStr;
-//        cell.model = cell.model;
-//    }];
+    [self.view endEditing:YES];
+    
+    NSTimeInterval yearSecond = 365 * 24 * 60 * 60;
+    [XYDatePickerView showDatePickerWithConfig:^(XYDatePickerView * _Nonnull datePicker) {
+        datePicker.datePickerMode = UIDatePickerModeDate;
+        datePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow: -50 * yearSecond];
+        datePicker.maximumDate = [NSDate dateWithTimeIntervalSinceNow: -2 * yearSecond];
+        datePicker.title = [@"选择" stringByAppendingString:cell.model.title];
+
+        // 如果已经有选好的时间，默认展示对应的时间
+        if ([cell.model.value isDateFromat]) {
+            NSDateFormatter *mft = [NSDateFormatter new];
+            mft.dateFormat = @"yyyy-MM-dd";
+            NSDate *date = [mft dateFromString:cell.model.value];
+            datePicker.date = date;
+        }
+
+    } result:^(NSDate * _Nonnull choosenDate) {
+
+        NSLog(@"选择完成，结果为:%@",choosenDate);
+
+        NSDateFormatter *mft = [NSDateFormatter new];
+        mft.dateFormat = @"yyyy-MM-dd";
+        NSString *dateStr = [mft stringFromDate:choosenDate];
+
+        NSLog(@"选择完成，结果为:%@",dateStr);
+        cell.model.value = dateStr;
+        cell.model.valueCode = dateStr;
+        cell.model = cell.model;
+    }];
 }
 
 #pragma mark - 数据源 构建
