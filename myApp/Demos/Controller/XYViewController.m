@@ -75,9 +75,9 @@
         },
         @{
             @"imageName": @"",
-            @"title": @"员工名称",
-            @"titleKey": @"",
-            @"value": @"支付宝",
+            @"title": @"XYPickerView",
+            @"titleKey": @"XYPickerViewController",
+            @"value": @"一个单列表选择器控件，简单易用\n\n使用的时候只需要关心数据，内部处理展示与选中相关业务。",
             @"type": @3,
             @"customCellClass": @"XYItemListCell",
             @"valueCode": @"",
