@@ -8,7 +8,6 @@
 
 #import "XYChooseLocationView.h"
 #import "XYLocationCell.h"
-#import "DataTool.h"
 
 @interface XYChooseLocationView ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -42,6 +41,7 @@
 
 @implementation XYChooseLocationView
 
+#pragma mark - Public Methods
 
 + (instancetype)viewAndShowWithConfig:(void (^)(XYChooseLocationView * _Nonnull))config
 {
@@ -68,6 +68,8 @@
     
     return clv;
 }
+
+#pragma mark - Private Methods
 
 - (void)show{
     
@@ -154,7 +156,7 @@
         
         
         UILabel *titleLabel = [[UILabel alloc] init];
-        titleLabel.text = @"选择地区";
+        titleLabel.text = self.title;
         titleLabel.font = [UIFont boldSystemFontOfSize:17];
         titleLabel.tintColor = UIColor.blackColor;
         titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -411,9 +413,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     XYLocationCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(XYLocationCell.class)];
-//    if (!cell) {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellID"];
-//    }
     
     NSInteger tableIndex = [self.tableViews indexOfObject:tableView];
     NSArray *tableDataArray = self.dataArray[tableIndex];
@@ -521,7 +520,7 @@
 
 - (void)dealloc
 {
-    NSLog(@"---------------------ChooseLocationView---------------dealloc----------------------");
+    NSLog(@"---------------------XYChooseLocationView---------------dealloc----------------------");
 }
 
 @end

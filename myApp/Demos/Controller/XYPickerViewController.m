@@ -139,36 +139,27 @@
         clv.baseDataArray = locations;
         clv.getNextDataArrayHandler = ^NSArray<XYLocation *> * _Nonnull(XYLocation * _Nonnull cuttentLocation) {
             return [DataTool cityArrayForPid:cuttentLocation.id];
-//            NSDictionary *dict = @{
-//                @"name": @"tester",
-//                @"id": @"1",
-//                @"pid": @"2",
-//            };
-//            return @[dict,dict.mutableCopy];
         };
         
-        
         clv.finishChooseBlock = ^(NSArray <XYLocation *>*locations) {
-            
-            if (!locations.count) {// 无数据直接返回
-                return;
-            }
-            
-            NSLog(@"locations = %@",locations);
-            
-            NSMutableString *stringM = @"".mutableCopy;
-            for (XYLocation *location in locations) {
-                if (location == locations.lastObject) {
-                    [stringM appendFormat:@"%@",location.name];
-                }else
-                {
-                    [stringM appendFormat:@"%@,",location.name];
+            if (locations.count) {// 无数据才处理
+                
+                NSLog(@"locations = %@",locations);
+                
+                NSMutableString *stringM = @"".mutableCopy;
+                for (XYLocation *location in locations) {
+                    if (location == locations.lastObject) {
+                        [stringM appendFormat:@"%@",location.name];
+                    }else
+                    {
+                        [stringM appendFormat:@"%@,",location.name];
+                    }
                 }
+                
+                weakCell.model.value = stringM;
+                weakCell.model.valueCode = stringM;
+                weakCell.model = weakCell.model;
             }
-            
-            weakCell.model.value = stringM;
-            weakCell.model.valueCode = stringM;
-            weakCell.model = weakCell.model;
         };
     }];
 }
