@@ -60,6 +60,9 @@
     self = [super initWithFrame:frame];
     if (self) {
         
+        self.title = @"选择地区";
+        self.viewToShow = [UIApplication sharedApplication].keyWindow;
+
         self.backgroundColor = UIColor.whiteColor;
         self.locationBarItems = @[].mutableCopy;
         self.tableViews = @[].mutableCopy;

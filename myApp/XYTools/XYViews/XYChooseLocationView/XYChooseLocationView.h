@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 
 // ######################## 下面属性为可选 ##########################
-/** 想要设置的 title */
+/** 想要设置的 title, default is “选择地区” */
 @property (nonatomic, copy)         NSString * title;
 /** 想要加载到哪个view上 default is the keyWindow.  */
 @property (nonatomic, weak)         UIView * viewToShow;
@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong)       NSArray <XYLocation *>*(^getNextDataArrayHandler)(XYLocation* cuttentLocation);
 
 /** 选择完毕，回调 */
-@property (nonatomic, copy)         void(^finishChooseBlock)(NSArray *locations);
+@property (nonatomic, copy)         void(^finishChooseBlock)(NSArray <XYLocation *>*locations);
 
 
 /// 快速创建实例 并 展示
