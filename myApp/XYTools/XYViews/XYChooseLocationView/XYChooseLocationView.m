@@ -12,6 +12,9 @@
 
 @interface XYChooseLocationView ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
 
+/** 背景 coverBtn */
+@property (nonatomic, strong)         UIButton * corverBtn;
+
 /** scrollView */
 @property (nonatomic, weak)         UIScrollView * scrollView;
 /** contentView */
@@ -48,29 +51,80 @@
 }
 + (instancetype)instanceAndShowWithConfig:(void (^)(XYChooseLocationView * _Nonnull))config
 {
+    // 创建
     XYChooseLocationView *clv = [XYChooseLocationView new];
     if (config) {
         config(clv);
     }
+    [clv setupContent];
+    
+    // 添加 - 默认 height 是60%屏幕高度
+    [clv.viewToShow addSubview:clv.corverBtn];
+    clv.corverBtn.frame = clv.viewToShow.bounds;
+    
+    [clv.corverBtn addSubview:clv];
+    clv.frame = CGRectMake(0, clv.corverBtn.frame.size.height, clv.corverBtn.frame.size.width, clv.corverBtn.frame.size.height * 0.6);
+    
+    // 展示
+    [clv show];
+    
     return clv;
 }
 
+- (void)show{
+    
+    [UIView animateWithDuration:UINavigationControllerHideShowBarDuration animations:^{
+        self.corverBtn.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.2];
+        self.transform = CGAffineTransformTranslate(CGAffineTransformIdentity, 0, -self.frame.size.height);
+    }];
+}
+
+- (void)dismiss{
+    
+    [UIView animateWithDuration:UINavigationControllerHideShowBarDuration animations:^{
+        self.corverBtn.backgroundColor = UIColor.clearColor;
+        self.transform = CGAffineTransformIdentity;
+    } completion:^(BOOL finished) {
+        if (finished) {
+            [self removeFromSuperview];
+            [self.corverBtn removeFromSuperview];
+            self.corverBtn = nil;
+        }
+    }];
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self setupBasic];
+    }
+    return self;
+}
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        
-        self.title = @"选择地区";
-        self.viewToShow = [UIApplication sharedApplication].keyWindow;
-
-        self.backgroundColor = UIColor.whiteColor;
-        self.locationBarItems = @[].mutableCopy;
-        self.tableViews = @[].mutableCopy;
-        self.dataArray = @[].mutableCopy;
-        
-        [self setupContent];
+        [self setupBasic];
     }
     return self;
+}
+
+- (void)setupBasic{
+    self.title = @"选择地区";
+    self.viewToShow = [UIApplication sharedApplication].keyWindow;
+    self.corverBtn = [self getCoverBtn];
+    self.backgroundColor = UIColor.whiteColor;
+    self.locationBarItems = @[].mutableCopy;
+    self.tableViews = @[].mutableCopy;
+    self.dataArray = @[].mutableCopy;
+}
+
+- (UIButton *)getCoverBtn{
+    UIButton *corverBtn = [UIButton new];
+    corverBtn.backgroundColor = UIColor.clearColor;
+    [corverBtn addTarget:self action:@selector(cancelBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    return corverBtn;
 }
 
 - (void)setupContent{
@@ -441,7 +495,8 @@
     if (self.finishChooseBlock) {
         self.finishChooseBlock(nil);
     }
-    [self removeFromSuperview];
+    
+    [self dismiss];
 }
 
 - (void)ensureBtnClick:(UIButton *)sender
@@ -457,7 +512,7 @@
     }
     
     // 移除自己
-    [self removeFromSuperview];
+    [self dismiss];
 }
 
 - (void)locationBtnClick:(UIButton *)sender
