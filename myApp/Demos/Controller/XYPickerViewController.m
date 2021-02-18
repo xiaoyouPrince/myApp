@@ -148,26 +148,22 @@
         };
         
         
-        clv.finishChooseBlock = ^(NSArray <NSString *>*locations) {
+        clv.finishChooseBlock = ^(NSArray <XYLocation *>*locations) {
             
-            if (!locations || [locations.firstObject isEqualToString:@"请选择"]) {
-                return ;
+            if (!locations.count) {// 无数据直接返回
+                return;
             }
             
             NSLog(@"locations = %@",locations);
             
             NSMutableString *stringM = @"".mutableCopy;
-            for (NSString *str in locations) {
-                if ([str isEqualToString:@"请选择"]) {
-                    stringM = [stringM substringToIndex:stringM.length-1];
-                    continue;
-                }else if ([str isEqualToString:locations.lastObject]) {
-                    [stringM appendFormat:@"%@",str];
+            for (XYLocation *location in locations) {
+                if (location == locations.lastObject) {
+                    [stringM appendFormat:@"%@",location.name];
                 }else
                 {
-                    [stringM appendFormat:@"%@,",str];
+                    [stringM appendFormat:@"%@,",location.name];
                 }
-                
             }
             
             weakCell.model.value = stringM;
