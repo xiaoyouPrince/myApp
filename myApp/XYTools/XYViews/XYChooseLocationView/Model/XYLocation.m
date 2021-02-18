@@ -22,7 +22,7 @@
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key{}
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"\n{\n\t id : %@\n\t name : %@\n\t pid : %@\n}",self.id,self.name,self.pid];
+    return [NSString stringWithFormat:@"{ id : %@,  name : %@,  pid : %@}",self.id,self.name,self.pid];
 }
 
 @end

@@ -42,8 +42,6 @@
 
 @implementation XYChooseLocationView
 
-//UIColor *color_nor = UIColor.blackColor;
-//UIColor *color_sel = UIColor.blackColor;
 
 + (instancetype)viewAndShowWithConfig:(void (^)(XYChooseLocationView * _Nonnull))config
 {
@@ -491,9 +489,9 @@
 
 - (void)cancelBtnClick:(UIButton *)sender
 {
-    // 回调
+    // 回调-取消为无数据
     if (self.finishChooseBlock) {
-        self.finishChooseBlock(nil);
+        self.finishChooseBlock(@[]);
     }
     
     [self dismiss];
@@ -502,8 +500,11 @@
 - (void)ensureBtnClick:(UIButton *)sender
 {
     NSMutableArray *arrayM = @[].mutableCopy;
-    for (UIButton *btn in self.locationBar.subviews) {
-        [arrayM addObject:btn.currentTitle];
+    for (XYLocationBarItemView *btn in self.locationBar.subviews) {
+        // 最后一个为选择的，不进行添加
+        if (btn.model) {
+            [arrayM addObject:btn.model];
+        }
     }
     
     // 回调
