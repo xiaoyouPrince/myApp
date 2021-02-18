@@ -489,11 +489,6 @@
 
 - (void)cancelBtnClick:(UIButton *)sender
 {
-    // 回调-取消为无数据
-    if (self.finishChooseBlock) {
-        self.finishChooseBlock(@[]);
-    }
-    
     [self dismiss];
 }
 
