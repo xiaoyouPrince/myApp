@@ -27,8 +27,10 @@ NS_ASSUME_NONNULL_BEGIN
 // ######################## 下面属性为可选 ##########################
 /** 想要设置的 title, default is “选择地区” */
 @property (nonatomic, copy)         NSString * title;
-/** 想要加载到哪个view上 default is the keyWindow.  */
+/** 想要加载到哪个view上 default is the keyWindow.  推荐设置为 VC.view*/
 @property (nonatomic, weak)         UIView * viewToShow;
+/** 可选最大层级数. default is 0, 支持无限层级选择。eg: 当选择省市区，可设置为3， 当选择省市，可设置为2 */
+@property (nonatomic, assign)         NSUInteger maxLevel;
 
 // ######################## 下面属性为必填 ##########################
 

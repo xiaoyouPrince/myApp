@@ -157,6 +157,7 @@
 - (void)setupBasic{
     self.title = @"选择地区";
     self.viewToShow = [UIApplication sharedApplication].keyWindow;
+    self.maxLevel = 0;
     self.corverBtn = [self getCoverBtn];
     self.backgroundColor = UIColor.whiteColor;
     self.locationBarItems = @[].mutableCopy;
@@ -494,6 +495,15 @@
     
     // 如果有数据
     if (locations.count) {
+        // 0. 处理最大可选择层级
+        if (self.tableViews.count >= self.maxLevel && self.maxLevel != 0) {
+            // 1. 修改标题
+            [self scrollToNextItem:cell.model];
+            // 2. 直接跳转出去完成选择
+            [self ensureBtnClick:nil];
+            return;
+        }
+        
         // 1. 添加新的 item 和 列表
         [self.dataArray addObject:locations];
         [self addLocationBarItem];
