@@ -8,6 +8,7 @@
 
 #import "XYChooseLocationView.h"
 #import "XYLocationCell.h"
+#import "FMDB.h"
 
 @interface XYChooseLocationView ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -41,7 +42,7 @@
 
 @implementation XYChooseLocationView
 
-#pragma mark - Public Methods
+#pragma mark - Public Methods - allow custom
 
 + (instancetype)viewAndShowWithConfig:(void (^)(XYChooseLocationView * _Nonnull))config
 {
@@ -67,6 +68,49 @@
     [clv show];
     
     return clv;
+}
+
+#pragma mark - Public Methods - not allow custom
+
++ (instancetype)instanceAndShowWithDefault:(void (^)(NSArray<XYLocation *> * _Nonnull))finishChooseBlock{
+    return [self instanceAndShowWithConfig:^(XYChooseLocationView * _Nonnull clv) {
+        clv.baseDataArray = [self cityArrayForPid:@"0"];
+        clv.getNextDataArrayHandler = ^NSArray<XYLocation *> * _Nonnull(XYLocation * _Nonnull cuttentLocation) {
+            return [self cityArrayForPid:cuttentLocation.id];
+        };
+        clv.finishChooseBlock = finishChooseBlock;
+    }];
+}
+
++ (NSArray *)cityArrayForPid:(NSString *)pid
+{
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"cityArray" ofType:@"sqlite"];
+//    FMDatabaseQueue *queue = [FMDatabaseQueue databaseQueueWithPath:path];
+//
+//    NSMutableArray *arrayM = @[].mutableCopy;
+//
+//    [queue inDatabase:^(FMDatabase *db) {
+//        FMResultSet *rs = [db executeQuery:@"SELECT * FROM t_allCities WHERE pid = (?)",pid];
+//
+//        while (rs.next) {
+//            long cid = [rs longForColumn:@"id"];
+//            long pid = [rs longForColumn:@"pid"];
+//            NSString * name = [rs stringForColumn:@"name"];
+//            NSMutableDictionary *dict = @{}.mutableCopy;
+//
+//            [dict setValue:@(cid) forKey:@"id"];
+//            [dict setValue:@(pid) forKey:@"pid"];
+//            [dict setValue:name forKey:@"name"];
+//            [arrayM addObject:dict];
+//        }
+//    }];
+//    return arrayM;
+    
+#warning todo - XY 添加一个默认的数据源
+    
+    @throw [NSException exceptionWithName:@"XYChooseLocationView" reason:@"暂时不支持默认，因为本地数据异常。需要重新整理一下基础数据" userInfo:nil];
+    
+    return @[];
 }
 
 #pragma mark - Private Methods

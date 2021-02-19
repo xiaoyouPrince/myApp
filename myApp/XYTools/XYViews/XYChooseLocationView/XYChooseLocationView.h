@@ -47,6 +47,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)viewAndShowWithConfig:(void(^)(XYChooseLocationView *clv))config;
 + (instancetype)instanceAndShowWithConfig:(void(^)(XYChooseLocationView *clv))config;
 
+/// 创建展示默认数据源的位置选择器 - 不可自定义数据源
+/// @param finishChooseBlock 选完地址之后的回调
++ (instancetype)instanceAndShowWithDefault:(void(^)(NSArray <XYLocation *>*locations))finishChooseBlock;
+
 
 @end
 

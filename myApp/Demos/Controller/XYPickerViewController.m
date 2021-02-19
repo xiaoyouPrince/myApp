@@ -130,19 +130,18 @@
     [self.view endEditing:YES];
     
     // 外围地址数据
-    NSArray *array = [DataTool cityArrayForPid:@"0"];
-    NSArray *locations = [XYLocation mj_objectArrayWithKeyValuesArray:array];
+//    NSArray *array = [DataTool cityArrayForPid:@"0"];
+//    NSArray *locations = [XYLocation mj_objectArrayWithKeyValuesArray:array];
     __weak typeof(cell) weakCell = cell;
     
     [XYChooseLocationView instanceAndShowWithConfig:^(XYChooseLocationView * _Nonnull clv) {
-        clv.title = @"自定title";
-        clv.baseDataArray = locations;
+        clv.baseDataArray = [DataTool cityArrayForPid:@"0"];
         clv.getNextDataArrayHandler = ^NSArray<XYLocation *> * _Nonnull(XYLocation * _Nonnull cuttentLocation) {
             return [DataTool cityArrayForPid:cuttentLocation.id];
         };
         
         clv.finishChooseBlock = ^(NSArray <XYLocation *>*locations) {
-            if (locations.count) {// 无数据才处理
+            if (locations.count) {// 有数据处理
                 
                 NSLog(@"locations = %@",locations);
                 
