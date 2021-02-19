@@ -129,11 +129,7 @@
 {
     [self.view endEditing:YES];
     
-    // 外围地址数据
-//    NSArray *array = [DataTool cityArrayForPid:@"0"];
-//    NSArray *locations = [XYLocation mj_objectArrayWithKeyValuesArray:array];
-    __weak typeof(cell) weakCell = cell;
-    
+    // 一行代码搞定 chooseLocationView。blcok 内可以随便使用 self,不会有循环引用问题
     [XYChooseLocationView instanceAndShowWithConfig:^(XYChooseLocationView * _Nonnull clv) {
         clv.baseDataArray = [DataTool cityArrayForPid:@"0"];
         clv.getNextDataArrayHandler = ^NSArray<XYLocation *> * _Nonnull(XYLocation * _Nonnull cuttentLocation) {
@@ -142,25 +138,30 @@
         
         clv.finishChooseBlock = ^(NSArray <XYLocation *>*locations) {
             if (locations.count) {// 有数据处理
-                
-                NSLog(@"locations = %@",locations);
-                
-                NSMutableString *stringM = @"".mutableCopy;
-                for (XYLocation *location in locations) {
-                    if (location == locations.lastObject) {
-                        [stringM appendFormat:@"%@",location.name];
-                    }else
-                    {
-                        [stringM appendFormat:@"%@,",location.name];
-                    }
-                }
-                
-                weakCell.model.value = stringM;
-                weakCell.model.valueCode = stringM;
-                weakCell.model = weakCell.model;
+                [self hasChooseLocations:locations forCell:cell];
             }
         };
     }];
+}
+
+// 内部拿到选择城市数据，具体处理
+- (void)hasChooseLocations:(NSArray <XYLocation *>*)locations forCell:(XYInfomationCell *)weakCell
+{
+    NSLog(@"locations = %@",locations);
+    
+    NSMutableString *stringM = @"".mutableCopy;
+    for (XYLocation *location in locations) {
+        if (location == locations.lastObject) {
+            [stringM appendFormat:@"%@",location.name];
+        }else
+        {
+            [stringM appendFormat:@"%@,",location.name];
+        }
+    }
+    
+    weakCell.model.value = stringM;
+    weakCell.model.valueCode = stringM;
+    weakCell.model = weakCell.model;
 }
 
 #pragma mark - 数据源 构建
