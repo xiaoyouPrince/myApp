@@ -84,6 +84,7 @@
 		B4C656CF238178BD00959704 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C656CE238178BD00959704 /* main.m */; };
 		B4C829F2247CFFCA00B5F13F /* XYPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C829F0247CFFCA00B5F13F /* XYPushViewController.m */; };
 		B4C829F3247CFFCA00B5F13F /* XYPushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4C829F1247CFFCA00B5F13F /* XYPushViewController.xib */; };
+		B4CA53F825DFF4330033ECC4 /* XYSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CA53F725DFF4330033ECC4 /* XYSwitch.m */; };
 		B4D064742497050200DAEF7C /* XYKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D064732497050200DAEF7C /* XYKVO.m */; };
 		B4D9311F247515480013E550 /* XYDemoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D9311E247515480013E550 /* XYDemoListController.m */; };
 		B4D93123247533490013E550 /* XYHealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D93121247533490013E550 /* XYHealthViewController.m */; };
@@ -228,6 +229,8 @@
 		B4C829EF247CFFCA00B5F13F /* XYPushViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYPushViewController.h; sourceTree = "<group>"; };
 		B4C829F0247CFFCA00B5F13F /* XYPushViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYPushViewController.m; sourceTree = "<group>"; };
 		B4C829F1247CFFCA00B5F13F /* XYPushViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYPushViewController.xib; sourceTree = "<group>"; };
+		B4CA53F625DFF4330033ECC4 /* XYSwitch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYSwitch.h; sourceTree = "<group>"; };
+		B4CA53F725DFF4330033ECC4 /* XYSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSwitch.m; sourceTree = "<group>"; };
 		B4D064722497050200DAEF7C /* XYKVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYKVO.h; sourceTree = "<group>"; };
 		B4D064732497050200DAEF7C /* XYKVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYKVO.m; sourceTree = "<group>"; };
 		B4D9311D247515480013E550 /* XYDemoListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYDemoListController.h; sourceTree = "<group>"; };
@@ -395,6 +398,7 @@
 		B45FCD2F23B61F3200626D06 /* XYViews */ = {
 			isa = PBXGroup;
 			children = (
+				B4CA53F525DFF3CB0033ECC4 /* XYSwitch */,
 				B49E380B25DA9749007B11D8 /* XYCheckBox */,
 				B45FCDE723B6218B00626D06 /* XYChooseLocationView */,
 				B45FCDE423B6218B00626D06 /* XYDatePickerView */,
@@ -606,6 +610,15 @@
 				B4A3795825DD96340070530E /* cityArray.sqlite */,
 			);
 			path = BaseInitial;
+			sourceTree = "<group>";
+		};
+		B4CA53F525DFF3CB0033ECC4 /* XYSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				B4CA53F625DFF4330033ECC4 /* XYSwitch.h */,
+				B4CA53F725DFF4330033ECC4 /* XYSwitch.m */,
+			);
+			path = XYSwitch;
 			sourceTree = "<group>";
 		};
 		B4D93119247514E70013E550 /* Demos */ = {
@@ -832,6 +845,7 @@
 				B45FCE0923B621A500626D06 /* XYLocation.m in Sources */,
 				B45FCD7723B61F3300626D06 /* XYAlertView.m in Sources */,
 				B45FCD9B23B61F7A00626D06 /* UIView+XYAdd.m in Sources */,
+				B4CA53F825DFF4330033ECC4 /* XYSwitch.m in Sources */,
 				B45FCE0A23B621A500626D06 /* XYLocationBar.m in Sources */,
 				B4BDA75C24924F190070D05C /* WebViewController.m in Sources */,
 				B45FCD9823B61F7A00626D06 /* UILabel+XYAdd.m in Sources */,

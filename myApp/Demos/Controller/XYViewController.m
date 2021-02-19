@@ -7,32 +7,64 @@
 //
 
 #import "XYViewController.h"
+#import "XYSwitch.h"
 
 @interface XYViewController ()
-
+/** switch */
+@property (nonatomic, strong)         XYSwitch * my_switch;
 @end
 
 @implementation XYViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    XYWeakSelf
     self.view.backgroundColor = HEXCOLOR(0xf0f0f0);
     
+    [self my_switch];
+    [self refreshContent];
+}
+
+- (void)refreshContent{
+    XYWeakSelf
     [self setContentWithData:[self customData] itemConfig:^(XYInfomationItem * _Nonnull item) {
-        item.titleWidthRate = 0.4;
+        item.titleWidthRate = 0.7;
+        if (![item.valueColor isEqual:UIColor.blueColor]) {// 第一组不处理
+            item.type = weakSelf.my_switch.settingValue ? XYInfoCellTypeOther : XYInfoCellTypeChoose;
+            if (!weakSelf.my_switch.settingValue) { // chooseType
+                item.titleFont = [UIFont boldSystemFontOfSize:20];
+                item.titleColor = UIColor.brownColor;
+                item.value = @"";
+            }
+        }
     } sectionConfig:^(XYInfomationSection * _Nonnull section) {
         section.layer.cornerRadius = 0;
-        section.separatorHeight = 10;
-    } sectionDistance:10 contentEdgeInsets:UIEdgeInsetsZero cellClickBlock:^(NSInteger index, XYInfomationCell * _Nonnull cell) {
+        if (section.tag != 0) { // 从第二组开始
+            section.separatorHeight = 10;
+        }
+    } sectionDistance:0 contentEdgeInsets:UIEdgeInsetsZero cellClickBlock:^(NSInteger index, XYInfomationCell * _Nonnull cell) {
         
         UIViewController *vc = [NSClassFromString(cell.model.titleKey) new];
         [weakSelf.navigationController pushViewController:vc animated:YES];
     }];
 }
 
+- (XYSwitch *)my_switch
+{
+    if (!_my_switch) {
+        XYSwitch *my_switch = [XYSwitch new];
+        my_switch.settingKey = @"show_detail";
+        my_switch.on = my_switch.settingValue;
+        XYWeakSelf
+        my_switch.valueChangedHandler = ^(BOOL isOn) {
+            [weakSelf refreshContent];
+        };
+        _my_switch = my_switch;
+    }
+    return _my_switch;
+}
+
 - (NSArray *)customData{
+    
     NSArray *section1 = @[
         @{
             @"title": @"",
@@ -40,28 +72,35 @@
             @"type": @3,
             @"customCellClass": @"XYItemListCell",
             @"backgroundColor": UIColor.clearColor,
-            @"valueColor": UIColor.blueColor
+            @"valueColor": UIColor.blueColor,
         },
         @{
-            @"title": @"XYInfomationSection",
-            @"titleKey": @"",
-            @"value": @"""简介: ""\n\t一组可自定义的表单组件，致力于快速实现表单、列表、设置等相关功能\n\t本项目中所有相关列表(比如本目录)均基于此构建\
-            \n\n此项目基于纯代码实现""",
-            @"type": @3,
-            @"customCellClass": @"XYItemListCell",
-        }
+            @"title": @"此开关将展示各组件简介",
+            @"value": @" ",
+            @"type": @1,
+            @"backgroundColor": UIColor.clearColor,
+            @"valueColor": UIColor.blueColor,
+            @"accessoryView": _my_switch
+        },
     ];
     
     UIImage *image = [UIImage imageNamed:@"rightArraw_gray2"];
     NSArray *section2 = @[
         @{
+            @"title": @"XYInfomationSection",
+            @"titleKey": @"",
+            @"value": @"""简介: ""\n\t一组可自定义的表单组件，致力于快速实现表单、列表、设置等相关功能\n\t本项目中所有相关列表(比如本目录)均基于此构建\
+            \n\n此项目基于纯代码实现""",
+            @"type": _my_switch.settingValue ? @3 : @1,
+            @"customCellClass": @"XYItemListCell",
+        },
+        @{
             @"title": @"XYCheckBox",
             @"value": @"一组复选框组件,可以方便实现复选框功能，常用案例为选择某些信息。\n\n支持自定义cell",
             @"titleKey": @"XYCheckBoxVC",
-            @"type": @3,
+            @"type": _my_switch.settingValue ? @3 : @1,
             @"customCellClass": @"XYItemListCell",
             @"valueCode": @"",
-            @"accessoryView": [[UIImageView alloc] initWithImage:image]
         },
         @{
             @"imageName": @"",
@@ -71,7 +110,6 @@
             @"type": @3,
             @"customCellClass": @"XYItemListCell",
             @"valueCode": @"",
-            @"accessoryView": [[UIImageView alloc] initWithImage:image]
         },
         @{
             @"imageName": @"",
@@ -81,7 +119,6 @@
             @"type": @3,
             @"customCellClass": @"XYItemListCell",
             @"valueCode": @"",
-            @"accessoryView": [[UIImageView alloc] initWithImage:image]
         },
         @{
             @"imageName": @"",
@@ -91,7 +128,6 @@
             @"type": @3,
             @"customCellClass": @"XYItemListCell",
             @"valueCode": @"",
-            @"accessoryView": [[UIImageView alloc] initWithImage:image]
         },
         @{
             @"imageName": @"",
@@ -101,7 +137,6 @@
             @"type": @3,
             @"customCellClass": @"XYItemListCell",
             @"valueCode": @"",
-            @"accessoryView": [[UIImageView alloc] initWithImage:image]
         },
         @{
             @"imageName": @"",
@@ -111,7 +146,6 @@
             @"type": @3,
             @"customCellClass": @"XYItemListCell",
             @"valueCode": @"",
-            @"accessoryView": [[UIImageView alloc] initWithImage:image]
         }
     ];
     

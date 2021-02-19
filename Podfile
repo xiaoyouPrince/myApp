@@ -17,6 +17,6 @@ target 'myApp' do
   pod 'IQKeyboardManager', '~> 6.4.2'
   pod 'SDCycleScrollView'
   pod 'SVProgressHUD'
-  pod 'XYInfomationSection'
+  pod 'XYInfomationSection', '~> 1.0.3'
 
 end
