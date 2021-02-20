@@ -41,7 +41,7 @@
         if (section.tag != 0) { // 从第二组开始
             section.separatorHeight = 10;
         }
-    } sectionDistance:0 contentEdgeInsets:UIEdgeInsetsZero cellClickBlock:^(NSInteger index, XYInfomationCell * _Nonnull cell) {
+    } sectionDistance:10 contentEdgeInsets:UIEdgeInsetsZero cellClickBlock:^(NSInteger index, XYInfomationCell * _Nonnull cell) {
         
         UIViewController *vc = [NSClassFromString(cell.model.titleKey) new];
         [weakSelf.navigationController pushViewController:vc animated:YES];
@@ -71,14 +71,14 @@
             @"value": @"以下是本项目展示的 Demo 列表",
             @"type": @3,
             @"customCellClass": @"XYItemListCell",
-            @"backgroundColor": UIColor.clearColor,
+            @"backgroundColor": HEXCOLOR(0xf0f0f0),
             @"valueColor": UIColor.blueColor,
         },
         @{
             @"title": @"此开关将展示各组件简介",
             @"value": @" ",
             @"type": @1,
-            @"backgroundColor": UIColor.clearColor,
+            @"backgroundColor": HEXCOLOR(0xf0f0f0),
             @"valueColor": UIColor.blueColor,
             @"accessoryView": _my_switch
         },
