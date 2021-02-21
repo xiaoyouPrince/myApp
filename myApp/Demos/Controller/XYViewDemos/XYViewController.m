@@ -83,12 +83,9 @@
             @"accessoryView": _my_switch
         },
     ];
-    
-    UIImage *image = [UIImage imageNamed:@"rightArraw_gray2"];
     NSArray *section2 = @[
         @{
             @"title": @"XYInfomationSection",
-            @"titleKey": @"",
             @"value": @"""简介: ""\n\t一组可自定义的表单组件，致力于快速实现表单、列表、设置等相关功能\n\t本项目中所有相关列表(比如本目录)均基于此构建\
             \n\n此项目基于纯代码实现""",
             @"type": _my_switch.settingValue ? @3 : @1,
@@ -100,52 +97,41 @@
             @"titleKey": @"XYCheckBoxVC",
             @"type": _my_switch.settingValue ? @3 : @1,
             @"customCellClass": @"XYItemListCell",
-            @"valueCode": @"",
         },
         @{
-            @"imageName": @"",
             @"title": @"XYStarView",
             @"titleKey": @"XYStarViewController",
             @"value": @"一个星星框组件,常用于展示用户评分功能。\n\n支持自定义cell",
             @"type": @3,
             @"customCellClass": @"XYItemListCell",
-            @"valueCode": @"",
         },
         @{
-            @"imageName": @"",
             @"title": @"XYPickerView",
             @"titleKey": @"XYPickerViewController",
             @"value": @"一个单列表选择器控件，简单易用。可一行代码集成\n\n使用的时候只需要关心数据，内部处理展示与选中相关业务。",
             @"type": @3,
             @"customCellClass": @"XYItemListCell",
-            @"valueCode": @"",
         },
         @{
-            @"imageName": @"",
             @"title": @"XYDatePickerView",
             @"titleKey": @"XYPickerViewController",
             @"value": @"一个日期/时间选择控件，简单易用。可一行代码集成\n\n使用的时候只需要关心业务代码，简洁的 API 设计，如同系统 DatePicker。",
             @"type": @3,
             @"customCellClass": @"XYItemListCell",
-            @"valueCode": @"",
         },
         @{
-            @"imageName": @"",
             @"title": @"XYChooseLocationView",
             @"titleKey": @"XYPickerViewController",
             @"value": @"一个地址选择器控件【亦可用作各种多级选择器】，简单易用。可一行代码集成\n\n使用的时候只需要关心数据，内部处理展示与选中相关业务。",
             @"type": @3,
             @"customCellClass": @"XYItemListCell",
-            @"valueCode": @"",
         },
         @{
-            @"imageName": @"",
-            @"title": @"-------------",
-            @"titleKey": @"XYPickerViewController",
-            @"value": @"一个单列表选择器控件，简单易用\n\n使用的时候只需要关心数据，内部处理展示与选中相关业务。",
+            @"title": @"XYSwitch",
+            @"titleKey": @"",
+            @"value": @"一个UISwitch子类，加入新 API\n\n使用简单，方便设置其设置的值，并监听事件回调\n\nDEMO即上面的 Switch",
             @"type": @3,
             @"customCellClass": @"XYItemListCell",
-            @"valueCode": @"",
         }
     ];
     

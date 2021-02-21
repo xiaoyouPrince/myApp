@@ -17,38 +17,33 @@
 
 @interface ViewController ()
 
-/** name */
-@property (nonatomic, copy)         NSString * name;
-
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-
-    // UI
-    [self buildUI];
-    
-    self.name = @"nihao";
-    
-    
-    NSArray *keys = @[@"title",@"name"];
-    NSDictionary *dict = [self dictionaryWithValuesForKeys:keys];
-    NSLog(@"dict = %@",dict);
-    
-    
-    [self valueForKey:@"title"];
-        
+    self.view.backgroundColor = HEXCOLOR(0xf0f0f0);
+    XYWeakSelf
+    [self setContentWithData:[self customData] itemConfig:^(XYInfomationItem * _Nonnull item) {
+        item.titleWidthRate = 0.7;
+    } sectionConfig:^(XYInfomationSection * _Nonnull section) {
+        section.layer.cornerRadius = 0;
+        if (section.tag != 0) { // 从第二组开始
+            section.separatorHeight = 10;
+        }
+    } sectionDistance:10 contentEdgeInsets:UIEdgeInsetsZero cellClickBlock:^(NSInteger index, XYInfomationCell * _Nonnull cell) {
+        UIViewController *vc = [NSClassFromString(cell.model.titleKey) new];
+        vc.title = cell.model.title;
+        [weakSelf.navigationController pushViewController:vc animated:YES];
+    }];
 }
 
 
 - (void)buildUI{
     
-    IMP imp = [NSObject instanceMethodForSelector:@selector(class)];
-    NSMethodSignature *ms = [NSObject instanceMethodSignatureForSelector:@selector(class)];
+//    IMP imp = [NSObject instanceMethodForSelector:@selector(class)];
+//    NSMethodSignature *ms = [NSObject instanceMethodSignatureForSelector:@selector(class)];
     /**
         (lldb) po ms
         <NSMethodSignature: 0x6000018e5440>
@@ -218,6 +213,60 @@
     XYDemoListController *detail = [XYDemoListController new];
     [self.navigationController pushViewController:detail animated:YES];
     
+}
+
+- (NSArray *)customData{
+    
+    NSArray *section1 = @[
+        @{
+            @"title": @"",
+            @"value": @"以下是本项目展示的 Demo 列表,主要分为Controller工具类，View工具类、逻辑工具类和系统分类",
+            @"type": @3,
+            @"customCellClass": @"XYItemListCell",
+            @"backgroundColor": HEXCOLOR(0xf0f0f0),
+            @"valueColor": UIColor.blueColor,
+        }
+    ];
+    NSArray *section2 = @[
+        @{
+            @"title": @"Controller 工具(控制器)",
+            @"value": @"拍照\n\n拍摄身份证照片\n\n导航控制器",
+            @"titleKey": @"XYVCController",
+            @"type": @3,
+            @"customCellClass": @"XYItemListCell",
+        },
+        @{
+            @"title": @"视图工具类",
+            @"value": @"XYInfomationSection\n\nXYCheckBox\n\nXYStarView\n\nXYPickerView\n\nXYDatePickerView\n\nXYChooseLocationView\n\nXYSwitch",
+            @"titleKey": @"XYViewController",
+            @"type": @3,
+            @"customCellClass": @"XYItemListCell",
+        },
+        @{
+            @"title": @"逻辑工具类",
+            @"titleKey": @"XYToolController",
+            @"value": @"FileTool\n\nHealthKitTool\n\nConfigTool\n\nPushServiceTool\n\nPinyinTool\n\nHTTPTool",
+            @"type": @3,
+            @"customCellClass": @"XYItemListCell",
+        },
+        @{
+            @"title": @"系统分类，增强系统功能",
+            @"titleKey": @"",
+            @"value": @"这组没什么好展示的",
+            @"type": @3,
+            @"customCellClass": @"XYItemListCell",
+        },
+        @{
+            @"title": @"组件工具",
+            @"titleKey": @"",
+            @"value": @"后续计划独立成组件的工具。\n\nXYInfomationSection",
+            @"type": @3,
+            @"customCellClass": @"XYItemListCell",
+        }
+    ];
+    
+    NSArray *array = @[section1,section2];
+    return array;
 }
 
 @end

@@ -62,6 +62,9 @@
 		B45FCE0C23B621A500626D06 /* XYChooseLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCE0723B621A500626D06 /* XYChooseLocationView.m */; };
 		B45FCE1223B6230200626D06 /* UIViewController+XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCE1023B6230200626D06 /* UIViewController+XYNavigationController.m */; };
 		B45FCE1323B6230200626D06 /* XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCE1123B6230200626D06 /* XYNavigationController.m */; };
+		B499A06225E2D22D008652B8 /* XYVCController.m in Sources */ = {isa = PBXBuildFile; fileRef = B499A06125E2D22D008652B8 /* XYVCController.m */; };
+		B499A06625E2D4A8008652B8 /* XYToolController.m in Sources */ = {isa = PBXBuildFile; fileRef = B499A06525E2D4A8008652B8 /* XYToolController.m */; };
+		B499A06B25E2D840008652B8 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B499A06A25E2D840008652B8 /* SceneDelegate.m */; };
 		B49E370525D84A25007B11D8 /* XYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E370425D84A25007B11D8 /* XYViewController.m */; };
 		B49E374825D90F31007B11D8 /* XYItemListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E374725D90F31007B11D8 /* XYItemListCell.m */; };
 		B49E380E25DA997D007B11D8 /* XYCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E380D25DA997D007B11D8 /* XYCheckBox.m */; };
@@ -76,7 +79,7 @@
 		B4BDA75C24924F190070D05C /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BDA75A24924F190070D05C /* WebViewController.m */; };
 		B4BDA75D24924F190070D05C /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BDA75B24924F190070D05C /* WebViewController.xib */; };
 		B4C656BE238178BC00959704 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C656BD238178BC00959704 /* AppDelegate.m */; };
-		B4C656C1238178BC00959704 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C656C0238178BC00959704 /* SceneDelegate.m */; };
+		B4C656C1238178BC00959704 /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C656C0238178BC00959704 /* BaseVC.m */; };
 		B4C656C4238178BC00959704 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C656C3238178BC00959704 /* ViewController.m */; };
 		B4C656C7238178BC00959704 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C656C5238178BC00959704 /* Main.storyboard */; };
 		B4C656C9238178BD00959704 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C656C8238178BD00959704 /* Assets.xcassets */; };
@@ -190,6 +193,12 @@
 		B45FCE0F23B6230200626D06 /* XYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNavigationController.h; sourceTree = "<group>"; };
 		B45FCE1023B6230200626D06 /* UIViewController+XYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XYNavigationController.m"; sourceTree = "<group>"; };
 		B45FCE1123B6230200626D06 /* XYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYNavigationController.m; sourceTree = "<group>"; };
+		B499A06025E2D22D008652B8 /* XYVCController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYVCController.h; sourceTree = "<group>"; };
+		B499A06125E2D22D008652B8 /* XYVCController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYVCController.m; sourceTree = "<group>"; };
+		B499A06425E2D4A8008652B8 /* XYToolController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYToolController.h; sourceTree = "<group>"; };
+		B499A06525E2D4A8008652B8 /* XYToolController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYToolController.m; sourceTree = "<group>"; };
+		B499A06925E2D840008652B8 /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		B499A06A25E2D840008652B8 /* SceneDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		B49E370325D84A25007B11D8 /* XYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYViewController.h; sourceTree = "<group>"; };
 		B49E370425D84A25007B11D8 /* XYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYViewController.m; sourceTree = "<group>"; };
 		B49E374625D90F31007B11D8 /* XYItemListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYItemListCell.h; sourceTree = "<group>"; };
@@ -216,8 +225,8 @@
 		B4C656B9238178BC00959704 /* myApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C656BC238178BC00959704 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B4C656BD238178BC00959704 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B4C656BF238178BC00959704 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		B4C656C0238178BC00959704 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		B4C656BF238178BC00959704 /* BaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
+		B4C656C0238178BC00959704 /* BaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
 		B4C656C2238178BC00959704 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		B4C656C3238178BC00959704 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B4C656C6238178BC00959704 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -278,6 +287,7 @@
 		B45FCCF823B61F3200626D06 /* XYTools */ = {
 			isa = PBXGroup;
 			children = (
+				B499A05E25E2CA73008652B8 /* XYConfigTool */,
 				B4B0141E247E15210099B0D6 /* PushServiceTool */,
 				B40C02BA2476120F00D9AE82 /* HealthKitTool */,
 				B45FCD3E23B61F3200626D06 /* XYHeader.h */,
@@ -533,6 +543,57 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B499A05925E2B9A7008652B8 /* XYViewDemos */ = {
+			isa = PBXGroup;
+			children = (
+				B49E370325D84A25007B11D8 /* XYViewController.h */,
+				B49E370425D84A25007B11D8 /* XYViewController.m */,
+				B49E382925DD4588007B11D8 /* XYPickerViewController.h */,
+				B49E382A25DD4588007B11D8 /* XYPickerViewController.m */,
+				B49E381025DAC548007B11D8 /* XYCheckBoxVC.h */,
+				B49E381125DAC548007B11D8 /* XYCheckBoxVC.m */,
+				B49E382525DBED38007B11D8 /* XYStarViewController.h */,
+				B49E382625DBED38007B11D8 /* XYStarViewController.m */,
+			);
+			path = XYViewDemos;
+			sourceTree = "<group>";
+		};
+		B499A05B25E2BB25008652B8 /* XYVCDemos */ = {
+			isa = PBXGroup;
+			children = (
+				B499A06025E2D22D008652B8 /* XYVCController.h */,
+				B499A06125E2D22D008652B8 /* XYVCController.m */,
+			);
+			path = XYVCDemos;
+			sourceTree = "<group>";
+		};
+		B499A05C25E2BB38008652B8 /* XYToolDemos */ = {
+			isa = PBXGroup;
+			children = (
+				B499A06425E2D4A8008652B8 /* XYToolController.h */,
+				B499A06525E2D4A8008652B8 /* XYToolController.m */,
+				B4D93120247533490013E550 /* XYHealthViewController.h */,
+				B4D93121247533490013E550 /* XYHealthViewController.m */,
+				B4D93122247533490013E550 /* XYHealthViewController.xib */,
+				B4C829EF247CFFCA00B5F13F /* XYPushViewController.h */,
+				B4C829F0247CFFCA00B5F13F /* XYPushViewController.m */,
+				B4C829F1247CFFCA00B5F13F /* XYPushViewController.xib */,
+				B4BDA75924924F190070D05C /* WebViewController.h */,
+				B4BDA75A24924F190070D05C /* WebViewController.m */,
+				B4BDA75B24924F190070D05C /* WebViewController.xib */,
+				B4D064722497050200DAEF7C /* XYKVO.h */,
+				B4D064732497050200DAEF7C /* XYKVO.m */,
+			);
+			path = XYToolDemos;
+			sourceTree = "<group>";
+		};
+		B499A05E25E2CA73008652B8 /* XYConfigTool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XYConfigTool;
+			sourceTree = "<group>";
+		};
 		B49E380B25DA9749007B11D8 /* XYCheckBox */ = {
 			isa = PBXGroup;
 			children = (
@@ -595,10 +656,12 @@
 		B4C656D52381AAD100959704 /* BaseInitial */ = {
 			isa = PBXGroup;
 			children = (
+				B499A06925E2D840008652B8 /* SceneDelegate.h */,
+				B499A06A25E2D840008652B8 /* SceneDelegate.m */,
 				B4C656BC238178BC00959704 /* AppDelegate.h */,
 				B4C656BD238178BC00959704 /* AppDelegate.m */,
-				B4C656BF238178BC00959704 /* SceneDelegate.h */,
-				B4C656C0238178BC00959704 /* SceneDelegate.m */,
+				B4C656BF238178BC00959704 /* BaseVC.h */,
+				B4C656C0238178BC00959704 /* BaseVC.m */,
 				B4C656C2238178BC00959704 /* ViewController.h */,
 				B4C656C3238178BC00959704 /* ViewController.m */,
 				B4C656C5238178BC00959704 /* Main.storyboard */,
@@ -644,27 +707,11 @@
 		B4D9311B247514FD0013E550 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B499A05C25E2BB38008652B8 /* XYToolDemos */,
+				B499A05B25E2BB25008652B8 /* XYVCDemos */,
+				B499A05925E2B9A7008652B8 /* XYViewDemos */,
 				B4D9311D247515480013E550 /* XYDemoListController.h */,
 				B4D9311E247515480013E550 /* XYDemoListController.m */,
-				B4D93120247533490013E550 /* XYHealthViewController.h */,
-				B4D93121247533490013E550 /* XYHealthViewController.m */,
-				B4D93122247533490013E550 /* XYHealthViewController.xib */,
-				B4C829EF247CFFCA00B5F13F /* XYPushViewController.h */,
-				B4C829F0247CFFCA00B5F13F /* XYPushViewController.m */,
-				B4C829F1247CFFCA00B5F13F /* XYPushViewController.xib */,
-				B4BDA75924924F190070D05C /* WebViewController.h */,
-				B4BDA75A24924F190070D05C /* WebViewController.m */,
-				B4BDA75B24924F190070D05C /* WebViewController.xib */,
-				B4D064722497050200DAEF7C /* XYKVO.h */,
-				B4D064732497050200DAEF7C /* XYKVO.m */,
-				B49E370325D84A25007B11D8 /* XYViewController.h */,
-				B49E370425D84A25007B11D8 /* XYViewController.m */,
-				B49E382925DD4588007B11D8 /* XYPickerViewController.h */,
-				B49E382A25DD4588007B11D8 /* XYPickerViewController.m */,
-				B49E381025DAC548007B11D8 /* XYCheckBoxVC.h */,
-				B49E381125DAC548007B11D8 /* XYCheckBoxVC.m */,
-				B49E382525DBED38007B11D8 /* XYStarViewController.h */,
-				B49E382625DBED38007B11D8 /* XYStarViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -855,6 +902,7 @@
 				B45FCD9723B61F7A00626D06 /* UIBarButtonItem+XYAdd.m in Sources */,
 				B4D93123247533490013E550 /* XYHealthViewController.m in Sources */,
 				B49E381225DAC548007B11D8 /* XYCheckBoxVC.m in Sources */,
+				B499A06625E2D4A8008652B8 /* XYToolController.m in Sources */,
 				B49E380E25DA997D007B11D8 /* XYCheckBox.m in Sources */,
 				B49E382B25DD4588007B11D8 /* XYPickerViewController.m in Sources */,
 				B45FCDA723B61F8A00626D06 /* NSArray+XYAdd.m in Sources */,
@@ -864,9 +912,11 @@
 				B45FCD8023B61F3300626D06 /* XYCommon.m in Sources */,
 				B45FCDDE23B6203B00626D06 /* UIResponder+XYActionRecord.m in Sources */,
 				B45FCD8523B61F6300626D06 /* XYSharePresentationController.m in Sources */,
-				B4C656C1238178BC00959704 /* SceneDelegate.m in Sources */,
+				B4C656C1238178BC00959704 /* BaseVC.m in Sources */,
 				B4D9311F247515480013E550 /* XYDemoListController.m in Sources */,
+				B499A06B25E2D840008652B8 /* SceneDelegate.m in Sources */,
 				B49E374825D90F31007B11D8 /* XYItemListCell.m in Sources */,
+				B499A06225E2D22D008652B8 /* XYVCController.m in Sources */,
 				B45FCDE123B6203B00626D06 /* XYActionDataAndNetTool.m in Sources */,
 				B45FCDB123B61FAF00626D06 /* XBUGTool.m in Sources */,
 				B45FCE0B23B621A500626D06 /* XYLocationCell.m in Sources */,

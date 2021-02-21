@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SceneDelegate.h
 //  myApp
 //
 //  Created by 渠晓友 on 2019/11/17.
@@ -8,7 +8,9 @@
 
 #import <XYInfomationBaseViewController.h>
 
-@interface ViewController : XYInfomationBaseViewController
+@interface BaseVC : XYInfomationBaseViewController
+
+@property (strong, nonatomic) UIWindow * window;
 
 @end
 
