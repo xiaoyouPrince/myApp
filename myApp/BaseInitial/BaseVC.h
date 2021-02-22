@@ -10,7 +10,8 @@
 
 @interface BaseVC : XYInfomationBaseViewController
 
-@property (strong, nonatomic) UIWindow * window;
+/** 自定义cell点击回调 */
+@property (nonatomic, copy)         void(^ _Nullable customCellClickCallBcak)(NSInteger index, XYInfomationCell * _Nonnull cell);
 
 @end
 

@@ -284,9 +284,26 @@
 			path = HealthKitTool;
 			sourceTree = "<group>";
 		};
+		B44DB0A225E358340033C66E /* XYControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B44DB0A425E3870D0033C66E /* New Group */,
+			);
+			path = XYControllers;
+			sourceTree = "<group>";
+		};
+		B44DB0A425E3870D0033C66E /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		B45FCCF823B61F3200626D06 /* XYTools */ = {
 			isa = PBXGroup;
 			children = (
+				B44DB0A225E358340033C66E /* XYControllers */,
+				B45FCD2F23B61F3200626D06 /* XYViews */,
 				B499A05E25E2CA73008652B8 /* XYConfigTool */,
 				B4B0141E247E15210099B0D6 /* PushServiceTool */,
 				B40C02BA2476120F00D9AE82 /* HealthKitTool */,
@@ -297,7 +314,6 @@
 				B45FCD2123B61F3200626D06 /* XYPopover */,
 				B45FCD2923B61F3200626D06 /* LYLUnicode.m */,
 				B45FCD2A23B61F3200626D06 /* HttpTools */,
-				B45FCD2F23B61F3200626D06 /* XYViews */,
 				B45FCD3B23B61F3200626D06 /* FileTools */,
 				B45FCD3F23B61F3200626D06 /* XYAlertView */,
 				B45FCD4223B61F3200626D06 /* PinYinTool */,

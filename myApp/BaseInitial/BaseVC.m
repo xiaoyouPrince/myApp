@@ -19,9 +19,13 @@
             section.separatorHeight = 10;
         }
     } sectionDistance:10 contentEdgeInsets:UIEdgeInsetsZero cellClickBlock:^(NSInteger index, XYInfomationCell * _Nonnull cell) {
-        UIViewController *vc = [NSClassFromString(cell.model.titleKey) new];
-        vc.title = cell.model.title;
-        [weakSelf.navigationController pushViewController:vc animated:YES];
+        if (weakSelf.customCellClickCallBcak) {
+            weakSelf.customCellClickCallBcak(index, cell);
+        }else{
+            UIViewController *vc = [NSClassFromString(cell.model.titleKey) new];
+            vc.title = cell.model.title;
+            [weakSelf.navigationController pushViewController:vc animated:YES];
+        }
     }];
 }
 
