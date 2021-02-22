@@ -10,7 +10,6 @@
 #import <AFNetworking/AFNetworking.h>
 #import "XYAlertView.h"
 #import "XYKit.h"
-#import "XYDemoListController.h"
 #import <objc/runtime.h>
 #import <UIImageView+WebCache.h>
 #import "UIColor+XYAdd.h"
@@ -199,8 +198,8 @@
                              title:@"提示"
                            message:@"目前是一个空项目，但是已经有一些Demo，是否查看"
                            okTitle:@"好的" okAction:^{
-                                XYDemoListController *detail = [XYDemoListController new];
-                                [self.navigationController pushViewController:detail animated:YES];
+//                                XYDemoListController *detail = [XYDemoListController new];
+//                                [self.navigationController pushViewController:detail animated:YES];
                                 return;
                         }
                        cancelTitle:@"不进入了"
@@ -210,8 +209,8 @@
     });
     
     
-    XYDemoListController *detail = [XYDemoListController new];
-    [self.navigationController pushViewController:detail animated:YES];
+//    XYDemoListController *detail = [XYDemoListController new];
+//    [self.navigationController pushViewController:detail animated:YES];
     
 }
 

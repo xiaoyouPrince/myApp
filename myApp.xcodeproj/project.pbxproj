@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		541B685DF6C43D8009A8161C /* Pods_myApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC881613FB68E0CC860311D1 /* Pods_myApp.framework */; };
+		A35ED1AE85AA50FFB5D17216 /* libPods-myApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36CA4E83FAD4480B25A77432 /* libPods-myApp.a */; };
 		B40C02BD2476122B00D9AE82 /* XYHealthKitTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B40C02BC2476122B00D9AE82 /* XYHealthKitTool.m */; };
 		B41E8524248E0D6E00078278 /* ColorConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = B41E8523248E0D6E00078278 /* ColorConfig.plist */; };
-		B446899D2489EDFE0052ABF6 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4EE4A84247573B500ADC571 /* HealthKit.framework */; };
+		B44DB0A925E38EE30033C66E /* XYImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B44DB0A825E38EE30033C66E /* XYImagePickerController.m */; };
+		B44DB0AE25E38F3A0033C66E /* XYImageDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = B44DB0AC25E38F3A0033C66E /* XYImageDemoController.m */; };
+		B44DB0AF25E38F3A0033C66E /* XYImageDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B44DB0AD25E38F3A0033C66E /* XYImageDemoController.xib */; };
 		B45FCD6C23B61F3200626D06 /* LYLUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCD2923B61F3200626D06 /* LYLUnicode.m */; };
 		B45FCD6F23B61F3200626D06 /* XYChooseOrderTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCD3223B61F3200626D06 /* XYChooseOrderTimeView.m */; };
 		B45FCD7023B61F3200626D06 /* XYChooseOrderTimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45FCD3323B61F3200626D06 /* XYChooseOrderTimeView.xib */; };
@@ -62,6 +64,17 @@
 		B45FCE0C23B621A500626D06 /* XYChooseLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCE0723B621A500626D06 /* XYChooseLocationView.m */; };
 		B45FCE1223B6230200626D06 /* UIViewController+XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCE1023B6230200626D06 /* UIViewController+XYNavigationController.m */; };
 		B45FCE1323B6230200626D06 /* XYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45FCE1123B6230200626D06 /* XYNavigationController.m */; };
+		B47748C725E3B5C100F0344C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4EE4A84247573B500ADC571 /* HealthKit.framework */; };
+		B477495325E3B98A00F0344C /* XYTakePhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = B477495225E3B98A00F0344C /* XYTakePhotoController.m */; };
+		B477495F25E3B99200F0344C /* photo_flash_auto.png in Resources */ = {isa = PBXBuildFile; fileRef = B477495625E3B99200F0344C /* photo_flash_auto.png */; };
+		B477496025E3B99200F0344C /* photoClose@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B477495725E3B99200F0344C /* photoClose@2x.png */; };
+		B477496125E3B99200F0344C /* idCardGuoHui@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B477495825E3B99200F0344C /* idCardGuoHui@3x.png */; };
+		B477496225E3B99200F0344C /* gjjNew_changeCamera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B477495925E3B99200F0344C /* gjjNew_changeCamera@2x.png */; };
+		B477496325E3B99200F0344C /* photograph_Select@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B477495A25E3B99200F0344C /* photograph_Select@3x.png */; };
+		B477496425E3B99200F0344C /* photo_flash_off.png in Resources */ = {isa = PBXBuildFile; fileRef = B477495B25E3B99200F0344C /* photo_flash_off.png */; };
+		B477496525E3B99200F0344C /* photo_flash_on.png in Resources */ = {isa = PBXBuildFile; fileRef = B477495C25E3B99200F0344C /* photo_flash_on.png */; };
+		B477496625E3B99200F0344C /* photograph@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B477495D25E3B99200F0344C /* photograph@3x.png */; };
+		B477496725E3B99200F0344C /* photo_flash_allLight.png in Resources */ = {isa = PBXBuildFile; fileRef = B477495E25E3B99200F0344C /* photo_flash_allLight.png */; };
 		B499A06225E2D22D008652B8 /* XYVCController.m in Sources */ = {isa = PBXBuildFile; fileRef = B499A06125E2D22D008652B8 /* XYVCController.m */; };
 		B499A06625E2D4A8008652B8 /* XYToolController.m in Sources */ = {isa = PBXBuildFile; fileRef = B499A06525E2D4A8008652B8 /* XYToolController.m */; };
 		B499A06B25E2D840008652B8 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B499A06A25E2D840008652B8 /* SceneDelegate.m */; };
@@ -89,16 +102,21 @@
 		B4C829F3247CFFCA00B5F13F /* XYPushViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4C829F1247CFFCA00B5F13F /* XYPushViewController.xib */; };
 		B4CA53F825DFF4330033ECC4 /* XYSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CA53F725DFF4330033ECC4 /* XYSwitch.m */; };
 		B4D064742497050200DAEF7C /* XYKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D064732497050200DAEF7C /* XYKVO.m */; };
-		B4D9311F247515480013E550 /* XYDemoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D9311E247515480013E550 /* XYDemoListController.m */; };
 		B4D93123247533490013E550 /* XYHealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D93121247533490013E550 /* XYHealthViewController.m */; };
 		B4D93124247533490013E550 /* XYHealthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4D93122247533490013E550 /* XYHealthViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36CA4E83FAD4480B25A77432 /* libPods-myApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-myApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		667BB2AC3A9171C2A3047EA8 /* Pods-myApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-myApp/Pods-myApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B40C02BB2476122B00D9AE82 /* XYHealthKitTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHealthKitTool.h; sourceTree = "<group>"; };
 		B40C02BC2476122B00D9AE82 /* XYHealthKitTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHealthKitTool.m; sourceTree = "<group>"; };
 		B41E8523248E0D6E00078278 /* ColorConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ColorConfig.plist; sourceTree = "<group>"; };
+		B44DB0A725E38EE30033C66E /* XYImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYImagePickerController.h; sourceTree = "<group>"; };
+		B44DB0A825E38EE30033C66E /* XYImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYImagePickerController.m; sourceTree = "<group>"; };
+		B44DB0AB25E38F3A0033C66E /* XYImageDemoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYImageDemoController.h; sourceTree = "<group>"; };
+		B44DB0AC25E38F3A0033C66E /* XYImageDemoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYImageDemoController.m; sourceTree = "<group>"; };
+		B44DB0AD25E38F3A0033C66E /* XYImageDemoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYImageDemoController.xib; sourceTree = "<group>"; };
 		B45FCD1923B61F3200626D06 /* XYKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYKit.h; sourceTree = "<group>"; };
 		B45FCD2923B61F3200626D06 /* LYLUnicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYLUnicode.m; sourceTree = "<group>"; };
 		B45FCD3123B61F3200626D06 /* XYChooseOrderTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYChooseOrderTimeView.h; sourceTree = "<group>"; };
@@ -193,6 +211,17 @@
 		B45FCE0F23B6230200626D06 /* XYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYNavigationController.h; sourceTree = "<group>"; };
 		B45FCE1023B6230200626D06 /* UIViewController+XYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XYNavigationController.m"; sourceTree = "<group>"; };
 		B45FCE1123B6230200626D06 /* XYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYNavigationController.m; sourceTree = "<group>"; };
+		B477495125E3B98A00F0344C /* XYTakePhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XYTakePhotoController.h; sourceTree = "<group>"; };
+		B477495225E3B98A00F0344C /* XYTakePhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYTakePhotoController.m; sourceTree = "<group>"; };
+		B477495625E3B99200F0344C /* photo_flash_auto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_flash_auto.png; sourceTree = "<group>"; };
+		B477495725E3B99200F0344C /* photoClose@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photoClose@2x.png"; sourceTree = "<group>"; };
+		B477495825E3B99200F0344C /* idCardGuoHui@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "idCardGuoHui@3x.png"; sourceTree = "<group>"; };
+		B477495925E3B99200F0344C /* gjjNew_changeCamera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gjjNew_changeCamera@2x.png"; sourceTree = "<group>"; };
+		B477495A25E3B99200F0344C /* photograph_Select@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photograph_Select@3x.png"; sourceTree = "<group>"; };
+		B477495B25E3B99200F0344C /* photo_flash_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_flash_off.png; sourceTree = "<group>"; };
+		B477495C25E3B99200F0344C /* photo_flash_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_flash_on.png; sourceTree = "<group>"; };
+		B477495D25E3B99200F0344C /* photograph@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photograph@3x.png"; sourceTree = "<group>"; };
+		B477495E25E3B99200F0344C /* photo_flash_allLight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_flash_allLight.png; sourceTree = "<group>"; };
 		B499A06025E2D22D008652B8 /* XYVCController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYVCController.h; sourceTree = "<group>"; };
 		B499A06125E2D22D008652B8 /* XYVCController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYVCController.m; sourceTree = "<group>"; };
 		B499A06425E2D4A8008652B8 /* XYToolController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYToolController.h; sourceTree = "<group>"; };
@@ -242,15 +271,12 @@
 		B4CA53F725DFF4330033ECC4 /* XYSwitch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYSwitch.m; sourceTree = "<group>"; };
 		B4D064722497050200DAEF7C /* XYKVO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYKVO.h; sourceTree = "<group>"; };
 		B4D064732497050200DAEF7C /* XYKVO.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYKVO.m; sourceTree = "<group>"; };
-		B4D9311D247515480013E550 /* XYDemoListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYDemoListController.h; sourceTree = "<group>"; };
-		B4D9311E247515480013E550 /* XYDemoListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYDemoListController.m; sourceTree = "<group>"; };
 		B4D93120247533490013E550 /* XYHealthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XYHealthViewController.h; sourceTree = "<group>"; };
 		B4D93121247533490013E550 /* XYHealthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XYHealthViewController.m; sourceTree = "<group>"; };
 		B4D93122247533490013E550 /* XYHealthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XYHealthViewController.xib; sourceTree = "<group>"; };
 		B4EE4A83247573B500ADC571 /* myApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = myApp.entitlements; sourceTree = "<group>"; };
 		B4EE4A84247573B500ADC571 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		C2F5745F88AFD10F042E2A92 /* Pods-myApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-myApp/Pods-myApp.release.xcconfig"; sourceTree = "<group>"; };
-		EC881613FB68E0CC860311D1 /* Pods_myApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,8 +284,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B446899D2489EDFE0052ABF6 /* HealthKit.framework in Frameworks */,
-				541B685DF6C43D8009A8161C /* Pods_myApp.framework in Frameworks */,
+				B47748C725E3B5C100F0344C /* HealthKit.framework in Frameworks */,
+				A35ED1AE85AA50FFB5D17216 /* libPods-myApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				B4EE4A84247573B500ADC571 /* HealthKit.framework */,
-				EC881613FB68E0CC860311D1 /* Pods_myApp.framework */,
+				36CA4E83FAD4480B25A77432 /* libPods-myApp.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -287,16 +313,19 @@
 		B44DB0A225E358340033C66E /* XYControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B44DB0A425E3870D0033C66E /* New Group */,
+				B477495025E3B98A00F0344C /* XYTakePhotoController */,
+				B44DB0A625E38EE30033C66E /* XYImagePickerController */,
 			);
 			path = XYControllers;
 			sourceTree = "<group>";
 		};
-		B44DB0A425E3870D0033C66E /* New Group */ = {
+		B44DB0A625E38EE30033C66E /* XYImagePickerController */ = {
 			isa = PBXGroup;
 			children = (
+				B44DB0A725E38EE30033C66E /* XYImagePickerController.h */,
+				B44DB0A825E38EE30033C66E /* XYImagePickerController.m */,
 			);
-			path = "New Group";
+			path = XYImagePickerController;
 			sourceTree = "<group>";
 		};
 		B45FCCF823B61F3200626D06 /* XYTools */ = {
@@ -559,6 +588,32 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		B477495025E3B98A00F0344C /* XYTakePhotoController */ = {
+			isa = PBXGroup;
+			children = (
+				B477495525E3B99200F0344C /* cameraIcon */,
+				B477495125E3B98A00F0344C /* XYTakePhotoController.h */,
+				B477495225E3B98A00F0344C /* XYTakePhotoController.m */,
+			);
+			path = XYTakePhotoController;
+			sourceTree = "<group>";
+		};
+		B477495525E3B99200F0344C /* cameraIcon */ = {
+			isa = PBXGroup;
+			children = (
+				B477495625E3B99200F0344C /* photo_flash_auto.png */,
+				B477495725E3B99200F0344C /* photoClose@2x.png */,
+				B477495825E3B99200F0344C /* idCardGuoHui@3x.png */,
+				B477495925E3B99200F0344C /* gjjNew_changeCamera@2x.png */,
+				B477495A25E3B99200F0344C /* photograph_Select@3x.png */,
+				B477495B25E3B99200F0344C /* photo_flash_off.png */,
+				B477495C25E3B99200F0344C /* photo_flash_on.png */,
+				B477495D25E3B99200F0344C /* photograph@3x.png */,
+				B477495E25E3B99200F0344C /* photo_flash_allLight.png */,
+			);
+			path = cameraIcon;
+			sourceTree = "<group>";
+		};
 		B499A05925E2B9A7008652B8 /* XYViewDemos */ = {
 			isa = PBXGroup;
 			children = (
@@ -579,6 +634,9 @@
 			children = (
 				B499A06025E2D22D008652B8 /* XYVCController.h */,
 				B499A06125E2D22D008652B8 /* XYVCController.m */,
+				B44DB0AB25E38F3A0033C66E /* XYImageDemoController.h */,
+				B44DB0AC25E38F3A0033C66E /* XYImageDemoController.m */,
+				B44DB0AD25E38F3A0033C66E /* XYImageDemoController.xib */,
 			);
 			path = XYVCDemos;
 			sourceTree = "<group>";
@@ -726,8 +784,6 @@
 				B499A05C25E2BB38008652B8 /* XYToolDemos */,
 				B499A05B25E2BB25008652B8 /* XYVCDemos */,
 				B499A05925E2B9A7008652B8 /* XYViewDemos */,
-				B4D9311D247515480013E550 /* XYDemoListController.h */,
-				B4D9311E247515480013E550 /* XYDemoListController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -759,7 +815,7 @@
 				B4C656B5238178BC00959704 /* Sources */,
 				B4C656B6238178BC00959704 /* Frameworks */,
 				B4C656B7238178BC00959704 /* Resources */,
-				10417A509A9F4AED7FEAAA60 /* [CP] Embed Pods Frameworks */,
+				69F08E9B6C94D2BA7756EE13 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -811,20 +867,30 @@
 				B45FCDE323B6203B00626D06 /* EventRecord.plist in Resources */,
 				B4C829F3247CFFCA00B5F13F /* XYPushViewController.xib in Resources */,
 				B49E382325DBBD6E007B11D8 /* CheckBox.bundle in Resources */,
+				B477496125E3B99200F0344C /* idCardGuoHui@3x.png in Resources */,
+				B477496325E3B99200F0344C /* photograph_Select@3x.png in Resources */,
+				B44DB0AF25E38F3A0033C66E /* XYImageDemoController.xib in Resources */,
 				B4C656CC238178BD00959704 /* LaunchScreen.storyboard in Resources */,
 				B4C656C9238178BD00959704 /* Assets.xcassets in Resources */,
+				B477496025E3B99200F0344C /* photoClose@2x.png in Resources */,
 				B45FCDDD23B6203B00626D06 /* PageRecord.plist in Resources */,
 				B45FCDCF23B61FE500626D06 /* icon_star_bg@3x.png in Resources */,
+				B477496425E3B99200F0344C /* photo_flash_off.png in Resources */,
+				B477496225E3B99200F0344C /* gjjNew_changeCamera@2x.png in Resources */,
 				B45FCDB223B61FAF00626D06 /* xConfig.plist in Resources */,
 				B45FCDD023B61FE500626D06 /* icon_star@2x.png in Resources */,
 				B45FCDBF23B61FBD00626D06 /* XYPopoverViewController.xib in Resources */,
 				B4C656C7238178BC00959704 /* Main.storyboard in Resources */,
 				B4D93124247533490013E550 /* XYHealthViewController.xib in Resources */,
 				B45FCD7023B61F3200626D06 /* XYChooseOrderTimeView.xib in Resources */,
+				B477496725E3B99200F0344C /* photo_flash_allLight.png in Resources */,
 				B4BDA75D24924F190070D05C /* WebViewController.xib in Resources */,
 				B4A3795925DD96340070530E /* cityArray.sqlite in Resources */,
 				B45FCDB323B61FAF00626D06 /* XBUGConfigView.xib in Resources */,
 				B45FCDCC23B61FE500626D06 /* icon_star@3x.png in Resources */,
+				B477496625E3B99200F0344C /* photograph@3x.png in Resources */,
+				B477496525E3B99200F0344C /* photo_flash_on.png in Resources */,
+				B477495F25E3B99200F0344C /* photo_flash_auto.png in Resources */,
 				B41E8524248E0D6E00078278 /* ColorConfig.plist in Resources */,
 				B45FCDCE23B61FE500626D06 /* icon_star_bg@2x.png in Resources */,
 			);
@@ -833,23 +899,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		10417A509A9F4AED7FEAAA60 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-myApp/Pods-myApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-myApp/Pods-myApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-myApp/Pods-myApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		45A1B58D970D356084F27900 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -872,6 +921,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		69F08E9B6C94D2BA7756EE13 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-myApp/Pods-myApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-myApp/Pods-myApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-myApp/Pods-myApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -889,6 +955,7 @@
 				B45FCD7823B61F3300626D06 /* XYPinYinTool.m in Sources */,
 				B45FCE0C23B621A500626D06 /* XYChooseLocationView.m in Sources */,
 				B45FCD9923B61F7A00626D06 /* UIColor+XYAdd.m in Sources */,
+				B44DB0A925E38EE30033C66E /* XYImagePickerController.m in Sources */,
 				B45FCDBD23B61FBD00626D06 /* XYPresentationController.m in Sources */,
 				B45FCDAA23B61F8A00626D06 /* NSObject+XYAdd.m in Sources */,
 				B4C829F2247CFFCA00B5F13F /* XYPushViewController.m in Sources */,
@@ -903,6 +970,7 @@
 				B45FCDE223B6203B00626D06 /* UIControl+XYActionRecord.m in Sources */,
 				B4D064742497050200DAEF7C /* XYKVO.m in Sources */,
 				B45FCD9623B61F7A00626D06 /* UIButton+XYAdd.m in Sources */,
+				B44DB0AE25E38F3A0033C66E /* XYImageDemoController.m in Sources */,
 				B45FCDA823B61F8A00626D06 /* NSMutableArray+XYAdd.m in Sources */,
 				B49E382725DBED38007B11D8 /* XYStarViewController.m in Sources */,
 				B45FCE0923B621A500626D06 /* XYLocation.m in Sources */,
@@ -917,6 +985,7 @@
 				B45FCDA923B61F8A00626D06 /* NSString+XYAdd.m in Sources */,
 				B45FCD9723B61F7A00626D06 /* UIBarButtonItem+XYAdd.m in Sources */,
 				B4D93123247533490013E550 /* XYHealthViewController.m in Sources */,
+				B477495325E3B98A00F0344C /* XYTakePhotoController.m in Sources */,
 				B49E381225DAC548007B11D8 /* XYCheckBoxVC.m in Sources */,
 				B499A06625E2D4A8008652B8 /* XYToolController.m in Sources */,
 				B49E380E25DA997D007B11D8 /* XYCheckBox.m in Sources */,
@@ -929,7 +998,6 @@
 				B45FCDDE23B6203B00626D06 /* UIResponder+XYActionRecord.m in Sources */,
 				B45FCD8523B61F6300626D06 /* XYSharePresentationController.m in Sources */,
 				B4C656C1238178BC00959704 /* BaseVC.m in Sources */,
-				B4D9311F247515480013E550 /* XYDemoListController.m in Sources */,
 				B499A06B25E2D840008652B8 /* SceneDelegate.m in Sources */,
 				B49E374825D90F31007B11D8 /* XYItemListCell.m in Sources */,
 				B499A06225E2D22D008652B8 /* XYVCController.m in Sources */,
@@ -1086,7 +1154,7 @@
 				CODE_SIGN_ENTITLEMENTS = myApp/myApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L2HZ4TQZ67;
+				DEVELOPMENT_TEAM = J9CJUEB6H8;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = myApp/BaseInitial/PrefixHeader.pch;
@@ -1096,7 +1164,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.helo.wqkj.enterprise;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.xiaoyou;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1111,7 +1179,7 @@
 				CODE_SIGN_ENTITLEMENTS = myApp/myApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L2HZ4TQZ67;
+				DEVELOPMENT_TEAM = J9CJUEB6H8;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = myApp/BaseInitial/PrefixHeader.pch;
@@ -1121,7 +1189,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.helo.wqkj.enterprise;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.xiaoyou;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
