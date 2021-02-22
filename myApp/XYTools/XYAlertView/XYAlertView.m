@@ -16,6 +16,12 @@
     action.value = value;
     return action;
 }
++ (instancetype)modelWithTitle:(NSString *)title value:(NSString *)value style:(UIAlertActionStyle)style
+{
+    XYAlertAction *action = [XYAlertAction modelWithTitle:title value:value];
+    action.style = style;
+    return action;
+}
 @end
 
 @implementation XYAlertView
@@ -116,7 +122,7 @@ void xy_doinMainThread(void(^block)(void)){
     for (XYAlertAction *action in actions) {
         index ++;
         uiaction = [UIAlertAction actionWithTitle:action.title
-          style:UIAlertActionStyleDefault
+                                            style:action.style ?: UIAlertActionStyleDefault
         handler:^(UIAlertAction * _Nonnull action) {
             // 确定
             if (handler) {

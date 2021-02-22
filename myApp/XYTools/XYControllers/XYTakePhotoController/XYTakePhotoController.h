@@ -14,6 +14,7 @@ typedef NS_ENUM(NSUInteger, XYTakePhotoMode) {
     XYTakePhotoModeSingleFront, ///< 拍摄一张正面
     XYTakePhotoModeSingleBack,  ///< 拍摄一张反面
     XYTakePhotoModeFrontRear,   ///< 拍摄两张正反面
+    XYTakePhotoModeNormalCard,   ///< 拍摄一张普通卡片，如银行卡，水卡 etc
 };
 
 @interface XYTakePhotoController : UIViewController

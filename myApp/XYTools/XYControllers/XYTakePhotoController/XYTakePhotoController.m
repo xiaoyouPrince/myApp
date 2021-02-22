@@ -353,7 +353,12 @@ static XYTakePhotoController *_instance;
 - (void)customUI{
     XYIDCardBackView *idcardBackView = [[XYIDCardBackView alloc] initWithFrame:self.view.bounds];
     idcardBackView.showGuoHuiImage = (self.mode == XYTakePhotoModeSingleBack);
-    [idcardBackView updateWithBackTitle:@"请将证件置于白色框内"];
+    if (self.mode == XYTakePhotoModeNormalCard) {
+        [idcardBackView updateWithBackTitle:@"请将卡片置于白色框内"];
+    }else{
+        [idcardBackView updateWithBackTitle:@"请将证件置于白色框内"];
+    }
+    
     self.idcardBackView = idcardBackView;
     [self.view addSubview:idcardBackView];
     
@@ -363,7 +368,6 @@ static XYTakePhotoController *_instance;
     [_closeBtn setImage:[UIImage imageNamed:@"photoClose"] forState:UIControlStateNormal];
     [_closeBtn addTarget:self action:@selector(closeCarema) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_closeBtn];
-    
     
     _PhotoButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _PhotoButton.frame = CGRectMake(kScreen_Width*1/2.0-30, kScreen_Height- 80, 60, 60);

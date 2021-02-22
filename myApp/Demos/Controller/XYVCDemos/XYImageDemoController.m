@@ -47,7 +47,7 @@
     
     XYAlertAction *action = [XYAlertAction modelWithTitle:@"相机" value:@"1"];
     XYAlertAction *action2 = [XYAlertAction modelWithTitle:@"相册" value:@"2"];
-    XYAlertAction *action3 = [XYAlertAction modelWithTitle:@"取消" value:@"3"];
+    XYAlertAction *action3 = [XYAlertAction modelWithTitle:@"取消" value:@"3" style:UIAlertActionStyleCancel];
     NSArray *actions = @[action,action2,action3];
     [XYAlertView showSheetOnVC:self title:@"选择图片来源" message:@"就是一个解释说明" actions:actions actionHandler:^(NSInteger index) {
         
@@ -79,12 +79,29 @@
     
     XYAlertAction *action = [XYAlertAction modelWithTitle:@"身份证正面" value:@"1"];
     XYAlertAction *action2 = [XYAlertAction modelWithTitle:@"身份证反面" value:@"2"];
-    XYAlertAction *action3 = [XYAlertAction modelWithTitle:@"银行卡" value:@"3"];
-    NSArray *actions = @[action,action2,action3];
+    XYAlertAction *action3 = [XYAlertAction modelWithTitle:@"同时正反面" value:@"3"];
+    XYAlertAction *action4 = [XYAlertAction modelWithTitle:@"银行卡片等" value:@"4"];
+    XYAlertAction *action5 = [XYAlertAction modelWithTitle:@"取消" value:@"5" style:UIAlertActionStyleCancel];
+    NSArray *actions = @[action,action2,action3,action4,action5];
     [XYAlertView showSheetOnVC:self title:@"选择图片来源" message:@"就是一个解释说明" actions:actions actionHandler:^(NSInteger index) {
         
+        XYTakePhotoMode type = XYTakePhotoModeSingleFront;
+        if (index == 0) {
+            type = XYTakePhotoModeSingleFront;
+        }else if(index == 1)
+        {
+            type = XYTakePhotoModeSingleBack;
+        }else if(index == 2){
+            type = XYTakePhotoModeFrontRear;
+        }else if(index == 3){
+            type = XYTakePhotoModeNormalCard;
+        }else
+        {
+            return;
+        }
+        
         // 一行代码拍摄照片
-        [XYTakePhotoController presentFromVC:self mode:XYTakePhotoModeSingleFront resultHandler:^(NSArray<UIImage *> * _Nonnull images, NSString * _Nonnull errorMsg) {
+        [XYTakePhotoController presentFromVC:self mode:type resultHandler:^(NSArray<UIImage *> * _Nonnull images, NSString * _Nonnull errorMsg) {
             
             if (errorMsg) {
                 NSLog(@"errorMsg = %@",errorMsg);

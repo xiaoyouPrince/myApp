@@ -14,7 +14,10 @@
 @property (nonatomic, copy)         NSString * title;
 /** value */
 @property (nonatomic, copy)         NSString * value;
+/** UIAlertActionStyle */
+@property (nonatomic, assign)       UIAlertActionStyle style;
 + (instancetype)modelWithTitle:(NSString *)title value:(NSString *)value;
++ (instancetype)modelWithTitle:(NSString *)title value:(NSString *)value style:(UIAlertActionStyle)style;
 @end
 
 @interface XYAlertView : NSObject
