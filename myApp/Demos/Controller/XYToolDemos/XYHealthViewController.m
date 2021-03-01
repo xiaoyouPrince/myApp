@@ -8,8 +8,7 @@
 //  健康Demo
 
 #import "XYHealthViewController.h"
-
-#import "XYHealthKitTool.h"
+#import <XYHealthKitTool.h>
 
 @interface XYHealthViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *authLabel;

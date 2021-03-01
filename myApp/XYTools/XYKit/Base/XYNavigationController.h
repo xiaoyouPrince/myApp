@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XYKit.h"
 #import "UIViewController+XYNavigationController.h"
 
 @interface XYNavigationController : UINavigationController

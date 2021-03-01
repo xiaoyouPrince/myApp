@@ -7,6 +7,7 @@
 //
 
 #import "XBUGConfigView.h"
+#import <XYAlertView.h>
 #import "XBUGTool.h"
 
 @interface XBUGConfigView ()<UITextFieldDelegate>

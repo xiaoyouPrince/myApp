@@ -8,8 +8,7 @@
 
 #import "ViewController.h"
 #import <AFNetworking/AFNetworking.h>
-#import "XYAlertView.h"
-#import "XYKit.h"
+#import <XYKit.h>
 #import <objc/runtime.h>
 #import <UIImageView+WebCache.h>
 #import "UIColor+XYAdd.h"

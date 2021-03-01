@@ -21,13 +21,15 @@
 // 3.获得随机颜色
 #define XYRandomColor XYColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 
+#define HEXCOLOR(hexValue) ([UIColor colorWithRed:((float)((hexValue & 0xFF0000) >> 16))/255.0 green:((float)((hexValue & 0xFF00) >> 8))/255.0 blue:((float)(hexValue & 0xFF))/255.0 alpha:1])
+
 // 4.通知中心
 #define kNotificationCenter [NSNotificationCenter defaultCenter]
 
 // 5.userDefault
 #define kUserDefaults [NSUserDefaults standardUserDefaults]
 
-#define kGlobalBg XYColor(246, 246, 246)
+#define kGlobalBgColor XYColor(246, 246, 246)
 
 // 6.写入文件
 // @#filename -> @"filename"

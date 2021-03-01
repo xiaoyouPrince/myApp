@@ -35,7 +35,7 @@ NSNotificationName PopoviewUpdateStatusNotification = @"PopoverUpdateStatusNotif
     
     
     // 添加通知，监听当前订单状态
-    [kNotificationCenter addObserver:self selector:@selector(updateStatusNoty:) name:PopoviewUpdateStatusNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateStatusNoty:) name:PopoviewUpdateStatusNotification object:nil];
     
 }
 
@@ -95,7 +95,7 @@ NSNotificationName PopoviewUpdateStatusNotification = @"PopoverUpdateStatusNotif
 
 - (void)dealloc
 {
-    [kNotificationCenter removeObserver:self name:PopoviewUpdateStatusNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:PopoviewUpdateStatusNotification object:nil];
 }
 
 @end

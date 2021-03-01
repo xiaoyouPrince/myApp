@@ -9,6 +9,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XYKit.h"
 
 @interface XYSharePresentationController : UIPresentationController
 

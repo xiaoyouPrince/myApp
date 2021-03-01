@@ -8,7 +8,8 @@
 
 #import "XYChooseLocationView.h"
 #import "XYLocationCell.h"
-#import "FMDB.h"
+#import "XYKitMacro.h"
+#import "Masonry.h"
 
 @interface XYChooseLocationView ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>
 

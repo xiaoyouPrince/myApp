@@ -7,6 +7,7 @@
 //
 
 #import "XYCheckBox.h"
+#import "XYKitMacro.h"
 #import "Masonry.h"
 
 @implementation XYCheckBoxItem

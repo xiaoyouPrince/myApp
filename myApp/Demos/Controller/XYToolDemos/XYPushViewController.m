@@ -7,7 +7,8 @@
 //
 
 #import "XYPushViewController.h"
-#import "XYUserNotificationTool.h"
+#import <XYAlertView.h>
+#import <XYKit/XYUserNotificationTool.h>
 
 
 @interface XYPushViewController ()<UNUserNotificationCenterDelegate>

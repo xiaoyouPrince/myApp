@@ -10,7 +10,7 @@
 #import "XYImagePickerController.h"
 #import "XYTakePhotoController.h"
 #import "UIView+XYAdd.h"
-#import "XYAlertView.h"
+#import <XYAlertView.h>
 
 @interface XYImageDemoController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;

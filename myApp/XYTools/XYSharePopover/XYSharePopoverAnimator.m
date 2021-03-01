@@ -55,7 +55,8 @@
     if (self.presentFrame.size.width){
         presentVC.presentFrame = self.presentFrame;
     }else{
-        presentVC.presentFrame = CGRectMake(ScreenW - 155, 64, 140, 120);
+        CGFloat screenW = UIScreen.mainScreen.bounds.size.width;
+        presentVC.presentFrame = CGRectMake(screenW - 155, 64, 140, 120);
     }
     
     

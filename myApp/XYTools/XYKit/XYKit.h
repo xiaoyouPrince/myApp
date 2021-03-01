@@ -22,6 +22,8 @@
 #import "UITextField+XYAdd.h"
 #import "UILabel+XYAdd.h"
 #import "UIButton+XYAdd.h"
+#import "UIColor+XYAdd.h"
+
 
 /*************** Foundation **************/
 #import "NSObject+XYAdd.h"
@@ -35,26 +37,24 @@
 #import "XYRequestParam.h"
 #import "XYHttpTool.h"
 #import "XYFileTool.h"
+#import "XYAlertView.h"
 
+// base
+#import "UIViewController+XYNavigationController.h"
+#import "XYNavigationController.h"
+#import "XYCommon.h"
 
+// view controllers
+#import "XYImagePickerController.h"
+#import "XYTakePhotoController.h"
 
-///// 第三方
-//#import "AFNetworking.h"
-////#import "MBProgressHUD.h"
-//#import "Masonry.h"
-////#import "UIView+Toast.h"
-//#import "MJRefresh.h"
-//#import "MJExtension.h"
-//#import "SDCycleScrollView.h"
-//
-//
-///// XY工具 - Foundaton
-//
-//
-//
-///// XY工具 - UIKit
-
-
-
+// views
+#import "XYSwitch.h"
+#import "XYCheckBox.h"
+#import "XYChooseLocationView.h"
+#import "XYDatePickerView.h"
+#import "XYPickerView.h"
+#import "XYChooseOrderTimeView.h"
+#import "XYStarView.h"
 
 #endif /* XYKit_h */

@@ -55,40 +55,34 @@ static AFHTTPSessionManager *manager = nil;
     [self setupHeader];
     
     // 2.发送请求
-    [manager POST:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        // 下面三行 ---  适配目前返回结构，优化自己解码
-        NSDictionary *data = responseObject[@"data"];
-        
-        NSLog(@"url = %@",url);
-        NSLog(@"header = %@",[manager.requestSerializer valueForHTTPHeaderField:@"Transport-Channels"]);
-        NSLog(@"params = %@",params);
-        NSLog(@"response = %@",responseObject);
-        
-
-        
-        
-        // 成功调用成功block
-        if (success) {
-            success(data);
-        }
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        
-        // 失败调用失败block
-        if (failure) {
-            failure(error);
+    [manager POST:url parameters:params headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            
+            // 下面三行 ---  适配目前返回结构，优化自己解码
+            NSDictionary *data = responseObject[@"data"];
             
             NSLog(@"url = %@",url);
+            NSLog(@"header = %@",[manager.requestSerializer valueForHTTPHeaderField:@"Transport-Channels"]);
             NSLog(@"params = %@",params);
-            NSLog(@"error = %@",error);
-        }
-        
-        
-        // 提示没有网络hud
-        [self hudForNoInternet];
-    }];
+            NSLog(@"response = %@",responseObject);
+            
+            // 成功调用成功block
+            if (success) {
+                success(data);
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            // 失败调用失败block
+            if (failure) {
+                failure(error);
+                
+                NSLog(@"url = %@",url);
+                NSLog(@"params = %@",params);
+                NSLog(@"error = %@",error);
+            }
+            
+            
+            // 提示没有网络hud
+            [self hudForNoInternet];
+        }];
     
 }
 
@@ -100,22 +94,15 @@ static AFHTTPSessionManager *manager = nil;
     [self setupHeader];
     
     // 2.发送请求
-    [manager POST:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        
-        // 成功调用成功block
-        if (success) {
-            success(responseObject[@"data"]);
-        }
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        
-        
-        // 失败调用失败block
-        if (failure) {
-            failure(error);
-        }
-    }];
+    [manager POST:url parameters:params headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            if (success) {
+                success(responseObject[@"data"]);
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            if (failure) {
+                failure(error);
+            }
+        }];
 }
 
 
@@ -128,23 +115,19 @@ static AFHTTPSessionManager *manager = nil;
     
     [self setupHeader];
     
-    // 2.发送请求
-    [manager POST:url parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull totalFormData) {
-        
-        for (XYFormData* formData in formDataArray) {
-            [totalFormData appendPartWithFileData:formData.data name:formData.name fileName:formData.filename mimeType:formData.mimeType];
-        }
-        
-    } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        if (success) {
-            success(responseObject);
-        }
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        if (failure) {
-            failure(error);
-        }
-    }];
+    [manager POST:url parameters:params headers:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull totalFormData) {
+            for (XYFormData* formData in formDataArray) {
+                [totalFormData appendPartWithFileData:formData.data name:formData.name fileName:formData.filename mimeType:formData.mimeType];
+            }
+        } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            if (success) {
+                success(responseObject);
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            if (failure) {
+                failure(error);
+            }
+        }];
 }
 
 + (void)getWithURL:(NSString *)url params:(NSDictionary *)params success:(void (^)(id))success failure:(void (^)(NSError *))failure
@@ -154,16 +137,15 @@ static AFHTTPSessionManager *manager = nil;
     
     [self setupHeader];
     
-    // 2.发送请求
-    [manager GET:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        if (success) {
-            success(responseObject);
-        }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        if (failure) {
-            failure(error);
-        }
-    }];
+    [manager GET:url parameters:params headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            if (success) {
+                success(responseObject);
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            if (failure) {
+                failure(error);
+            }
+        }];
     
 }
 

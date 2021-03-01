@@ -26,7 +26,7 @@
 - (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController presentingViewController:(UIViewController *)presentingViewController
 {
     if (self == [super initWithPresentedViewController:presentedViewController presentingViewController:presentingViewController]) {
-        [kNotificationCenter addObserver:self selector:@selector(showAppNotInstall) name:@"APP Not Install" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showAppNotInstall) name:@"APP Not Install" object:nil];
     }
     return self;
 }
@@ -46,7 +46,7 @@
 
 - (void)dealloc
 {
-    [kNotificationCenter removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (UIView *)shareView
@@ -85,7 +85,7 @@
     self.coverView.frame = self.containerView.bounds;
     
     // 底部shareView
-    XYWeakSelf
+    
     [self.coverView addSubview:self.shareView];
 //    self.shareView.shareBlock = ^(NSInteger index) {
 //        

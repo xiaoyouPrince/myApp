@@ -7,7 +7,7 @@
 //
 
 #import "XYViewController.h"
-#import "XYSwitch.h"
+#import <XYKit/XYSwitch.h>
 
 @interface XYViewController ()
 /** switch */
