@@ -50,3 +50,8 @@
 
 
 @end
+
+
+@interface XYAlertView (Developing)
+#define XYAlertShowDeveloper [XYAlertView showAlertOnVC:nil title:@"提示" message:@"正在开发中" okTitle:@"好的" Ok:nil];
+@end
