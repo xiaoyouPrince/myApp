@@ -19,11 +19,11 @@ Pod::Spec.new do |s|
   s.swift_version = '5.0'
   s.module_name = 'XYKit'
 
-  s.source_files             = 'myApp/XYTools/**/*.{h,m,xib}'
-#  s.resource = [
-#  'myApp/Assets/**/*.{xib,plist,bundle,storyboard,json,mp3,jpg,png,mp4}',
-#    'myApp/Classes/**/*.{xib,plist,bundle,storyboard,json,mp3,jpg,png,mp4}'
-#  ]
+  s.source_files             = 'myApp/XYTools/**/*.{h,m,xib,swift}'
+  s.resource = [
+    'myApp/Assets/**/*.{xib,plist,bundle,storyboard,json,mp3,jpg,png,mp4}',
+    'myApp/XYTools/**/*.{xib,plist,bundle,storyboard,json,mp3,jpg,png,mp4}'
+  ]
 
   s.dependency 'Masonry'
   s.dependency 'AFNetworking'

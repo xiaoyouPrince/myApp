@@ -33,6 +33,7 @@ PODS:
     - AFNetworking
     - FMDB
     - Masonry
+    - MJExtension
 
 DEPENDENCIES:
   - AFNetworking
@@ -75,7 +76,7 @@ SPEC CHECKSUMS:
   SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   XYInfomationSection: 78adfd5a3e6b2939c5532f1500a90d52af24a668
-  XYKit: e7b7d15d20dbd1885015383d7795960978d9868e
+  XYKit: ed0b610604a1cbfc0edce6efa677b5034416c89b
 
 PODFILE CHECKSUM: ab13506dd89082921ac8707fe04f79e4a023fe2c
 
