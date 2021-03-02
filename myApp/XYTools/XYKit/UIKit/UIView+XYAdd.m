@@ -252,4 +252,15 @@
     }
 }
 
+- (UIViewController *)controller{
+    UIResponder *controller = self.nextResponder;
+    if ([controller isKindOfClass:UIViewController.class]) {
+        return (UIViewController *)controller;
+    }
+    if ([controller isKindOfClass:UIView.class]) {
+        return [(UIView *)controller controller];
+    }
+    return (UIViewController *)controller;
+}
+
 @end

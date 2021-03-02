@@ -37,4 +37,8 @@
  */
 - (void)xy_setGradientColors:(NSArray <UIColor *>*)colors;
 
+
+/// 返回当前 view 的控制器，如果没有返回 nil
+- (UIViewController *)controller;
+
 @end

@@ -53,5 +53,10 @@
 
 
 @interface XYAlertView (Developing)
-#define XYAlertShowDeveloper [XYAlertView showAlertOnVC:nil title:@"提示" message:@"正在开发中" okTitle:@"好的" Ok:nil];
+#define XYAlertShowDeveloper \
+if ([self isKindOfClass:UIViewController.class]) {\
+    [XYAlertView showAlertOnVC:self title:@"tips" message:@"正在开发中" okTitle:@"好的" Ok:nil];\
+}else if([self isKindOfClass:UIView.class]) {\
+    [XYAlertView showAlertOnVC:[(UIView *)self controller] title:@"tips" message:@"正在开发中" okTitle:@"好的" Ok:nil];\
+}
 @end
