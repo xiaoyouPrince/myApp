@@ -63,6 +63,9 @@ void xy_doinMainThread(void(^block)(void)){
                                                      }];
     [av addAction:actionOK];
     
+    if (![currentVC isKindOfClass:UIViewController.class]) {
+        currentVC = [[[UIApplication sharedApplication] keyWindow] rootViewController];
+    }
     xy_doinMainThread(^{
         [currentVC presentViewController:av animated:YES completion:nil];
     });
@@ -99,6 +102,10 @@ void xy_doinMainThread(void(^block)(void)){
     [av addAction:actionOK];
     [av addAction:actionCancel];
     
+    
+    if (![currentVC isKindOfClass:UIViewController.class]) {
+        currentVC = [[[UIApplication sharedApplication] keyWindow] rootViewController];
+    }
     xy_doinMainThread(^{
         [currentVC presentViewController:av animated:YES completion:nil];
     });
@@ -133,6 +140,9 @@ void xy_doinMainThread(void(^block)(void)){
         [av addAction:uiaction];
     }
     
+    if (![currentVC isKindOfClass:UIViewController.class]) {
+        currentVC = [[[UIApplication sharedApplication] keyWindow] rootViewController];
+    }
     xy_doinMainThread(^{
         [currentVC presentViewController:av animated:YES completion:nil];
     });
