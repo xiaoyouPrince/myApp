@@ -15,6 +15,7 @@
  使用注意:
  如果支持 FaceID，需要在 Info.plist 中添加 Privacy - Face ID Usage Description
  eg: Privacy - Face ID Usage Description -> 使用 Face ID 来解锁
+ eg: NSFaceIDUsageDescription -> 使用 Face ID 来解锁
  
  */
 

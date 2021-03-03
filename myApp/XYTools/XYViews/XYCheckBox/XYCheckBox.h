@@ -76,11 +76,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param isMutex 是否单选 default is YES
 /// @param allowCancelSelected 是否可取消选中 default is NO
 /// @param itemSelectedHandler 每次有 item 被选中之后的回调
-+ (instancetype)checkBoxWith:(nullable UIView *)headerView
-                   dataArray:(NSArray <XYCheckBoxItem *>*)dataArray
-                     isMutex:(BOOL)isMutex
-         allowCancelSelected:(BOOL)allowCancelSelected
-         itemSelectedHandler:(void(^)(XYCheckBoxItem *item))itemSelectedHandler;
++ (instancetype)checkBoxWithHeaderView:(nullable UIView *)headerView
+                             dataArray:(NSArray <XYCheckBoxItem *>*)dataArray
+                               isMutex:(BOOL)isMutex
+                   allowCancelSelected:(BOOL)allowCancelSelected
+                   itemSelectedHandler:(void(^)(XYCheckBoxItem *item))itemSelectedHandler;
 
 @end
 

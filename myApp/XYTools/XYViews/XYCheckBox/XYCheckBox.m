@@ -120,7 +120,7 @@
 @implementation XYCheckBox
 @synthesize headerView=__headerView;
 
-+ (instancetype)checkBoxWith:(UIView *)headerView dataArray:(NSArray<XYCheckBoxItem *> *)dataArray isMutex:(BOOL)isMutex allowCancelSelected:(BOOL)allowCancelSelected itemSelectedHandler:(void (^)(XYCheckBoxItem * _Nonnull))itemSelectedHandler{
++ (instancetype)checkBoxWithHeaderView:(UIView *)headerView dataArray:(NSArray<XYCheckBoxItem *> *)dataArray isMutex:(BOOL)isMutex allowCancelSelected:(BOOL)allowCancelSelected itemSelectedHandler:(void (^)(XYCheckBoxItem * _Nonnull))itemSelectedHandler{
     
     XYCheckBox *cb = [XYCheckBox new];
     cb.headerView = headerView;
