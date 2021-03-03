@@ -67,10 +67,18 @@
     instance.context = LAContext.new; // 每次使用新的 content
     getCanEvaluateResult();
     if (@available(iOS 9.0, *)) {
-        [instance.context evaluatePolicy:LAPolicyDeviceOwnerAuthentication localizedReason:tipString reply:reply];
+        [instance.context evaluatePolicy:LAPolicyDeviceOwnerAuthentication localizedReason:tipString reply:^(BOOL success, NSError * _Nullable error) {
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                reply(success,error);
+            });
+        }];
     } else {
         // Fallback on earlier versions
-        [instance.context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:tipString reply:reply];
+        [instance.context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:tipString reply:^(BOOL success, NSError * _Nullable error) {
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                reply(success,error);
+            });
+        }];
     }
 }
 
