@@ -38,6 +38,7 @@
 #import "XYHttpTool.h"
 #import "XYFileTool.h"
 #import "XYAlertView.h"
+#import "XYAuthenticationTool.h"
 
 // base
 #import "UIViewController+XYNavigationController.h"
