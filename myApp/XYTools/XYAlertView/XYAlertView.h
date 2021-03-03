@@ -59,4 +59,11 @@ if ([self isKindOfClass:UIViewController.class]) {\
 }else if([self isKindOfClass:UIView.class]) {\
     [XYAlertView showAlertOnVC:[(UIView *)self controller] title:@"tips" message:@"正在开发中" okTitle:@"好的" Ok:nil];\
 }
+
+#define XYAlertShowMessage(msg) \
+if ([self isKindOfClass:UIViewController.class]) {\
+    [XYAlertView showAlertOnVC:self title:@"tips" message:(msg) okTitle:@"好的" Ok:nil];\
+}else if([self isKindOfClass:UIView.class]) {\
+    [XYAlertView showAlertOnVC:[(UIView *)self controller] title:@"tips" message:(msg) okTitle:@"好的" Ok:nil];\
+}
 @end
