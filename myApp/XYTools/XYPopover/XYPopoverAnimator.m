@@ -17,10 +17,8 @@
 
 - (instancetype)initWithCallBack:(callBack)callback
 {
-    if (self == [super init]) {
-        
-        self.callback = callback;
-    }
+    self = [super init];
+    self.callback = callback;
     return self;
 }
 

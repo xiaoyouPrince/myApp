@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - actions
 
 /// tap 时候触发的回调
-- (void)xy_tapWithBlock:(void(^)())block;
+- (void)xy_tapWithBlock:(void(^)(void))block;
 
 
 /**

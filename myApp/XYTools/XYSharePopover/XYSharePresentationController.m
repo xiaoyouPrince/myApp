@@ -25,9 +25,8 @@
 
 - (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController presentingViewController:(UIViewController *)presentingViewController
 {
-    if (self == [super initWithPresentedViewController:presentedViewController presentingViewController:presentingViewController]) {
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showAppNotInstall) name:@"APP Not Install" object:nil];
-    }
+    self = [super initWithPresentedViewController:presentedViewController presentingViewController:presentingViewController];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showAppNotInstall) name:@"APP Not Install" object:nil];
     return self;
 }
 

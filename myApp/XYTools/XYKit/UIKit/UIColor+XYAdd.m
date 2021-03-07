@@ -87,7 +87,7 @@
     NSString *bString = [cString substringWithRange:range];
     
     // a
-    NSString *aString;
+    NSString *aString = @"FF";
     if (cString.length == 8) {
         range.location = 6;
         aString = [cString substringWithRange:range];
