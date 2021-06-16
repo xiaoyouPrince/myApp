@@ -42,3 +42,7 @@
 - (UIViewController *)controller;
 
 @end
+
+@interface UIView (Tap)
+- (void)xy_tapWithBlock:(void(^)(UIView *tapedView))block;
+@end

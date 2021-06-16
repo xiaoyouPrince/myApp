@@ -264,3 +264,35 @@
 }
 
 @end
+
+
+
+#import <objc/runtime.h>
+
+typedef void(^UIViewTapBlock)(UIView *tapedView);
+
+@implementation UIView (Tap)
+
+- (void)setTapBlock:(UIViewTapBlock)block{
+    objc_setAssociatedObject(self, @selector(setTapBlock:), block, OBJC_ASSOCIATION_RETAIN);
+}
+
+- (UIViewTapBlock)getTapBlock{
+    return objc_getAssociatedObject(self, @selector(setTapBlock:));
+}
+
+- (void)xy_tapWithBlock:(void (^)(UIView *))block
+{
+    self.userInteractionEnabled = YES;
+    [self setTapBlock:block];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(__taped:)];
+    [self addGestureRecognizer:tap];
+}
+- (void)__taped:(UITapGestureRecognizer *)tap{
+    UIViewTapBlock blk = [self getTapBlock];
+    if (blk) {
+        blk(tap.view);
+    }
+}
+
+@end
