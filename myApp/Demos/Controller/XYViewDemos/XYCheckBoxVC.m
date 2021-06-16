@@ -75,7 +75,7 @@
     UIView *headerView = [self headerWithTitle:@"计划出行日期" height:40];
     headerView.backgroundColor = XYRandomColor;
     // cb
-    XYCheckBox *cb = [XYCheckBox checkBoxWith:headerView dataArray:arrayM isMutex:NO allowCancelSelected:YES itemSelectedHandler:^(XYCheckBoxItem * _Nonnull item) {
+    XYCheckBox *cb = [XYCheckBox checkBoxWithHeaderView:headerView dataArray:arrayM isMutex:NO allowCancelSelected:YES itemSelectedHandler:^(XYCheckBoxItem * _Nonnull item) {
         NSLog(@"当前选中的 item %@",item);
     }];
     cb.backgroundColor = XYRandomColor;
@@ -94,7 +94,7 @@
     UIView *headerView = [self headerWithTitle:@"计划出行日期" height:40];
     headerView = nil;
     
-    XYCheckBox *cb = [XYCheckBox checkBoxWith:headerView dataArray:arrayM isMutex:NO allowCancelSelected:YES itemSelectedHandler:^(XYCheckBoxItem * _Nonnull item) {
+    XYCheckBox *cb = [XYCheckBox checkBoxWithHeaderView:headerView dataArray:arrayM isMutex:NO allowCancelSelected:YES itemSelectedHandler:^(XYCheckBoxItem * _Nonnull item) {
         NSLog(@"当前选中的 item %@",item);
     }];
     cb.backgroundColor = XYRandomColor;
